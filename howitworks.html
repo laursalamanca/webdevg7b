@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How It Works Page</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 🟢 Enable class-based dark mode -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+
+    <!-- Set theme before paint to prevent flicker -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+
+  <body
+    class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen"
+  >
+    <!-- NAVBAR -->
+    <nav
+      class="bg-white dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-700"
+    >
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <!-- Company Name -->
+            <span class="text-xl font-bold text-slate-900 dark:text-white"
+              >BeatBox</span
+            >
+
+            <!-- Logo -->
+            <img src="images/music-box.png" alt="Logo" class="h-8 w-auto" />
+          </div>
+
+          <!-- MOBILE MENU BUTTON -->
+          <div class="flex sm:hidden">
+            <button
+              id="menu-toggle"
+              type="button"
+              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <svg
+                id="menu-open-icon"
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="menu-close-icon"
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- NAV BAR LINKS -->
+          <div class="hidden sm:flex sm:space-x-4">
+            <a
+              href="index.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
+              >About</a
+            >
+            <a
+              href="subscriptiontiers.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
+              >Subscription Tiers</a
+            >
+            <a
+              href="howitworks.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
+              >How It Works</a
+            >
+            <a
+              href="featuredartist.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
+              >Featured Artist of the Month</a
+            >
+            <a
+              href="checkoutpage.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
+              >Checkout</a
+            >
+            <a
+              href="contact.html"
+              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
+              >Contact Us</a
+            >
+          </div>
+
+          <!-- RIGHT: THEME TOGGLE -->
+          <div class="flex items-center">
+            <button
+              id="theme-toggle"
+              class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-600 transition"
+              aria-label="Toggle theme"
+              title="Toggle dark / light"
+            >
+              🌗
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <!-- MOBILE MENU -->
+      <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
+        <a
+          href="index.html"
+          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
+          >About</a
+        >
+        <a
+          href="subscriptiontiers.html"
+          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
+          >Subscription Tiers</a
+        >
+        <a
+          href="howitworks.html"
+          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
+          >How It Works</a
+        >
+        <a
+          href="featuredartist.html"
+          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
+          >Featured Artist</a
+        >
+        <a
+          href="checkoutpage.html"
+          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
+          >Checkout</a
+        >
+        <a
+          href="contact.html"
+          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
+          >Contact Us</a
+        >
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="py-16 px-4 text-center"></main>
+
+    <!-- JS: Toggle theme & hamburger -->
+    <script>
+      // Dark mode toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      themeToggle.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.toggle("dark");
+        localStorage.theme = isDark ? "dark" : "light";
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuOpenIcon = document.getElementById("menu-open-icon");
+      const menuCloseIcon = document.getElementById("menu-close-icon");
+
+      menuToggle.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.toggle("hidden");
+        menuOpenIcon.classList.toggle("hidden", !isHidden);
+        menuCloseIcon.classList.toggle("hidden", isHidden);
+      });
+    </script>
+
+    <script>
+      // Highlight the active link in the navbar
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll("nav a");
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add(
+            "bg-gray-100",
+            "dark:bg-gray-800",
+            "text-blue-600",
+            "dark:text-blue-400",
+            "hover:text-blue-600"
+          );
+        } else {
+          link.classList.remove(
+            "bg-gray-800",
+            "dark:bg-gray-800",
+            "text-blue-600",
+            "dark:text-blue-400"
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
