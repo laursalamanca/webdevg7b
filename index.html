@@ -1,438 +1,349 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BeatBox Home</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeatBox Home</title>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- this is Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Enable class-based dark mode -->
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-      };
-    </script>
+  <script>
+    tailwind.config = { darkMode: "class" }
+  </script>
 
-    <!-- Set theme before paint to prevent flicker -->
-    <script>
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
-  </head>
+  <!-- this is theme setup before paint -->
+  <script>
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+</head>
 
-  <body
-    class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen"
-  >
-    <!-- NAVBAR -->
-    <nav
-      class="bg-white dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-700"
-    >
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="flex items-center space-x-2">
-            <!-- Company Name -->
-            <span class="text-xl font-bold text-slate-900 dark:text-white"
-              >BeatBox</span
-            >
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen">
 
-            <!-- Logo -->
-            <img src="images/music-box.png" alt="Logo" class="h-8 w-auto" />
+  <!-- this is NAVBAR -->
+  <nav class="bg-white dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-700">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+
+        <!-- this is Logo -->
+        <div class="flex items-center space-x-2">
+          <span class="text-xl font-bold dark:text-white">BeatBox</span>
+          <img src="images/music-box.png" class="h-8" />
+        </div>
+
+        <!-- this is Mobile button -->
+        <div class="flex sm:hidden">
+          <button id="menu-toggle" class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md">
+            <svg id="menu-open-icon" class="block h-6 w-6" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- this is Desktop nav -->
+        <div class="hidden sm:flex sm:space-x-4">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="subscriptiontiers.html" class="nav-link">Subscription Tiers</a>
+          <a href="howitworks.html" class="nav-link">How It Works</a>
+          <a href="featuredartist.html" class="nav-link">Featured Artist</a>
+          <a href="checkoutpage.html" class="nav-link">Checkout</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </div>
+
+        <!-- this is Right buttons -->
+        <div class="flex items-center space-x-2">
+          <div class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs">
+            <button id="font-decrease" class="px-2 text-sm font-semibold">A</button>
+            <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
+            <button id="font-increase" class="px-2 text-base font-semibold">A</button>
           </div>
 
-          <!-- MOBILE MENU BUTTON -->
-          <div class="flex sm:hidden">
-            <button
-              id="menu-toggle"
-              type="button"
-              class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <svg
-                id="menu-open-icon"
-                class="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-              <svg
-                id="menu-close-icon"
-                class="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+          <button id="theme-toggle"
+            class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600">
+            🌗
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- this is Mobile menu -->
+    <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="subscriptiontiers.html" class="mobile-link">Subscription Tiers</a>
+      <a href="howitworks.html" class="mobile-link">How It Works</a>
+      <a href="featuredartist.html" class="mobile-link">Featured Artist</a>
+      <a href="checkoutpage.html" class="mobile-link">Checkout</a>
+      <a href="contact.html" class="mobile-link">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="px-6 py-10 lg:px-12 lg:py-16 pt-20">
+
+    <!-- this is HERO SECTION (Sponsor image included inside layout) -->
+    <section class="mx-auto max-w-7xl grid gap-12 md:grid-cols-3 items-center">
+
+      <!-- this is LEFT SIDE -->
+      <div class="space-y-6 md:col-span-2">
+        <p class="inline rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-200">
+          Curated music boxes for rising artists
+        </p>
+
+        <h1 class="text-5xl font-bold leading-tight">
+          BeatBox brings exclusive music, playlists, and merch straight to your door.
+        </h1>
+
+        <p class="text-lg max-w-xl text-slate-600 dark:text-slate-300">
+          Every month, BeatBox curates a box with merch, digital playlists, and behind the scenes artist content.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="subscriptiontiers.html"
+            class="rounded-lg bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-purple-700">
+            View subscription tiers
+          </a>
+
+          <a href="featuredartist.html"
+            class="text-sm font-semibold text-purple-700 dark:text-purple-300">
+            Meet the featured artist
+          </a>
+        </div>
+
+        <div class="grid gap-4 text-sm text-slate-600 dark:text-slate-300 sm:grid-cols-2">
+          <div>
+            <p class="font-semibold dark:text-slate-100">Hand picked every month</p>
+            <p>Our team listens to hundreds of records and demos.</p>
           </div>
 
-          <!-- NAV BAR LINKS -->
-          <div class="hidden sm:flex sm:space-x-4">
-            <a
-              href="index.html"
-              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Home</a
-            >
-            <a
-              href="about.html"
-              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >About</a
-            >
-            <a
-              href="subscriptiontiers.html"
-              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Subscription Tiers</a
-            >
-            <a
-              href="howitworks.html"
-              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >How It Works</a
-            >
-            <a
-              href="featuredartist.html"
-              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Featured Artist of the Month</a
-            >
-            <a
-              href="checkoutpage.html"
-              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Checkout</a
-            >
-            <a
-              href="contact.html"
-              class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Contact Us</a
-            >
-          </div>
-
-          <!-- RIGHT: FONT SIZE + THEME TOGGLE -->
-          <div class="flex items-center space-x-2">
-            <!-- Font size controls -->
-            <div
-              class="flex items-center rounded-full border border-slate-300 bg-slate-100 px-2 py-1 text-xs dark:border-slate-700 dark:bg-slate-800"
-            >
-              <button
-                id="font-decrease"
-                type="button"
-                class="px-2 text-sm font-semibold"
-                aria-label="Decrease font size"
-              >
-                A
-              </button>
-              <span
-                class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"
-              ></span>
-              <button
-                id="font-increase"
-                type="button"
-                class="px-2 text-base font-semibold"
-                aria-label="Increase font size"
-              >
-                A
-              </button>
-            </div>
-
-            <!-- Theme toggle -->
-            <button
-              id="theme-toggle"
-              class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-600 transition"
-              aria-label="Toggle theme"
-              title="Toggle dark / light"
-            >
-              🌗
-            </button>
+          <div>
+            <p class="font-semibold dark:text-slate-100">Built for fans and creators</p>
+            <p>Support and discover rising musicians early.</p>
           </div>
         </div>
       </div>
 
-      <!-- MOBILE MENU -->
-      <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
-        <a
-          href="index.html"
-          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
-          >Home</a
-        >
-        <a
-          href="about.html"
-          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
-          >About</a
-        >
-        <a
-          href="subscriptiontiers.html"
-          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
-          >Subscription Tiers</a
-        >
-        <a
-          href="howitworks.html"
-          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
-          >How It Works</a
-        >
-        <a
-          href="featuredartist.html"
-          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
-          >Featured Artist</a
-        >
-        <a
-          href="checkoutpage.html"
-          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
-          >Checkout</a
-        >
-        <a
-          href="contact.html"
-          class="block rounded-md px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black dark:hover:text-blue-400 transition"
-          >Contact Us</a
-        >
+      <!-- this is SPONSOR IMAGE (now part of layout, no overlap) -->
+      <div class="flex justify-end items-start">
+        <img src="images/67.png"
+             class="w-48 sm:w-60 lg:w-72 rounded-2xl shadow-lg object-cover" />
       </div>
-    </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="px-6 py-10 lg:px-12 lg:py-16">
-      <!-- HERO SECTION -->
-      <section
-        class="mx-auto flex max-w-6xl flex-col items-center gap-12 text-center md:flex-row md:text-left"
-      >
-        <!-- Left: Text -->
-        <div class="flex-1 space-y-6">
-          <p
-            class="inline rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700 dark:bg-purple-900/40 dark:text-purple-200"
-          >
-            Curated music boxes for rising artists
-          </p>
+    </section>
 
-          <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
-          >
-            BeatBox brings exclusive music, playlists, and merch straight to
-            your door.
-          </h1>
+    <!-- this is REVIEWS -->
+    <section class="mt-20">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="text-3xl font-bold text-center mb-8">What listeners are saying</h2>
 
-          <p
-            class="max-w-xl text-sm sm:text-base text-slate-600 dark:text-slate-300"
-          >
-            Every month, BeatBox curates a box that mixes physical merch,
-            digital playlists, and behind the scenes stories from up and coming
-            artists. Choose a subscription tier that fits your vibe and discover
-            music before it blows up.
-          </p>
+        <div class="grid gap-8 md:grid-cols-3">
 
-          <div
-            class="flex flex-wrap items-center justify-center gap-4 md:justify-start"
-          >
-            <a
-              href="subscriptiontiers.html"
-              class="rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-300 dark:focus:ring-purple-700"
-            >
-              View subscription tiers
-            </a>
-            <a
-              href="featuredartist.html"
-              class="text-sm font-semibold text-purple-700 hover:text-purple-800 dark:text-purple-300 dark:hover:text-purple-200"
-            >
-              Meet the featured artist of the month
-            </a>
-          </div>
+          <article class="review-card">
+            <p class="stars">★★★★★</p>
+            <p class="review-title">BeatBox put me on to new artists instantly.</p>
+            <p class="review-user">Maya from Boston</p>
+          </article>
 
-          <div
-            class="mt-4 grid gap-4 text-xs text-slate-600 dark:text-slate-300 sm:grid-cols-2"
-          >
-            <div>
-              <p class="font-semibold text-slate-800 dark:text-slate-100">
-                Hand picked every month
-              </p>
-              <p>
-                Our team listens to hundreds of tracks, live sessions, and demos
-                to build each box around a theme.
-              </p>
-            </div>
-            <div>
-              <p class="font-semibold text-slate-800 dark:text-slate-100">
-                Built for fans and creators
-              </p>
-              <p>
-                Whether you are a listener or an artist, BeatBox gives you a new
-                way to share and support the music you love.
-              </p>
-            </div>
-          </div>
+          <article class="review-card">
+            <p class="stars">★★★★★</p>
+            <p class="review-title">The drops feel custom made for me.</p>
+            <p class="review-user">Jordan from New York</p>
+          </article>
+
+          <article class="review-card">
+            <p class="stars">★★★★★</p>
+            <p class="review-title">My fanbase grew because of BeatBox.</p>
+            <p class="review-user">Nova independent artist</p>
+          </article>
+
         </div>
+      </div>
+    </section>
 
-        <!-- Right: Visual -->
-        <div class="flex-1 flex justify-center">
-          <div
-            class="relative w-full max-w-md rounded-2xl border border-slate-200 bg-slate-900 p-6 text-left text-xs text-slate-100 shadow-xl dark:border-slate-700"
-          >
-            <div class="mb-3 flex items-center justify-between">
-              <p class="text-sm font-semibold">Next BeatBox drop</p>
-              <span class="text-[10px] text-purple-300"
-                >Lo fi nights edition</span
-              >
-            </div>
-            <ul class="space-y-2 text-sm">
-              <li>Exclusive cassette tape from the featured artist</li>
-              <li>QR code playlist with unreleased tracks</li>
-              <li>Handwritten tracklist card</li>
-              <li>Sticker pack and mini poster for your wall</li>
-            </ul>
-            <p class="mt-4 text-[11px] text-slate-400">
-              Subscribe now to lock in this month box. Shipping and checkout are
-              simulated for this web development project.
-            </p>
-          </div>
-        </div>
-      </section>
+  </main>
 
-      <!-- REVIEWS SECTION -->
-      <section class="mt-16 mb-10">
-        <div class="mx-auto max-w-6xl">
-          <h2
-            class="text-2xl sm:text-3xl font-bold text-center mb-6 text-slate-900 dark:text-white"
-          >
-            What listeners are saying
-          </h2>
+  <!-- CHATBOT (bottom right) -->
+  <!-- this is chatbot button -->
+  <button id="chatbot-btn"
+    class="fixed bottom-6 right-6 bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-purple-700 z-50">
+    💬 Chat
+  </button>
 
-          <div class="grid gap-6 md:grid-cols-3">
-            <!-- Review 1 -->
-            <article
-              class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800"
-            >
-              <p class="text-yellow-400 text-lg mb-1">★★★★★</p>
-              <p class="text-sm font-semibold mb-1">
-                BeatBox put me on to artists I never would have found on my own.
-              </p>
-              <p class="text-xs text-slate-500 dark:text-slate-300">
-                Maya from Boston
-              </p>
-            </article>
+  <!-- this is chatbot panel -->
+  <div id="chatbot-panel"
+    class="hidden fixed bottom-20 right-6 w-80 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-4 z-50">
 
-            <!-- Review 2 -->
-            <article
-              class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800"
-            >
-              <p class="text-yellow-400 text-lg mb-1">★★★★★</p>
-              <p class="text-sm font-semibold mb-1">
-                The playlists and merch drops feel like they were made just for
-                me.
-              </p>
-              <p class="text-xs text-slate-500 dark:text-slate-300">
-                Jordan from New York
-              </p>
-            </article>
+    <p class="font-bold mb-2 text-slate-800 dark:text-white">BeatBox Help Bot</p>
 
-            <!-- Review 3 -->
-            <article
-              class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800"
-            >
-              <p class="text-yellow-400 text-lg mb-1">★★★★★</p>
-              <p class="text-sm font-semibold mb-1">
-                As an artist I love seeing new fans discover my music through
-                BeatBox.
-              </p>
-              <p class="text-xs text-slate-500 dark:text-slate-300">
-                Nova independent artist
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
+    <div id="chat-log" class="h-40 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-slate-900"></div>
 
-    <!-- Inline JS for theme, menu, active link, font size -->
-    <script>
-      // Theme toggle
-      const themeToggle = document.getElementById("theme-toggle");
-      if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-          const isDark = document.documentElement.classList.toggle("dark");
-          localStorage.theme = isDark ? "dark" : "light";
-        });
-      }
+    <input id="chat-input" 
+           class="w-full p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
+           placeholder="Ask a question..." />
 
-      // Mobile menu toggle
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const menuOpenIcon = document.getElementById("menu-open-icon");
-      const menuCloseIcon = document.getElementById("menu-close-icon");
+  </div>
 
-      if (menuToggle && mobileMenu && menuOpenIcon && menuCloseIcon) {
-        menuToggle.addEventListener("click", () => {
-          const isHidden = mobileMenu.classList.toggle("hidden");
-          menuOpenIcon.classList.toggle("hidden", !isHidden);
-          menuCloseIcon.classList.toggle("hidden", isHidden);
-        });
-      }
 
-      // Highlight active nav link
-      const pathName =
-        window.location.pathname.split("/").pop() || "index.html";
-      document.querySelectorAll("nav a").forEach((link) => {
-        const href = link.getAttribute("href");
-        if (href === pathName) {
-          link.classList.add(
-            "bg-gray-100",
-            "dark:bg-gray-800",
-            "text-blue-600",
-            "dark:text-blue-400",
-            "hover:text-blue-600"
-          );
-        } else {
-          link.classList.remove(
-            "bg-gray-800",
-            "dark:bg-gray-800",
-            "text-blue-600",
-            "dark:text-blue-400"
-          );
-        }
+  <!-- this is INLINE JS -->
+  <script>
+    /* this is theme toggle */
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.toggle("dark");
+        localStorage.theme = isDark ? "dark" : "light";
       });
+    }
 
-      // Font size controls
-      const increaseBtn = document.getElementById("font-increase");
-      const decreaseBtn = document.getElementById("font-decrease");
+    /* this is mobile menu */
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const openIcon = document.getElementById("menu-open-icon");
+    const closeIcon = document.getElementById("menu-close-icon");
 
-      let scale = 1;
-      const minScale = 0.85;
-      const maxScale = 1.3;
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        const hidden = mobileMenu.classList.toggle("hidden");
+        openIcon.classList.toggle("hidden", !hidden);
+        closeIcon.classList.toggle("hidden", hidden);
+      });
+    }
 
-      const applyScale = () => {
-        document.documentElement.style.fontSize = 16 * scale + "px";
-      };
-
-      if (increaseBtn && decreaseBtn) {
-        increaseBtn.addEventListener("click", () => {
-          scale = Math.min(maxScale, scale + 0.05);
-          applyScale();
-        });
-
-        decreaseBtn.addEventListener("click", () => {
-          scale = Math.max(minScale, scale - 0.05);
-          applyScale();
-        });
+    /* this is active nav link highlight */
+    const path = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("nav a").forEach((a) => {
+      if (a.getAttribute("href") === path) {
+        a.classList.add("bg-gray-100", "dark:bg-gray-800", "text-blue-600");
       }
-    </script>
-  </body>
+    });
+
+    /* this is font size controls */
+    const inc = document.getElementById("font-increase");
+    const dec = document.getElementById("font-decrease");
+    let scale = 1;
+
+    function applyScale() {
+      document.documentElement.style.fontSize = 16 * scale + "px";
+    }
+
+    inc.addEventListener("click", () => {
+      scale = Math.min(1.3, scale + 0.05);
+      applyScale();
+    });
+
+    dec.addEventListener("click", () => {
+      scale = Math.max(0.85, scale - 0.05);
+      applyScale();
+    });
+
+    /* this is chatbot behavior */
+    const chatbotBtn = document.getElementById("chatbot-btn");
+    const chatbotPanel = document.getElementById("chatbot-panel");
+    const chatInput = document.getElementById("chat-input");
+    const chatLog = document.getElementById("chat-log");
+
+    chatbotBtn.addEventListener("click", () => {
+      chatbotPanel.classList.toggle("hidden");
+    });
+
+    function botReply(text) {
+      let p = document.createElement("p");
+      p.classList.add("mb-2", "text-purple-600", "font-semibold");
+      p.innerText = text;
+      chatLog.appendChild(p);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    function userReply(text) {
+      let p = document.createElement("p");
+      p.classList.add("mb-2");
+      p.innerText = text;
+      chatLog.appendChild(p);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    chatInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && chatInput.value.trim() !== "") {
+        const q = chatInput.value.trim();
+        userReply("You: " + q);
+
+        /* this is chatbot canned responses */
+        if (q.includes("price") || q.includes("cost") || q.includes("how much")) {
+          botReply("BeatBox subscription tiers start at ten per month and go up based on merch level.");
+        } else if (q.includes("shipping")) {
+          botReply("Shipping takes three to five days depending on your location.");
+        } else if (q.includes("artist") || q.includes("who is")) {
+          botReply("The featured artist of the month is highlighted on our Featured Artist page.");
+        } else if (q.includes("cancel")) {
+          botReply("You can cancel anytime from the subscription settings page.");
+        } else {
+          botReply("I can help with pricing, shipping info, cancellations, and artist questions.");
+        }
+
+        chatInput.value = "";
+      }
+    });
+  </script>
+
+  <!-- this is EXTRA STYLES -->
+  <style>
+    .nav-link {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: black;
+      border-radius: 0.375rem;
+    }
+    .nav-link:hover {
+      background-color: rgba(31,41,55,0.05);
+    }
+    .dark .nav-link {
+      color: white;
+    }
+
+    .mobile-link {
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 0.375rem;
+      display: block;
+    }
+    .mobile-link:hover {
+      background-color: rgba(31,41,55,0.05);
+    }
+
+    .review-card {
+      border-radius: 1rem;
+      padding: 1rem;
+      border: 1px solid #e2e8f0;
+      background-color: white;
+    }
+    .dark .review-card {
+      background-color: #0f172a;
+      border-color: #374151;
+    }
+
+    .stars {
+      color: #f59e0b;
+      font-size: 1.125rem;
+    }
+  </style>
+
+</body>
 </html>
