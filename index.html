@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home Page</title>
+    <title>BeatBox Home</title>
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- 🟢 Enable class-based dark mode -->
+    <!-- Enable class-based dark mode -->
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -131,8 +131,34 @@
             >
           </div>
 
-          <!-- RIGHT: THEME TOGGLE -->
-          <div class="flex items-center">
+          <!-- RIGHT: FONT SIZE + THEME TOGGLE -->
+          <div class="flex items-center space-x-2">
+            <!-- Font size controls -->
+            <div
+              class="flex items-center rounded-full border border-slate-300 bg-slate-100 px-2 py-1 text-xs dark:border-slate-700 dark:bg-slate-800"
+            >
+              <button
+                id="font-decrease"
+                type="button"
+                class="px-2 text-sm font-semibold"
+                aria-label="Decrease font size"
+              >
+                A
+              </button>
+              <span
+                class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"
+              ></span>
+              <button
+                id="font-increase"
+                type="button"
+                class="px-2 text-base font-semibold"
+                aria-label="Increase font size"
+              >
+                A
+              </button>
+            </div>
+
+            <!-- Theme toggle -->
             <button
               id="theme-toggle"
               class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-600 transition"
@@ -145,7 +171,7 @@
         </div>
       </div>
 
-      <!-- <!-- MOBILE MENU -->
+      <!-- MOBILE MENU -->
       <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
         <a
           href="index.html"
@@ -185,54 +211,99 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="py-16 px-4 text-center"></main>
+    <!-- MAIN CONTENT: HERO SECTION -->
+    <main class="py-16 px-4">
+      <section
+        class="mx-auto flex max-w-6xl flex-col items-center gap-10 text-center md:flex-row md:text-left"
+      >
+        <!-- Left: Text -->
+        <div class="flex-1 space-y-6">
+          <p
+            class="inline rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-purple-700 dark:bg-purple-900/40 dark:text-purple-200"
+          >
+            Curated music boxes for rising artists
+          </p>
 
-    <!-- JS: Toggle theme & hamburger -->
-    <script>
-      // Dark mode toggle
-      const themeToggle = document.getElementById("theme-toggle");
-      themeToggle.addEventListener("click", () => {
-        const isDark = document.documentElement.classList.toggle("dark");
-        localStorage.theme = isDark ? "dark" : "light";
-      });
+          <h1
+            class="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+          >
+            BeatBox brings exclusive music, playlists, and merch straight to
+            your door.
+          </h1>
 
-      // Mobile menu toggle
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const menuOpenIcon = document.getElementById("menu-open-icon");
-      const menuCloseIcon = document.getElementById("menu-close-icon");
+          <p class="max-w-xl text-sm sm:text-base text-slate-600 dark:text-slate-300">
+            Every month, BeatBox curates a box that mixes physical merch,
+            digital playlists, and behind the scenes stories from up and coming
+            artists. Choose a subscription tier that fits your vibe and discover
+            music before it blows up.
+          </p>
 
-      menuToggle.addEventListener("click", () => {
-        const isHidden = mobileMenu.classList.toggle("hidden");
-        menuOpenIcon.classList.toggle("hidden", !isHidden);
-        menuCloseIcon.classList.toggle("hidden", isHidden);
-      });
-    </script>
+          <div class="flex flex-wrap items-center justify-center gap-4 md:justify-start">
+            <a
+              href="subscriptiontiers.html"
+              class="rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-300 dark:focus:ring-purple-700"
+            >
+              View subscription tiers
+            </a>
+            <a
+              href="featuredartist.html"
+              class="text-sm font-semibold text-purple-700 hover:text-purple-800 dark:text-purple-300 dark:hover:text-purple-200"
+            >
+              Meet the featured artist of the month
+            </a>
+          </div>
 
-    <script>
-      // Highlight the active link in the navbar
-      const currentPage = window.location.pathname.split("/").pop();
-      const navLinks = document.querySelectorAll("nav a");
+          <div
+            class="mt-4 grid gap-4 text-xs text-slate-600 dark:text-slate-300 sm:grid-cols-2"
+          >
+            <div>
+              <p class="font-semibold text-slate-800 dark:text-slate-100">
+                Hand picked every month
+              </p>
+              <p>
+                Our team listens to hundreds of tracks, live sessions, and demos
+                to build each box around a theme.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-slate-800 dark:text-slate-100">
+                Built for fans and creators
+              </p>
+              <p>
+                Whether you are a listener or an artist, BeatBox gives you a new
+                way to share and support the music you love.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      navLinks.forEach((link) => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add(
-            "bg-gray-100",
-            "dark:bg-gray-800",
-            "text-blue-600",
-            "dark:text-blue-400",
-            "hover:text-blue-600"
-          );
-        } else {
-          link.classList.remove(
-            "bg-gray-800",
-            "dark:bg-gray-800",
-            "text-blue-600",
-            "dark:text-blue-400"
-          );
-        }
-      });
-    </script>
+        <!-- Right: Visual -->
+        <div class="flex-1 flex justify-center">
+          <div
+            class="relative w-full max-w-md rounded-2xl border border-slate-200 bg-slate-900 p-4 text-left text-xs text-slate-100 shadow-xl dark:border-slate-700"
+          >
+            <div class="mb-3 flex items-center justify-between">
+              <p class="text-sm font-semibold">Next BeatBox drop</p>
+              <span class="text-[10px] text-purple-300"
+                >Lo-fi nights edition</span
+              >
+            </div>
+            <ul class="space-y-2 text-sm">
+              <li>Exclusive cassette tape from the featured artist</li>
+              <li>QR code playlist with unreleased tracks</li>
+              <li>Handwritten tracklist card</li>
+              <li>Sticker pack and mini poster for your wall</li>
+            </ul>
+            <p class="mt-4 text-[11px] text-slate-400">
+              Subscribe now to lock in this month box. Shipping and checkout are
+              simulated for this web development project.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="scripts/scripts.js"></script>
   </body>
 </html>
