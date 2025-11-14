@@ -145,7 +145,7 @@
         </div>
       </div>
 
-      <!-- <!-- MOBILE MENU -->
+      <!-- MOBILE MENU -->
       <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
         <a
           href="index.html"
@@ -185,8 +185,161 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="py-16 px-4 text-center"></main>
+    <div class="container mx-auto px-4 mt-10">
+      <!-- Page Header -->
+      <h1
+        class="text-3xl font-bold text-center mb-6 text-slate-900 dark:text-white"
+      >
+        Subscription Tier Details
+      </h1>
+
+      <!-- Optional subtitle -->
+      <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+        Explore our music subscription plans and what each tier includes.
+      </p>
+
+      <div class="container mx-auto px-4 mt-10">
+        <div
+          class="rounded-xl shadow-lg overflow-hidden border-4 border-cyan-200"
+        >
+          <table class="table-auto w-full">
+            <!-- Table header -->
+            <thead class="bg-gradient-to-r from-red-400 to-red-200 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left text-lg font-semibold">Tier</th>
+                <th class="px-4 py-3 text-left text-lg font-semibold">Price</th>
+                <th class="px-4 py-3 text-left text-lg font-semibold">
+                  Perks + Goodies
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white dark:bg-slate-900">
+              <!-- Listener -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  🎧 Listener 🎵
+                </td>
+
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $9.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Monthly digital playlist</li>
+                    <li>Exclusive artist newsletter</li>
+                    <li>Themed phone wallpapers</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <!-- Groover -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  🕺 Groover
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $19.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Everything in Listener</li>
+                    <li>Limited edition sticker pack</li>
+                    <li>Digital merch</li>
+                    <li>Discount code for artist merch</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <!-- Collector -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  💿 Collector 📦
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $39.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Everything in Groover</li>
+                    <li>1 vinyl/CD or cassette from the featured artist</li>
+                    <li>Small physical merch (e.g., tote, patch)</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <!-- Headliner -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  🎤 Headliner 🌟
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $59.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Everything in Collector</li>
+                    <li>Access to virtual listening parties</li>
+                    <li>Entries into concert ticket giveaways</li>
+                    <li>Premium collectibles</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action + Subscription Box Card -->
+    <div class="mt-10 text-center">
+      <p class="text-lg font-medium text-slate-900 dark:text-white mb-4">
+        Interested in joining? Grab your subscription box and start enjoying
+        exclusive music perks today!
+      </p>
+
+      <a
+        href="checkoutpage.html"
+        class="inline-block w-full max-w-md md:max-w-lg rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+      >
+        <img
+          src="images/beatbox_package.png"
+          alt="Subscription Box"
+          class="w-full h-80 object-cover"
+        />
+        <div class="p-6 bg-white dark:bg-slate-800">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+            Get Your Subscription Box!
+          </h2>
+          <p class="text-gray-600 dark:text-gray-300 text-lg">
+            Click here to go to the checkout page and grab your box.
+          </p>
+        </div>
+      </a>
+    </div>
 
     <!-- JS: Toggle theme & hamburger -->
     <script>
