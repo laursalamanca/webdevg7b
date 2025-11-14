@@ -8,7 +8,7 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Enable class-based dark mode -->
+    <!-- Enable class based dark mode -->
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -211,10 +211,11 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT: HERO SECTION -->
+    <!-- MAIN CONTENT -->
     <main class="px-6 py-10 lg:px-12 lg:py-16">
+      <!-- HERO SECTION FIRST -->
       <section
-        class="mx-auto flex max-w-6xl flex-col items-center gap-12 text-center md:flex-row md:text-left min-h-[calc(100vh-4rem)]"
+        class="mx-auto flex max-w-6xl flex-col items-center gap-12 text-center md:flex-row md:text-left"
       >
         <!-- Left: Text -->
         <div class="flex-1 space-y-6">
@@ -281,7 +282,7 @@
           </div>
         </div>
 
-        <!-- Right: Visual -->
+        <!-- Right: Visual card -->
         <div class="flex-1 flex justify-center">
           <div
             class="relative w-full max-w-md rounded-2xl border border-slate-200 bg-slate-900 p-6 text-left text-xs text-slate-100 shadow-xl dark:border-slate-700"
@@ -302,6 +303,77 @@
               Subscribe now to lock in this month box. Shipping and checkout are
               simulated for this web development project.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPONSOR IMAGE UNDER HERO -->
+      <section class="w-full mt-16 mb-10 px-2 flex justify-center">
+        <div class="rounded-2xl shadow-lg overflow-hidden w-full max-w-3xl">
+          <img
+            src="images/beatbox-sponsor.jpg"
+            alt="BeatBox Sponsored Artist"
+            class="w-full h-auto object-contain"
+          />
+        </div>
+      </section>
+
+      <!-- REVIEWS SECTION -->
+      <section class="mt-6 mb-10">
+        <div class="mx-auto max-w-6xl">
+          <h2
+            class="text-2xl sm:text-3xl font-bold text-center mb-6 text-slate-900 dark:text-white"
+          >
+            What listeners are saying
+          </h2>
+
+          <div
+            class="grid gap-6 md:grid-cols-3"
+          >
+            <!-- Review 1 -->
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+            >
+              <p class="text-yellow-400 text-lg mb-1">
+                ★★★★★
+              </p>
+              <p class="text-sm font-semibold mb-1">
+                BeatBox put me on to artists I never would have found on my own.
+              </p>
+              <p class="text-xs text-slate-500 dark:text-slate-300">
+                Maya from Boston
+              </p>
+            </article>
+
+            <!-- Review 2 -->
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+            >
+              <p class="text-yellow-400 text-lg mb-1">
+                ★★★★★
+              </p>
+              <p class="text-sm font-semibold mb-1">
+                The playlists and merch drops feel like they were made just for me.
+              </p>
+              <p class="text-xs text-slate-500 dark:text-slate-300">
+                Jordan from New York
+              </p>
+            </article>
+
+            <!-- Review 3 -->
+            <article
+              class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+            >
+              <p class="text-yellow-400 text-lg mb-1">
+                ★★★★★
+              </p>
+              <p class="text-sm font-semibold mb-1">
+                As an artist I love seeing new fans discover my music through BeatBox.
+              </p>
+              <p class="text-xs text-slate-500 dark:text-slate-300">
+                Nova independent artist
+              </p>
+            </article>
           </div>
         </div>
       </section>
