@@ -191,7 +191,22 @@
 
     <p class="font-bold mb-2 text-slate-800 dark:text-white">BeatBox Help Bot</p>
 
-    <div id="chat-log" class="h-40 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-slate-900"></div>
+    <div id="chat-log" class="h-40 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-slate-900">
+      <!-- this is initial helper text -->
+      <p class="mb-2 text-xs text-slate-500 dark:text-slate-400">
+        this is example questions you can ask:
+        "What are the subscription tiers"
+        "How much does BeatBox cost"
+        "How long is shipping"
+        "Who is the featured artist"
+        "How do I cancel"
+        "What is BeatBox"
+        "Do you ship internationally"
+        "How do I track my order"
+        "Do you have student discounts"
+        "clear"
+      </p>
+    </div>
 
     <input id="chat-input" 
            class="w-full p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
@@ -263,39 +278,127 @@
     });
 
     function botReply(text) {
+      /* this is bot reply element */
       let p = document.createElement("p");
       p.classList.add("mb-2", "text-purple-600", "font-semibold");
-      p.innerText = text;
+      p.innerText = "Bot: " + text;
       chatLog.appendChild(p);
       chatLog.scrollTop = chatLog.scrollHeight;
     }
 
     function userReply(text) {
+      /* this is user reply element */
       let p = document.createElement("p");
       p.classList.add("mb-2");
-      p.innerText = text;
+      p.innerText = "You: " + text;
       chatLog.appendChild(p);
       chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    function handleQuestion(rawText) {
+      /* this is question normalizer */
+      const q = rawText.trim();
+      const qLower = q.toLowerCase();
+
+      /* this is clear chat command */
+      if (qLower === "clear" || qLower === "reset" || qLower === "cls") {
+        chatLog.innerHTML = "";
+        botReply("Chat cleared. Ask me anything about BeatBox again.");
+        return;
+      }
+
+      /* this is greeting handler */
+      if (
+        qLower.includes("hi") ||
+        qLower.includes("hello") ||
+        qLower.includes("hey") ||
+        qLower.includes("yo")
+      ) {
+        botReply("Hey there. I am the BeatBox Help Bot. Ask me about pricing, shipping, tiers, the featured artist, or how subscriptions work.");
+        return;
+      }
+
+      /* this is what is beatbox handler */
+      if (qLower.includes("what is beatbox") || (qLower.includes("beatbox") && qLower.includes("what"))) {
+        botReply("BeatBox is a monthly music box subscription for rising artists. You get curated merch, playlists, and behind the scenes content in every box. This is a class project demo, so everything is simulated for now.");
+        return;
+      }
+
+      /* this is subscription tiers handler */
+      if (qLower.includes("tier") || qLower.includes("plan") || qLower.includes("subscription")) {
+        botReply("We imagine three tiers for BeatBox in this project. Starter Vibes around ten per month with digital playlists and stickers. Crowd Favorite around twenty five per month with merch like posters and exclusive tracks. Headliner around forty per month with premium items like apparel and limited prints.");
+        return;
+      }
+
+      /* this is pricing handler */
+      if (qLower.includes("price") || qLower.includes("cost") || qLower.includes("how much")) {
+        botReply("In this project demo, prices are not charged for real. Conceptually our tiers would start around ten per month and increase based on how much merch and exclusive content you want.");
+        return;
+      }
+
+      /* this is shipping handler */
+      if (qLower.includes("shipping") || qLower.includes("deliver") || qLower.includes("delivery") || qLower.includes("ship")) {
+        botReply("For the real version we would aim for three to five business days once your BeatBox ships. This site is a class project, so shipping here is just simulated messaging, not real packages.");
+        return;
+      }
+
+      /* this is international shipping handler */
+      if (qLower.includes("international") || qLower.includes("outside") || qLower.includes("country")) {
+        botReply("For now we focus on a United States based concept. A real launch could expand to international shipping, but this demo site does not process real international orders.");
+        return;
+      }
+
+      /* this is featured artist handler */
+      if (qLower.includes("featured artist") || qLower.includes("artist of the month") || qLower.includes("who is the artist")) {
+        botReply("Each month we highlight someone on the Featured Artist page with their story, playlists, and curated items in the box. Check the Featured Artist page in the navigation for the current spotlight.");
+        return;
+      }
+
+      /* this is cancel subscription handler */
+      if (qLower.includes("cancel") || qLower.includes("stop") || qLower.includes("end my subscription")) {
+        botReply("On a real production site you would cancel from your account subscription settings. Here it is just a project, so nothing actually bills or renews.");
+        return;
+      }
+
+      /* this is pause subscription handler */
+      if (qLower.includes("pause") || qLower.includes("hold") || qLower.includes("skip a month")) {
+        botReply("A real BeatBox account could include skip a month or pause features. In this demo we just show the concept, not live billing controls.");
+        return;
+      }
+
+      /* this is contact support handler */
+      if (qLower.includes("contact") || qLower.includes("email") || qLower.includes("support") || qLower.includes("help desk")) {
+        botReply("You can head to the Contact page in the top navigation. For the project description we use support at beatboxsound dot com as the sample support email.");
+        return;
+      }
+
+      /* this is track order handler */
+      if (qLower.includes("track") || qLower.includes("tracking") || qLower.includes("where is my box") || qLower.includes("order status")) {
+        botReply("In a real app you would get a tracking link by email when your BeatBox ships. Here everything is simulated so there is no real tracking number, just the idea of how it would work.");
+        return;
+      }
+
+      /* this is student discount handler */
+      if (qLower.includes("student") || qLower.includes("discount") || qLower.includes("promo")) {
+        botReply("Since this is a class project, there are no real promo codes or student discounts. A real BeatBox launch could definitely add student pricing or special promotions.");
+        return;
+      }
+
+      /* this is general help handler */
+      if (qLower.includes("help") || qLower.includes("what can you do") || qLower.includes("options")) {
+        botReply("I can answer questions about what BeatBox is, subscription tiers, prices, shipping, featured artists, cancellations, tracking concepts, and how to contact the BeatBox team in this project.");
+        return;
+      }
+
+      /* this is default fallback */
+      botReply("I am not sure about that one yet. Try asking about pricing, tiers, shipping, featured artists, cancelling, tracking, student discounts, or type clear to reset the chat.");
     }
 
     chatInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && chatInput.value.trim() !== "") {
         const q = chatInput.value.trim();
-        userReply("You: " + q);
-
-        /* this is chatbot canned responses */
-        if (q.includes("price") || q.includes("cost") || q.includes("how much")) {
-          botReply("BeatBox subscription tiers start at ten per month and go up based on merch level.");
-        } else if (q.includes("shipping")) {
-          botReply("Shipping takes three to five days depending on your location.");
-        } else if (q.includes("artist") || q.includes("who is")) {
-          botReply("The featured artist of the month is highlighted on our Featured Artist page.");
-        } else if (q.includes("cancel")) {
-          botReply("You can cancel anytime from the subscription settings page.");
-        } else {
-          botReply("I can help with pricing, shipping info, cancellations, and artist questions.");
-        }
-
+        userReply(q);
+        handleQuestion(q);
         chatInput.value = "";
       }
     });
