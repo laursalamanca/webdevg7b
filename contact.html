@@ -8,6 +8,9 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -237,7 +240,7 @@
                 Phone
               </dt>
               <dd class="text-slate-600 dark:text-slate-300">
-                978 555 1440
+                978-555-1440
               </dd>
             </div>
             <div>
@@ -245,8 +248,8 @@
                 Address
               </dt>
               <dd class="text-slate-600 dark:text-slate-300">
-                BeatBox Studios  
-                315 Turnpike Street  
+                BeatBox Studios<br />
+                315 Turnpike Street<br />
                 North Andover MA 01845
               </dd>
             </div>
@@ -298,6 +301,7 @@
             >
             <select
               id="topic"
+              required
               class="mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm shadow-sm focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
             >
               <option>Question about my subscription</option>
