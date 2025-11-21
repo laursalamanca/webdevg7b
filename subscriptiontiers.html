@@ -130,6 +130,20 @@
               >Contact Us</a
             >
           </div>
+          <!-- FONT SIZE CONTROLS -->
+          <div class="flex items-center space-x-2">
+            <div
+              class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs"
+            >
+              <button id="font-decrease" class="px-2 text-sm font-semibold">
+                A
+              </button>
+              <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
+              <button id="font-increase" class="px-2 text-base font-semibold">
+                A
+              </button>
+            </div>
+          </div>
 
           <!-- RIGHT: THEME TOGGLE -->
           <div class="flex items-center">
@@ -145,7 +159,7 @@
         </div>
       </div>
 
-      <!-- <!-- MOBILE MENU -->
+      <!-- MOBILE MENU -->
       <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
         <a
           href="index.html"
@@ -185,11 +199,196 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="py-16 px-4 text-center"></main>
+    <div class="container mx-auto px-4 mt-10">
+      <!-- Page Header -->
+      <h1
+        class="text-3xl font-bold text-center mb-6 text-slate-900 dark:text-white"
+      >
+        Subscription Tier Details
+      </h1>
+
+      <!-- Optional subtitle -->
+      <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+        Explore our music subscription plans and what each tier includes.
+      </p>
+
+      <div class="container mx-auto px-4 mt-10">
+        <div
+          class="rounded-xl shadow-lg overflow-hidden border-4 border-purple-600"
+        >
+          <table class="table-auto w-full">
+            <!-- Table header -->
+            <thead
+              class="bg-gradient-to-r from-cyan-400 to-cyan-100 text-white"
+            >
+              <tr>
+                <th class="px-4 py-3 text-left text-lg font-semibold">Tier</th>
+                <th class="px-4 py-3 text-left text-lg font-semibold">Price</th>
+                <th class="px-4 py-3 text-left text-lg font-semibold">
+                  Perks + Goodies
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white dark:bg-slate-900">
+              <!-- Listener -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  🎧 Listener 🎵
+                </td>
+
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $9.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Monthly digital playlist</li>
+                    <li>Exclusive artist newsletter</li>
+                    <li>Themed phone wallpapers</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <!-- Groover -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  🕺 Groover 💃
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $19.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Everything in Listener</li>
+                    <li>Limited edition sticker pack</li>
+                    <li>Digital merch</li>
+                    <li>Discount code for artist merch</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <!-- Collector -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  💿 Collector 📦
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $39.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Everything in Groover</li>
+                    <li>1 vinyl/CD or cassette from the featured artist</li>
+                    <li>Small physical merch (e.g., tote, patch)</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <!-- Headliner -->
+              <tr>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700 text-xl font-bold"
+                >
+                  🎤 Headliner 🎸
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  $59.99/mo
+                </td>
+                <td
+                  class="px-4 py-2 border-t border-gray-300 dark:border-gray-700"
+                >
+                  <ul class="list-disc ml-4">
+                    <li>Everything in Collector</li>
+                    <li>Access to virtual listening parties</li>
+                    <li>Entries into concert ticket giveaways</li>
+                    <li>Premium collectibles</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action + Subscription Box Card -->
+    <div class="mt-12 mb-12 text-center">
+      <p class="text-lg font-medium text-slate-900 dark:text-white mb-6">
+        Interested in joining? Grab your subscription box and start enjoying
+        exclusive music perks today!
+      </p>
+
+      <a
+        href="checkoutpage.html"
+        class="block mx-auto max-w-lg rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition transform hover:scale-105 duration-300"
+      >
+        <!-- Image -->
+        <img
+          src="images/beatbox_package.png"
+          alt="Subscription Box"
+          class="w-full h-96 object-cover bg-white dark:bg-slate-800"
+        />
+
+        <!-- Card content -->
+        <div class="p-6 bg-white dark:bg-gray-800 text-center">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3">
+            Get Your Subscription Box!
+          </h2>
+          <p class="text-gray-700 dark:text-gray-300 text-lg">
+            Click here to go to the checkout page and grab your box.
+          </p>
+          <button
+            class="mt-6 px-6 py-2 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 transition"
+          >
+            Grab Your Box
+          </button>
+        </div>
+      </a>
+    </div>
+
+    <br />
+    <br />
 
     <!-- JS: Toggle theme & hamburger -->
     <script>
+      // Font size controls
+      const inc = document.getElementById("font-increase");
+      const dec = document.getElementById("font-decrease");
+      let scale = 1;
+
+      function applyScale() {
+        document.documentElement.style.fontSize = 16 * scale + "px";
+      }
+
+      inc.addEventListener("click", () => {
+        scale = Math.min(1.3, scale + 0.05);
+        applyScale();
+      });
+
+      dec.addEventListener("click", () => {
+        scale = Math.max(0.85, scale - 0.05);
+        applyScale();
+      });
+
       // Dark mode toggle
       const themeToggle = document.getElementById("theme-toggle");
       themeToggle.addEventListener("click", () => {
