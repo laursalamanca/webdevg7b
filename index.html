@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BeatBox Home</title>
 
-  <!-- Tailwind for styling -->
+  <!-- this is tailwind for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    /* Enable dark mode support in Tailwind */
+    /* this is where we tell tailwind that we want dark mode classes */
     tailwind.config = { darkMode: "class" }
   </script>
 
-  <!-- Decide theme before paint so the page does not flash -->
+  <!-- this is where we decide the theme before the page shows so it does not flash -->
   <script>
     if (
       localStorage.theme === "dark" ||
@@ -30,27 +30,27 @@
 <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen">
 
   <!-- =============================== -->
-  <!--           TOP NAVBAR            -->
+  <!-- this is the top navigation bar  -->
   <!-- =============================== -->
   <nav class="bg-white dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-700">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
 
-        <!-- Brand logo and name -->
+        <!-- this is the brand logo and name -->
         <div class="flex items-center space-x-2">
           <span class="text-xl font-bold dark:text-white">BeatBox</span>
           <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
         </div>
 
-        <!-- Mobile button to open or close nav links -->
+        <!-- this is the mobile button that opens and closes nav links -->
         <div class="flex sm:hidden">
           <button id="menu-toggle" class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md">
-            <!-- three line icon when menu closed -->
+            <!-- this is the three line icon when the menu is closed -->
             <svg id="menu-open-icon" class="block h-6 w-6" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <!-- x icon when menu open -->
+            <!-- this is the x icon when the menu is open -->
             <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M6 18L18 6M6 6l12 12" />
@@ -58,7 +58,7 @@
           </button>
         </div>
 
-        <!-- Desktop navigation links -->
+        <!-- this is the desktop navigation links -->
         <div class="hidden sm:flex sm:space-x-4">
           <a href="index.html" class="nav-link">Home</a>
           <a href="about.html" class="nav-link">About</a>
@@ -69,16 +69,16 @@
           <a href="contact.html" class="nav-link">Contact Us</a>
         </div>
 
-        <!-- Right side controls for font size and theme -->
+        <!-- this is the right side with font size controls and theme toggle -->
         <div class="flex items-center space-x-2">
-          <!-- Font size controls -->
+          <!-- this is the font size control -->
           <div class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs">
             <button id="font-decrease" class="px-2 text-sm font-semibold">A</button>
             <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
             <button id="font-increase" class="px-2 text-base font-semibold">A</button>
           </div>
 
-          <!-- Theme toggle button -->
+          <!-- this is the theme toggle that flips between light and dark -->
           <button id="theme-toggle"
             class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600">
             🌗
@@ -88,7 +88,7 @@
       </div>
     </div>
 
-    <!-- Mobile navigation menu content -->
+    <!-- this is the mobile navigation menu content -->
     <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
       <a href="index.html" class="mobile-link">Home</a>
       <a href="about.html" class="mobile-link">About</a>
@@ -101,14 +101,14 @@
   </nav>
 
   <!-- =============================== -->
-  <!--           MAIN CONTENT          -->
+  <!-- this is the main content area   -->
   <!-- =============================== -->
   <main class="px-6 py-10 lg:px-12 lg:py-16 pt-20">
 
-    <!-- Hero section with feature text and sponsor image -->
+    <!-- this is the hero section with copy and the sponsor image -->
     <section class="mx-auto max-w-7xl grid gap-12 md:grid-cols-3 items-center">
 
-      <!-- Left side hero copy -->
+      <!-- this is the left side hero copy -->
       <div class="space-y-6 md:col-span-2">
         <p class="inline rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-200">
           Curated music boxes for rising artists
@@ -122,7 +122,7 @@
           Every month, BeatBox curates a box with merch, digital playlists, and behind the scenes artist content.
         </p>
 
-        <!-- Call to action buttons -->
+        <!-- this is the call to action button row -->
         <div class="flex flex-wrap gap-4">
           <a href="subscriptiontiers.html"
             class="rounded-lg bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-purple-700">
@@ -135,7 +135,7 @@
           </a>
         </div>
 
-        <!-- Two short feature blurbs -->
+        <!-- this is two short feature blurbs -->
         <div class="grid gap-4 text-sm text-slate-600 dark:text-slate-300 sm:grid-cols-2">
           <div>
             <p class="font-semibold dark:text-slate-100">Hand picked every month</p>
@@ -149,7 +149,7 @@
         </div>
       </div>
 
-      <!-- Right side image section -->
+      <!-- this is the right side hero image -->
       <div class="flex justify-end items-start">
         <img src="images/67.png"
              class="w-48 sm:w-60 lg:w-72 rounded-2xl shadow-lg object-cover"
@@ -158,7 +158,7 @@
 
     </section>
 
-    <!-- Simple reviews row -->
+    <!-- this is the simple reviews row -->
     <section class="mt-20">
       <div class="mx-auto max-w-7xl">
         <h2 class="text-3xl font-bold text-center mb-8">What listeners are saying</h2>
@@ -190,10 +190,10 @@
   </main>
 
   <!-- =============================== -->
-  <!--              CHATBOT            -->
+  <!-- this is the chatbot section     -->
   <!-- =============================== -->
 
-  <!-- Floating button with unread badge -->
+  <!-- this is the floating chat button with an unread badge -->
   <button id="chatbot-btn"
     class="fixed bottom-6 right-6 bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-purple-700 z-50 flex items-center space-x-2">
     <span>💬 Chat</span>
@@ -203,27 +203,30 @@
     </span>
   </button>
 
-  <!-- Chat panel container -->
+  <!-- this is the chat panel container -->
   <div id="chatbot-panel"
     class="hidden fixed bottom-20 right-6 w-80 md:w-[28rem] bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-4 z-50">
 
-    <!-- Header with title and controls -->
+    <!-- this is the header with title and controls -->
     <div class="flex items-center justify-between mb-2">
       <div class="flex flex-col">
         <p class="font-bold text-slate-800 dark:text-white">
           BeatBox Help Bot
         </p>
         <p id="chat-subtitle" class="text-xs text-slate-500 dark:text-slate-400">
-          Ask me about subscriptions, shipping, and more.
+          this is where you can ask about subscriptions, shipping, and more.
+        </p>
+        <p id="chat-status" class="text-[0.7rem] text-emerald-600 dark:text-emerald-400">
+          this is online right now
         </p>
       </div>
       <div class="flex items-center space-x-2">
-        <!-- Size toggle button for compact or large view -->
+        <!-- this is the size toggle button for compact or large view -->
         <button id="chat-size-toggle"
           class="text-xs px-2 py-1 rounded border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700">
           Large
         </button>
-        <!-- Close button -->
+        <!-- this is the close button -->
         <button id="chatbot-close"
           class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg leading-none px-1">
           ×
@@ -231,36 +234,36 @@
       </div>
     </div>
 
-    <!-- Two column layout on larger screens -->
+    <!-- this is the two column layout on bigger screens -->
     <div class="md:grid md:grid-cols-[2fr,1.3fr] md:gap-3">
 
-      <!-- Left column: chat log and input -->
+      <!-- this is the left column with chat log and input -->
       <div class="flex flex-col">
         <div class="relative">
-          <!-- Chat scroll area -->
+          <!-- this is the scroll area for chat messages -->
           <div id="chat-log"
                class="h-44 md:h-48 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-slate-900">
-            <!-- Helper text with many sample questions filled from JavaScript -->
+            <!-- this is helper text with many sample questions filled from javascript -->
             <p class="mb-2 text-xs text-slate-500 dark:text-slate-400">
               Try asking things like:
               <span id="helper-questions"></span>
             </p>
           </div>
 
-          <!-- Scroll to bottom pill -->
+          <!-- this is the pill that appears when there are new messages and you are scrolled up -->
           <button id="scroll-bottom-btn"
                   class="hidden absolute bottom-4 right-4 text-xs bg-purple-600 text-white px-3 py-1 rounded-full shadow">
             New messages
           </button>
         </div>
 
-        <!-- Typing indicator -->
+        <!-- this is the typing indicator -->
         <p id="typing-indicator"
            class="hidden text-[0.7rem] text-slate-500 dark:text-slate-400 mb-1">
-          Bot is typing...
+          this is the bot typing a reply...
         </p>
 
-        <!-- Quick suggestion chips -->
+        <!-- this is a row of quick suggestion chips -->
         <div class="flex flex-wrap gap-2 mb-2">
           <button class="suggest-chip" data-question="What are your subscription tiers">
             Tiers
@@ -282,7 +285,7 @@
           </button>
         </div>
 
-        <!-- Input row -->
+        <!-- this is the input row where you type and can clear -->
         <div class="flex items-center space-x-2">
           <input id="chat-input" 
                  class="flex-1 p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
@@ -292,12 +295,18 @@
             Clear
           </button>
         </div>
+
+        <!-- this is the toggle that controls auto open behavior -->
+        <label class="mt-2 flex items-center space-x-1 text-[0.7rem] text-slate-500 dark:text-slate-400">
+          <input type="checkbox" id="chat-autoopen-toggle" class="h-3 w-3">
+          <span>this is a switch so the chat does not pop open by itself next time</span>
+        </label>
       </div>
 
-      <!-- Right column: quick topics -->
+      <!-- this is the right column with quick topic buttons -->
       <div class="hidden md:flex md:flex-col md:border-l md:border-slate-200 md:dark:border-slate-700 md:pl-3 md:space-y-2 mt-3 md:mt-0">
         <p class="text-xs font-semibold text-slate-500 dark:text-slate-300 mb-1">
-          Quick topics
+          this is a list of quick topics
         </p>
         <button class="topic-btn" data-topic="subscriptions">
           Subscriptions and plans
@@ -317,18 +326,22 @@
         <button class="topic-btn" data-topic="support">
           Support and contact
         </button>
+        <button class="topic-btn" data-topic="gifts">
+          Gifts and gift plans
+        </button>
+        <button class="topic-btn" data-topic="rewards">
+          Rewards and referrals
+        </button>
       </div>
     </div>
   </div>
 
 
   <!-- =============================== -->
-  <!--            INLINE JS            -->
+  <!-- this is the inline javascript   -->
   <!-- =============================== -->
   <script>
-    /* =========================================
-       Theme toggle for light and dark
-       ========================================= */
+    /* this is the theme toggle that flips light and dark classes */
     const themeToggle = document.getElementById("theme-toggle");
     if (themeToggle) {
       themeToggle.addEventListener("click", () => {
@@ -337,9 +350,7 @@
       });
     }
 
-    /* =========================================
-       Mobile navigation open and close
-       ========================================= */
+    /* this is the logic that opens and closes the mobile navigation */
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const openIcon = document.getElementById("menu-open-icon");
@@ -353,9 +364,7 @@
       });
     }
 
-    /* =========================================
-       Highlight the current page in the nav
-       ========================================= */
+    /* this is where we highlight the current page in the nav bar */
     const path = window.location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll("nav a").forEach((a) => {
       if (a.getAttribute("href") === path) {
@@ -363,9 +372,7 @@
       }
     });
 
-    /* =========================================
-       Font size adjuster
-       ========================================= */
+    /* this is the font size adjuster that gently scales the html font size */
     const inc = document.getElementById("font-increase");
     const dec = document.getElementById("font-decrease");
     let scale = 1;
@@ -386,9 +393,7 @@
       });
     }
 
-    /* =========================================
-       Chatbot references
-       ========================================= */
+    /* this is the main set of references for the chatbot */
     const chatbotBtn = document.getElementById("chatbot-btn");
     const chatbotPanel = document.getElementById("chatbot-panel");
     const chatbotClose = document.getElementById("chatbot-close");
@@ -401,21 +406,21 @@
     const chatSizeToggle = document.getElementById("chat-size-toggle");
     const chatUnread = document.getElementById("chat-unread");
     const chatSubtitle = document.getElementById("chat-subtitle");
+    const chatStatus = document.getElementById("chat-status");
     const topicButtons = document.querySelectorAll(".topic-btn");
     const suggestChips = document.querySelectorAll(".suggest-chip");
+    const chatAutoOpenToggle = document.getElementById("chat-autoopen-toggle");
 
     const CHAT_HISTORY_KEY = "beatboxChatHistory";
     const CHAT_USER_KEY = "beatboxUserName";
     const CHAT_OPENED_KEY = "beatboxChatOpenedOnce";
+    const CHAT_AUTOOPEN_DISABLED_KEY = "beatboxChatAutoOpenDisabled";
 
     let isUserScrollingUp = false;
     let unreadCount = 0;
     let botTypingTimeout = null;
 
-    /* =========================================
-       Helper questions (one thousand total)
-       ========================================= */
-
+    /* this is the first batch of helper questions that look real */
     const baseQuestions = [
       "What are your subscription tiers",
       "How do I start a BeatBox subscription",
@@ -540,6 +545,7 @@
       "How do I clear this BeatBox chat"
     ];
 
+    /* this is where we pad the helper questions so we reach one thousand entries */
     const extraQuestionsNeeded = 1000 - baseQuestions.length;
 
     const extraQuestions = Array.from({ length: extraQuestionsNeeded }, (_, index) => {
@@ -553,10 +559,7 @@
       helperQuestionsSpan.textContent = sampleQuestions.join(", ");
     }
 
-    /* =========================================
-       Chat history and persistence
-       ========================================= */
-
+    /* this is where we handle chat history and persistence in local storage */
     function loadChatHistory() {
       try {
         const raw = localStorage.getItem(CHAT_HISTORY_KEY);
@@ -571,7 +574,7 @@
       try {
         localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(history));
       } catch (e) {
-        // ignore
+        // this is ignoring storage errors so the chat still works
       }
     }
 
@@ -587,12 +590,13 @@
       try {
         localStorage.setItem(CHAT_USER_KEY, name);
       } catch (e) {
-        // ignore
+        // this is ignoring storage errors
       }
     }
 
     let chatHistory = loadChatHistory();
     let storedName = getUserName();
+    let autoOpenDisabled = false;
 
     function formatTime(date) {
       const h = date.getHours();
@@ -602,6 +606,7 @@
       return hour12 + ":" + m + " " + suffix;
     }
 
+    /* this is where we append a single message into the dom with a tiny header line */
     function appendMessageToDom(sender, text, time) {
       if (!chatLog) return;
       const wrapper = document.createElement("div");
@@ -634,13 +639,14 @@
       chatLog.appendChild(wrapper);
     }
 
+    /* this is where we paint the chat history when the page loads */
     function renderChatHistory() {
       if (!chatLog) return;
       chatLog.innerHTML = "";
       if (chatHistory.length === 0) {
         const p = document.createElement("p");
         p.classList.add("mb-2", "text-xs", "text-slate-500", "dark:text-slate-400");
-        p.innerText = "Welcome to BeatBox Help Bot. Ask anything about subscriptions, shipping, billing, featured artists, or type clear to reset.";
+        p.innerText = "Welcome to BeatBox Help Bot. this is a space where you can ask about subscriptions, shipping, billing, featured artists, or type clear to reset.";
         chatLog.appendChild(p);
       } else {
         chatHistory.forEach(msg => {
@@ -652,6 +658,7 @@
 
     renderChatHistory();
 
+    /* this is a helper that adds a message to history and the dom */
     function addMessage(sender, text) {
       const time = formatTime(new Date());
       const entry = { sender, text, time };
@@ -669,6 +676,7 @@
       }
     }
 
+    /* this is the unread badge update logic */
     function updateUnreadBadge() {
       if (!chatUnread) return;
       if (unreadCount > 0 && !isPanelVisible()) {
@@ -688,10 +696,7 @@
       return chatbotPanel && !chatbotPanel.classList.contains("hidden");
     }
 
-    /* =========================================
-       Typing indicator with delay
-       ========================================= */
-
+    /* this is the typing indicator control */
     function showTyping() {
       if (!typingIndicator) return;
       typingIndicator.classList.remove("hidden");
@@ -702,6 +707,7 @@
       typingIndicator.classList.add("hidden");
     }
 
+    /* this is where the bot waits for a bit then replies so it feels alive */
     function botAnswerWithDelay(text) {
       showTyping();
       if (botTypingTimeout) {
@@ -713,10 +719,7 @@
       }, 600);
     }
 
-    /* =========================================
-       Name detection
-       ========================================= */
-
+    /* this is where we pick up the user name if they say my name is ... */
     function detectAndSaveName(text) {
       const lower = text.toLowerCase();
       const marker = "my name is ";
@@ -729,15 +732,15 @@
             setUserName(cleanName);
             storedName = cleanName;
             botAnswerWithDelay("Nice to meet you " + cleanName + ". I will use your name in this chat.");
+            if (chatSubtitle) {
+              chatSubtitle.textContent = "Hi " + cleanName + ". this is your BeatBox chat for quick questions.";
+            }
           }
         }
       }
     }
 
-    /* =========================================
-       Main question handler
-       ========================================= */
-
+    /* this is the main brain that decides how to answer a question */
     function handleQuestion(rawText) {
       const q = rawText.trim();
       const qLower = q.toLowerCase();
@@ -778,7 +781,7 @@
       }
 
       if (qLower.includes("price") || qLower.includes("cost") || qLower.includes("how much")) {
-        botAnswerWithDelay("Prices can shift with promotions and location, but Starter Vibes is planned around ten per month, Crowd Favorite around twenty five per month, and Headliner around forty per month.");
+        botAnswerWithDelay("Prices can move a little with promotions and location, but Starter Vibes is planned around ten per month, Crowd Favorite around twenty five per month, and Headliner around forty per month.");
         return;
       }
 
@@ -822,18 +825,35 @@
         return;
       }
 
-      if (qLower.includes("help") || qLower.includes("what can you do") || qLower.includes("options")) {
-        botAnswerWithDelay("I can help explain BeatBox subscription tiers, pricing, shipping, featured artists, cancelling or pausing, and how to contact support. You can also type clear to reset the chat.");
+      if (qLower.includes("gift")) {
+        botAnswerWithDelay("BeatBox gift plans are meant to be easy. You choose a length like three or six months, add a message, and we send boxes directly to the person you pick. In a full version they would get an email to set their shipping details and preferences.");
         return;
       }
 
-      botAnswerWithDelay("I am not sure about that one yet. Try asking about pricing, subscription tiers, shipping, featured artists, cancelling or pausing, order tracking, or type clear to reset the chat.");
+      if (qLower.includes("reward") || qLower.includes("points") || qLower.includes("loyalty")) {
+        botAnswerWithDelay("A BeatBox rewards system would let you earn points for each renewal, referrals, and special actions like sharing playlists. You could redeem points toward future boxes, limited items, or early access to special drops.");
+        return;
+      }
+
+      if (qLower.includes("refer") || qLower.includes("referral") || qLower.includes("friend")) {
+        botAnswerWithDelay("A BeatBox referral program would give you a personal link to share with friends. When they sign up through that link, they could get a welcome benefit and you could earn credit or rewards on your account.");
+        return;
+      }
+
+      if (qLower.includes("hours") || qLower.includes("when are you open") || qLower.includes("support hours")) {
+        botAnswerWithDelay("BeatBox support is planned to focus on business day coverage with extended evening hours. In a real launch we would show exact times based on your region and offer email support around the clock.");
+        return;
+      }
+
+      if (qLower.includes("help") || qLower.includes("what can you do") || qLower.includes("options")) {
+        botAnswerWithDelay("I can help explain BeatBox subscription tiers, pricing, shipping, featured artists, cancelling or pausing, gift plans, referrals, and how to contact support. You can also type clear to reset the chat.");
+        return;
+      }
+
+      botAnswerWithDelay("I am not sure about that one yet. Try asking about pricing, subscription tiers, shipping, featured artists, cancelling or pausing, gift options, order tracking, or type clear to reset the chat.");
     }
 
-    /* =========================================
-       Chat input listeners and clear
-       ========================================= */
-
+    /* this is a helper that sends the user question into the system */
     function sendUserQuestion(text) {
       const q = text.trim();
       if (!q) return;
@@ -841,9 +861,10 @@
       handleQuestion(q);
     }
 
+    /* this is where we listen for enter in the chat input */
     if (chatInput && chatLog) {
       chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" && chatInput.value.trim() !== "") {
+        if (e.key === "Enter" && !e.shiftKey && chatInput.value.trim() !== "") {
           const q = chatInput.value.trim();
           chatInput.value = "";
           sendUserQuestion(q);
@@ -851,6 +872,7 @@
       });
     }
 
+    /* this is the clear button that wipes local chat history */
     if (chatClearBtn) {
       chatClearBtn.addEventListener("click", () => {
         chatHistory = [];
@@ -862,7 +884,7 @@
       });
     }
 
-    /* Suggestion chips */
+    /* this is where the suggestion chips send canned questions */
     suggestChips.forEach(chip => {
       chip.addEventListener("click", () => {
         const question = chip.getAttribute("data-question") || "";
@@ -872,16 +894,19 @@
       });
     });
 
-    /* Topic buttons with richer answers */
+    /* this is extra topic info for the right column buttons */
     const topicAnswers = {
-      subscriptions: "BeatBox subscriptions are built around three planned tiers. Starter Vibes focuses on digital content and small merch, Crowd Favorite adds more exclusive tracks and physical items, and Headliner includes premium merch like apparel and limited prints. Plans are designed to renew monthly and eventually support skip and pause options so you stay in control.",
-      shipping: "BeatBox aims to ship boxes within a few days of your billing date. Once your box leaves our facility you receive an email with a tracking link. Most boxes are planned to arrive in about three to five business days, depending on the carrier and location. As we expand, we will explore international shipping options beyond the United States.",
-      billing: "BeatBox billing is planned to run on a recurring monthly schedule. You will be able to update your payment method, billing address, and preferred plan from your account settings. Promotional prices, student discounts, and bundle offers can be applied with promo codes during checkout when available.",
-      artists: "Each BeatBox cycle centers on a featured artist. That artist helps shape the playlists, stories, and merch inside the box. We focus on rising artists and independent talent while also exploring partnerships with labels, festivals, and brands. You will be able to discover new artists early and follow them beyond the box.",
-      account: "From your BeatBox account you will be able to manage your subscription, update shipping and billing details, change your plan, adjust your music preferences, and control email settings. Future updates may include profile badges, listening stats, and rewards for long time supporters.",
-      support: "If something is not right with your BeatBox order you can reach out through the Contact page or by using the support email listed there. When you contact support it helps to include your order number, the email tied to your account, and a short description of what happened so the team can respond quickly."
+      subscriptions: "BeatBox subscriptions are built around three planned tiers. Starter Vibes focuses on digital content and small merch, Crowd Favorite adds more exclusive tracks and physical items, and Headliner includes premium merch like apparel and limited prints. Plans renew monthly and are designed to support skip and pause options so you stay in control.",
+      shipping: "BeatBox boxes are prepared around your billing date and are planned to ship within a few days. When your box leaves our facility you receive tracking details by email. Most arrivals land in three to five business days, depending on the carrier and your address.",
+      billing: "BeatBox billing runs on a recurring monthly schedule. From your account you will be able to update your payment method, change your plan, and apply promotional codes where they are available. Student deals and bundles are shared through campaigns and partner events.",
+      artists: "Each BeatBox cycle centers on a featured artist. That artist helps shape the playlists, stories, and merch you receive. We pay a lot of attention to independent artists and rising talent, while also exploring label partnerships for special drops.",
+      account: "Your BeatBox account is the main place where you can update addresses, change your tier, adjust music preferences, manage email settings, and handle cancellation or pause choices. Future versions can layer in profile badges and listening stats.",
+      support: "Support for BeatBox lives on the Contact page and the support email listed there. If you reach out, it helps to include your order number, the email tied to your account, and a short description of the issue so the team can respond quickly.",
+      gifts: "BeatBox gift plans allow you to send boxes for a set number of months. You can add a note for the recipient and let them set up their own address and preferences through a welcome email.",
+      rewards: "BeatBox rewards and referrals are meant to thank long time fans. You can earn value from renewals, referrals, and community actions, and then trade that value in for discounts, special items, or early access boxes."
     };
 
+    /* this is where the topic buttons send a friendly summary */
     topicButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         const topic = btn.getAttribute("data-topic");
@@ -892,10 +917,7 @@
       });
     });
 
-    /* =========================================
-       Chat panel visibility and size
-       ========================================= */
-
+    /* this is chat panel visibility helpers and size toggle */
     function openChatPanel(fromAuto) {
       if (!chatbotPanel) return;
       chatbotPanel.classList.remove("hidden");
@@ -931,7 +953,7 @@
       });
     }
 
-    /* Size toggle between normal and larger */
+    /* this is the button that expands the panel width */
     if (chatSizeToggle && chatbotPanel) {
       chatSizeToggle.addEventListener("click", () => {
         const isLarge = chatbotPanel.classList.toggle("md:w-[32rem]");
@@ -939,23 +961,53 @@
       });
     }
 
-    /* Auto open once per session on page load */
+    /* this is where we read and set the auto open toggle state */
+    try {
+      autoOpenDisabled = localStorage.getItem(CHAT_AUTOOPEN_DISABLED_KEY) === "true";
+    } catch (e) {
+      autoOpenDisabled = false;
+    }
+
+    if (chatAutoOpenToggle) {
+      chatAutoOpenToggle.checked = autoOpenDisabled;
+      chatAutoOpenToggle.addEventListener("change", () => {
+        autoOpenDisabled = chatAutoOpenToggle.checked;
+        try {
+          localStorage.setItem(CHAT_AUTOOPEN_DISABLED_KEY, autoOpenDisabled ? "true" : "false");
+        } catch (e) {
+          // this is ignoring storage errors
+        }
+      });
+    }
+
+    /* this is auto open logic that only runs once a session if the user allows it */
     window.addEventListener("load", () => {
       const alreadyOpened = sessionStorage.getItem(CHAT_OPENED_KEY) === "true";
-      if (!alreadyOpened) {
+      if (!alreadyOpened && !autoOpenDisabled) {
         openChatPanel(true);
         sessionStorage.setItem(CHAT_OPENED_KEY, "true");
       }
+
+      /* this is where we set a friendly status line based on the time of day */
+      if (chatStatus) {
+        const now = new Date();
+        const hour = now.getHours();
+        if (hour >= 9 && hour < 18) {
+          chatStatus.textContent = "this is online right now and ready for questions.";
+        } else {
+          chatStatus.textContent = "this is usually online during the day, but you can still leave questions any time.";
+        }
+      }
     });
 
-    /* Close with Escape key */
+    /* this is escape key handling so you can close the chat quickly */
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && isPanelVisible()) {
         closeChatPanel();
       }
     });
 
-    /* Track scroll to show new message pill */
+    /* this is tracking scroll position so we can show the new messages pill */
     if (chatLog && scrollBottomBtn) {
       chatLog.addEventListener("scroll", () => {
         const nearBottom = chatLog.scrollHeight - chatLog.scrollTop - chatLog.clientHeight < 10;
@@ -976,14 +1028,14 @@
       });
     }
 
-    /* Update subtitle with name if stored */
+    /* this is where we adjust the subtitle if we already know the user name */
     if (storedName && chatSubtitle) {
-      chatSubtitle.textContent = "Hi " + storedName + ". Ask me anything about your BeatBox subscription.";
+      chatSubtitle.textContent = "Hi " + storedName + ". this is your BeatBox chat for quick questions.";
     }
   </script>
 
   <!-- =============================== -->
-  <!--         EXTRA STYLES            -->
+  <!-- this is extra style helpers     -->
   <!-- =============================== -->
   <style>
     .nav-link {
