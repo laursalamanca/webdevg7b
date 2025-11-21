@@ -105,63 +105,173 @@
   <!-- =============================== -->
   <main class="px-6 py-10 lg:px-12 lg:py-16 pt-20">
 
-    <!-- this is the hero section with text and sponsor image -->
-    <section class="mx-auto max-w-7xl grid gap-12 md:grid-cols-3 items-center">
-
-      <!-- this is the left side hero text section -->
-      <div class="space-y-6 md:col-span-2">
-        <p class="inline rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-200">
-          Curated music boxes for rising artists
-        </p>
-
-        <h1 class="text-5xl font-bold leading-tight">
-          BeatBox brings exclusive music, playlists, and merch straight to your door.
-        </h1>
-
-        <p class="text-lg max-w-xl text-slate-600 dark:text-slate-300">
-          Every month, BeatBox curates a box with merch, digital playlists, and behind the scenes artist content.
-        </p>
-
-        <!-- this is the main call to action buttons -->
-        <div class="flex flex-wrap gap-4">
-          <a href="subscriptiontiers.html"
-            class="rounded-lg bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-purple-700">
-            View subscription tiers
-          </a>
-
-          <a href="featuredartist.html"
-            class="text-sm font-semibold text-purple-700 dark:text-purple-300">
-            Meet the featured artist
-          </a>
-        </div>
-
-        <!-- this is a quick feature grid -->
-        <div class="grid gap-4 text-sm text-slate-600 dark:text-slate-300 sm:grid-cols-2">
-          <div>
-            <p class="font-semibold dark:text-slate-100">Hand picked every month</p>
-            <p>Our team listens to many records and demos so you can discover new artists early.</p>
-          </div>
-
-          <div>
-            <p class="font-semibold dark:text-slate-100">Built for fans and creators</p>
-            <p>Support rising artists while getting exclusive content and merch in every BeatBox.</p>
-          </div>
-        </div>
+    <!-- hero with soft gradient glow -->
+    <section class="relative mx-auto max-w-7xl">
+      <!-- background glow -->
+      <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-24 -left-16 h-64 w-64 rounded-full bg-purple-300/40 blur-3xl dark:bg-purple-700/40"></div>
+        <div class="absolute -bottom-24 -right-10 h-64 w-64 rounded-full bg-indigo-300/40 blur-3xl dark:bg-indigo-700/40"></div>
       </div>
 
-      <!-- this is the sponsor or artist image on the right side -->
-      <div class="flex justify-end items-start">
-        <img src="images/67.png"
-             class="w-48 sm:w-60 lg:w-72 rounded-2xl shadow-lg object-cover"
-             alt="BeatBox featured artist" />
-      </div>
+      <div class="grid gap-12 md:grid-cols-3 items-center">
 
+        <!-- left side hero text -->
+        <div class="space-y-6 md:col-span-2">
+          <p class="inline rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 shadow-sm">
+            Curated music boxes for rising artists
+          </p>
+
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+            BeatBox brings exclusive music, playlists, and merch straight to your door.
+          </h1>
+
+          <p class="text-lg max-w-xl text-slate-600 dark:text-slate-300">
+            Every month, BeatBox curates a box with merch, digital playlists, and behind the scenes artist content so you feel closer to the music you love.
+          </p>
+
+          <!-- stats strip -->
+          <div class="grid grid-cols-3 gap-4 text-xs sm:text-sm">
+            <div class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700">
+              <p class="text-2xl font-semibold text-purple-600 dark:text-purple-300">25+</p>
+              <p class="text-slate-500 dark:text-slate-300">featured artists imagined for this concept</p>
+            </div>
+            <div class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700">
+              <p class="text-2xl font-semibold text-purple-600 dark:text-purple-300">4</p>
+              <p class="text-slate-500 dark:text-slate-300">curated playlists planned for each box</p>
+            </div>
+            <div class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700">
+              <p class="text-2xl font-semibold text-purple-600 dark:text-purple-300">100%</p>
+              <p class="text-slate-500 dark:text-slate-300">built in class as a design concept</p>
+            </div>
+          </div>
+
+          <!-- main call to action buttons -->
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="subscriptiontiers.html"
+              class="rounded-xl bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 hover:bg-purple-700">
+              View subscription tiers
+            </a>
+
+            <a href="featuredartist.html"
+              class="text-sm font-semibold text-purple-700 dark:text-purple-300 underline-offset-4 hover:underline">
+              Meet the featured artist
+            </a>
+          </div>
+
+          <!-- genres row -->
+          <div class="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-300 pt-2">
+            <span class="mr-1 text-slate-600 dark:text-slate-200">Genres imagined for BeatBox:</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Alt RnB</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Indie Rap</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Bedroom Pop</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Lo Fi Nights</span>
+          </div>
+        </div>
+
+        <!-- right side image with card under it -->
+        <div class="flex flex-col items-end gap-3">
+          <div class="relative">
+            <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-purple-500/30 via-indigo-500/20 to-blue-500/20 blur-xl"></div>
+            <div class="relative rounded-2xl shadow-xl overflow-hidden">
+              <img src="images/67.png"
+                   class="w-56 sm:w-64 lg:w-72 object-cover"
+                   alt="BeatBox featured artist" />
+            </div>
+          </div>
+
+          <!-- Sponsored by BeatBox card moved outside the image -->
+          <div class="w-full max-w-xs rounded-2xl border border-slate-800 bg-black/85 text-white p-3 text-xs shadow-lg">
+            <p class="font-semibold flex items-center justify-between">
+              <span>Sponsored by BeatBox</span>
+              <span class="text-[0.6rem] px-2 py-0.5 rounded-full bg-white/10 border border-white/20">
+                Concept drop
+              </span>
+            </p>
+            <p class="mt-1 text-[0.7rem] text-slate-100">
+              This section imagines a real partnership with a rising artist whose story is told through your box.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- this is a simple reviews row -->
+    <!-- as seen on style strip -->
+    <section class="mt-14">
+      <div class="mx-auto max-w-7xl border border-slate-200/70 dark:border-slate-700/80 rounded-2xl px-4 py-3 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur">
+        <div class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
+          <p class="font-medium text-slate-600 dark:text-slate-200 flex items-center gap-1">
+            <span class="text-base">✨</span>
+            <span>Imagined for students and music fans</span>
+          </p>
+          <div class="flex flex-wrap items-center gap-3 text-slate-500 dark:text-slate-300">
+            <span class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]">Campus project</span>
+            <span class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]">Design concept</span>
+            <span class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]">No real billing here</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- how it works fancy steps -->
+    <section class="mt-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-8">
+          <div>
+            <h2 class="text-3xl font-bold">How BeatBox could work</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-300 max-w-xl mt-1">
+              This flow explains the idea behind the product. In this class project you can explore the pages without any real checkout.
+            </p>
+          </div>
+          <a href="howitworks.html" class="text-sm text-purple-700 dark:text-purple-300 underline-offset-4 hover:underline">
+            See full walkthrough
+          </a>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold">1</span>
+              <span class="text-xs text-slate-400 dark:text-slate-500">Choose your vibe</span>
+            </div>
+            <p class="font-semibold mb-1">Pick a subscription tier</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              Browse the Subscription Tiers page to see which mix of digital perks and imagined merch feels right for you.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold">2</span>
+              <span class="text-xs text-slate-400 dark:text-slate-500">Meet the artist</span>
+            </div>
+            <p class="font-semibold mb-1">Discover the featured story</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              Visit the Featured Artist page to imagine the story, inspirations, and tracks that would shape this months box.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold">3</span>
+              <span class="text-xs text-slate-400 dark:text-slate-500">Unbox and repeat</span>
+            </div>
+            <p class="font-semibold mb-1">Experience the drop</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300">
+              In a real product this is where you would unbox playlists, stories, and merch, then check your next cycle from your account page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews row -->
     <section class="mt-20">
       <div class="mx-auto max-w-7xl">
-        <h2 class="text-3xl font-bold text-center mb-8">What listeners are saying</h2>
+        <h2 class="text-3xl font-bold text-center mb-3">What listeners are saying</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-300 text-center mb-8">
+          These quotes are written for this project so you can see how reviews might look in a live product.
+        </p>
 
         <div class="grid gap-8 md:grid-cols-3">
 
@@ -187,6 +297,39 @@
       </div>
     </section>
 
+    <!-- gradient call to action -->
+    <section class="mt-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 text-white px-6 py-8 sm:px-10 sm:py-10 shadow-xl">
+          <div class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/10 blur-2xl"></div>
+          <div class="absolute -left-10 bottom-0 h-40 w-40 rounded-full bg-black/10 blur-2xl"></div>
+
+          <div class="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-white/70 mb-1">BeatBox concept preview</p>
+              <h3 class="text-2xl sm:text-3xl font-bold mb-2">
+                Ready to explore the rest of the BeatBox story
+              </h3>
+              <p class="text-sm sm:text-base text-white/80 max-w-xl">
+                Jump into the Subscription Tiers, Featured Artist, and How It Works pages to see how this experience comes together as a full design project.
+              </p>
+            </div>
+            <div class="flex flex-col items-start gap-3">
+              <a href="subscriptiontiers.html"
+                 class="inline-flex items-center justify-center rounded-xl bg-white text-purple-700 px-5 py-2.5 text-sm font-semibold shadow-lg shadow-black/20 hover:bg-slate-100">
+                Explore tiers and pricing
+              </a>
+              <button
+                 onclick="window.location.href='contact.html';"
+                 class="inline-flex items-center justify-center rounded-xl border border-white/70 bg-white/5 px-4 py-2 text-xs font-medium text-white/90 backdrop-blur hover:bg-white/10">
+                Share feedback on this concept
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- =============================== -->
@@ -207,10 +350,9 @@
   <div id="chatbot-panel"
     class="hidden fixed bottom-20 right-6 w-80 md:w-[28rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur border border-purple-300 dark:border-purple-700 rounded-xl shadow-2xl p-4 z-50 transition-all duration-300 transform translate-y-4 opacity-0 chat-closed">
 
-    <!-- this is the header area with title and controls -->
+    <!-- header area -->
     <div class="flex items-center justify-between mb-2">
       <div class="flex items-center space-x-2">
-        <!-- this is a little avatar for the bot -->
         <div class="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm">
           🎧
         </div>
@@ -224,17 +366,14 @@
         </div>
       </div>
       <div class="flex items-center space-x-2">
-        <!-- this is the size toggle button that flips between compact and large -->
         <button id="chat-size-toggle"
           class="text-xs px-2 py-1 rounded border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700">
           Large
         </button>
-        <!-- this is a minimize button that hides the panel but keeps unread counts -->
         <button id="chat-minimize"
           class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-base leading-none px-1">
           ▾
         </button>
-        <!-- this is the close button that fully closes the panel -->
         <button id="chatbot-close"
           class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg leading-none px-1">
           ×
@@ -242,26 +381,22 @@
       </div>
     </div>
 
-    <!-- this is a two column layout on larger screens -->
+    <!-- layout -->
     <div class="md:grid md:grid-cols-[2fr,1.4fr] md:gap-3">
 
-      <!-- this is the left column with chat messages and input -->
+      <!-- chat column -->
       <div class="flex flex-col">
         <div class="relative">
-          <!-- this is the scroll area where messages live -->
           <div id="chat-log"
                class="h-44 md:h-52 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50/90 dark:bg-slate-950/80">
-            <!-- this is the starter helper text if there is no history yet, it gets replaced in JS -->
           </div>
 
-          <!-- this is a pill that pops up when there are new messages further down -->
           <button id="scroll-bottom-btn"
                   class="hidden absolute bottom-4 right-4 text-xs bg-purple-600 text-white px-3 py-1 rounded-full shadow">
             New messages
           </button>
         </div>
 
-        <!-- this is a little typing indicator so it feels more alive -->
         <p id="typing-indicator"
            class="hidden text-[0.7rem] text-slate-500 dark:text-slate-400 mb-1 flex items-center space-x-1">
           <span>Bot is typing</span>
@@ -272,7 +407,6 @@
           </span>
         </p>
 
-        <!-- this is a row of quick suggestion chips -->
         <div class="flex flex-wrap gap-2 mb-2">
           <button class="suggest-chip" data-question="What are your subscription tiers">
             Tiers
@@ -294,14 +428,12 @@
           </button>
         </div>
 
-        <!-- this is a tiny auto suggestion line below the input -->
         <p id="input-suggestion"
            class="text-[0.7rem] text-slate-500 dark:text-slate-400 mb-1 h-4 overflow-hidden">
         </p>
 
-        <!-- this is the input row with clear and save and export tools -->
         <div class="flex items-center space-x-2 mb-1">
-          <input id="chat-input" 
+          <input id="chat-input"
                  class="flex-1 p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
                  placeholder="Ask a question or type /help..." />
           <button id="chat-clear"
@@ -310,7 +442,6 @@
           </button>
         </div>
 
-        <!-- this is a small row for save last question and export actions -->
         <div class="flex items-center justify-between text-[0.7rem] mt-1">
           <button id="save-last-question"
                   class="text-purple-700 dark:text-purple-300 hover:underline">
@@ -323,10 +454,9 @@
         </div>
       </div>
 
-      <!-- this is the right column with topics, faq, favorites, news -->
+      <!-- info column -->
       <div class="hidden md:flex md:flex-col md:border-l md:border-slate-200 md:dark:border-slate-700 md:pl-3 md:space-y-3 mt-3 md:mt-0 text-xs">
 
-        <!-- this is a small daily tip section -->
         <div class="border border-slate-200 dark:border-slate-700 rounded-lg p-2 bg-slate-50/80 dark:bg-slate-950/60">
           <p class="font-semibold text-slate-700 dark:text-slate-200 mb-1">
             BeatBox daily tip
@@ -335,7 +465,6 @@
           </p>
         </div>
 
-        <!-- this is a quick topics section -->
         <div>
           <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
             Quick topics
@@ -362,7 +491,6 @@
           </div>
         </div>
 
-        <!-- this is a tiny faq section using details summary style -->
         <div>
           <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
             Fast questions
@@ -383,7 +511,6 @@
           </div>
         </div>
 
-        <!-- this is a favorites section for saved questions -->
         <div>
           <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
             Saved questions
@@ -392,7 +519,6 @@
           </ul>
         </div>
 
-        <!-- this is a recent questions section -->
         <div>
           <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
             Recent questions
@@ -401,7 +527,6 @@
           </ul>
         </div>
 
-        <!-- this is a small news feed style block -->
         <div>
           <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
             BeatBox news preview
@@ -422,7 +547,7 @@
   <!--            INLINE JS            -->
   <!-- =============================== -->
   <script>
-    /* this is the theme toggle for light and dark */
+    /* theme toggle */
     const themeToggle = document.getElementById("theme-toggle");
     if (themeToggle) {
       themeToggle.addEventListener("click", () => {
@@ -431,7 +556,7 @@
       });
     }
 
-    /* this is the mobile navigation open and close behavior */
+    /* mobile navigation behavior */
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const openIcon = document.getElementById("menu-open-icon");
@@ -445,7 +570,7 @@
       });
     }
 
-    /* this is where we highlight the current page in the nav */
+    /* highlight current nav link */
     const path = window.location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll("nav a").forEach((a) => {
       if (a.getAttribute("href") === path) {
@@ -453,7 +578,7 @@
       }
     });
 
-    /* this is the font size adjuster for the whole document */
+    /* font size adjuster */
     const inc = document.getElementById("font-increase");
     const dec = document.getElementById("font-decrease");
     let scale = 1;
@@ -474,7 +599,7 @@
       });
     }
 
-    /* this is the big block that wires up the chatbot */
+    /* chatbot wiring */
     const chatbotBtn = document.getElementById("chatbot-btn");
     const chatbotPanel = document.getElementById("chatbot-panel");
     const chatbotClose = document.getElementById("chatbot-close");
@@ -508,11 +633,10 @@
     let unreadCount = 0;
     let botTypingTimeout = null;
     let lastTopic = "";
-       let lastUserQuestion = "";
+    let lastUserQuestion = "";
     let favoriteQuestions = [];
     let recentQuestions = [];
 
-    /* this is a quick in browser audio beep for send and receive, no external files needed */
     function playBeep(frequency) {
       try {
         const AudioContextClass = window.AudioContext || window.webkitAudioContext;
@@ -529,22 +653,18 @@
         osc.start();
         osc.stop(ctx.currentTime + 0.16);
       } catch (e) {
-        // this is where we quietly give up if the browser says no
       }
     }
 
-    /* this is a tiny helper to vibrate on mobile when something sends */
     function vibrateIfPossible(pattern) {
       try {
         if (navigator.vibrate) {
           navigator.vibrate(pattern);
         }
       } catch (e) {
-        // this is fine, some browsers do not like this
       }
     }
 
-    /* this is the big helper questions list which we keep at one thousand entries */
     const baseQuestions = [
       "What are your subscription tiers",
       "How do I start a BeatBox subscription",
@@ -677,7 +797,6 @@
 
     const sampleQuestions = baseQuestions.concat(extraQuestions);
 
-    /* this is where we would print helper questions if we wanted them inline in the header text */
     if (chatLog && chatLog.children.length === 0) {
       const p = document.createElement("p");
       p.classList.add("mb-2", "text-xs", "text-slate-500", "dark:text-slate-400");
@@ -697,7 +816,6 @@
       chatLog.appendChild(helper);
     }
 
-    /* this is where we load and save simple data into local storage */
     function safeGet(key) {
       try {
         return localStorage.getItem(key);
@@ -710,7 +828,6 @@
       try {
         localStorage.setItem(key, value);
       } catch (e) {
-        // this is okay if the browser blocks storage
       }
     }
 
@@ -773,7 +890,6 @@
     favoriteQuestions = loadFavorites();
     recentQuestions = loadRecent();
 
-    /* this is a friendly time formatter for messages */
     function formatTime(date) {
       const h = date.getHours();
       const m = date.getMinutes().toString().padStart(2, "0");
@@ -782,7 +898,6 @@
       return hour12 + ":" + m + " " + suffix;
     }
 
-    /* this is where we append a message bubble into the chat log with simple avatars and time */
     function appendMessageToDom(sender, text, time) {
       if (!chatLog) return;
       const wrapper = document.createElement("div");
@@ -831,7 +946,6 @@
       inner.appendChild(meta);
       inner.appendChild(body);
 
-      /* this is where we attach simple rating buttons for bot answers */
       if (sender === "bot") {
         const actions = document.createElement("div");
         actions.classList.add("mt-0.5", "flex", "items-center", "space-x-2", "text-[0.65rem]", "text-slate-400");
@@ -863,7 +977,6 @@
       chatLog.appendChild(wrapper);
     }
 
-    /* this is where we render chat history back into the log on page load */
     function renderChatHistory() {
       if (!chatLog) return;
       chatLog.innerHTML = "";
@@ -882,7 +995,6 @@
 
     renderChatHistory();
 
-    /* this is where we show favorites and recent questions */
     function renderFavorites() {
       if (!favoritesList) return;
       favoritesList.innerHTML = "";
@@ -930,7 +1042,6 @@
     renderFavorites();
     renderRecent();
 
-    /* this is where we add a new message to history and the screen */
     function addMessage(sender, text) {
       const time = formatTime(new Date());
       const entry = { sender, text, time };
@@ -954,7 +1065,6 @@
       }
     }
 
-    /* this is where we update the little unread bubble on the chat button */
     function updateUnreadBadge() {
       if (!chatUnread) return;
       if (unreadCount > 0 && !isPanelVisible()) {
@@ -974,7 +1084,6 @@
       return chatbotPanel && !chatbotPanel.classList.contains("hidden");
     }
 
-    /* this is the typing indicator logic */
     function showTyping() {
       if (!typingIndicator) return;
       typingIndicator.classList.remove("hidden");
@@ -985,7 +1094,6 @@
       typingIndicator.classList.add("hidden");
     }
 
-    /* this is a helper for a single bot answer that waits a short moment */
     function botAnswerWithDelay(text) {
       showTyping();
       if (botTypingTimeout) {
@@ -998,7 +1106,6 @@
       }, 600);
     }
 
-    /* this is a helper for multi step bot conversations */
     function botConversation(messages) {
       let delay = 0;
       messages.forEach(msg => {
@@ -1009,7 +1116,6 @@
       });
     }
 
-    /* this is where we detect and remember the user name if they type it */
     function detectAndSaveName(text) {
       const lower = text.toLowerCase();
       const marker = "my name is ";
@@ -1030,14 +1136,12 @@
       }
     }
 
-    /* this is a tiny sentiment check so the bot can respond more kindly if you sound stressed */
     function checkSentiment(text) {
       const lower = text.toLowerCase();
       const badWords = ["frustrated", "angry", "upset", "mad", "annoyed", "confused", "stressed"];
       return badWords.some(w => lower.includes(w));
     }
 
-    /* this is where we handle slash commands like /pricing or /help */
     function handleCommand(qLower) {
       if (qLower === "/pricing") {
         lastTopic = "pricing";
@@ -1075,7 +1179,6 @@
       return false;
     }
 
-    /* this is the main question handler that picks a response based on keywords */
     function handleQuestion(rawText) {
       const q = rawText.trim();
       const qLower = q.toLowerCase();
@@ -1212,7 +1315,6 @@
       botAnswerWithDelay("I am not sure about that one yet. Try asking about pricing, subscription tiers, shipping, featured artists, cancelling or pausing, order tracking, or type clear to reset the chat.");
     }
 
-    /* this is the function that sends a user question and feeds it into the handler */
     function sendUserQuestion(text) {
       const q = text.trim();
       if (!q) return;
@@ -1221,7 +1323,6 @@
       handleQuestion(q);
     }
 
-    /* this is where we track recent questions and update that side list */
     function addToRecent(q) {
       if (!q) return;
       recentQuestions.unshift(q);
@@ -1230,7 +1331,6 @@
       renderRecent();
     }
 
-    /* this is where we save the last question into favorites */
     function saveLastQuestion() {
       if (!lastUserQuestion) return;
       if (!favoriteQuestions.includes(lastUserQuestion)) {
@@ -1242,7 +1342,6 @@
       }
     }
 
-    /* this is the input event handler */
     if (chatInput && chatLog) {
       chatInput.addEventListener("keydown", (e) => {
         if (e.key === "Enter" && chatInput.value.trim() !== "") {
@@ -1267,7 +1366,6 @@
       });
     }
 
-    /* this is the clear button logic */
     if (chatClearBtn) {
       chatClearBtn.addEventListener("click", () => {
         chatHistory = [];
@@ -1279,7 +1377,6 @@
       });
     }
 
-    /* this is where suggestion chips send a full question for you */
     suggestChips.forEach(chip => {
       chip.addEventListener("click", () => {
         const question = chip.getAttribute("data-question") || "";
@@ -1289,7 +1386,6 @@
       });
     });
 
-    /* this is where topic buttons give richer topic answers */
     const topicAnswers = {
       subscriptions: "BeatBox subscriptions are built around three planned tiers. Starter Vibes focuses on digital content and small merch, Crowd Favorite adds more exclusive tracks and physical items, and Headliner includes premium merch like apparel and limited prints. Plans are designed to renew monthly and eventually support skip and pause options so you stay in control.",
       shipping: "BeatBox aims to ship boxes within a few days of your billing date. Once your box leaves the fulfillment center you receive an email with a tracking link. Most boxes are planned to arrive in about three to five business days, and future versions could show live estimated delivery windows right in your account.",
@@ -1309,14 +1405,12 @@
       });
     });
 
-    /* this is where we wire up saving the last question into favorites */
     if (saveLastQuestionBtn) {
       saveLastQuestionBtn.addEventListener("click", () => {
         saveLastQuestion();
       });
     }
 
-    /* this is a simple export that opens the chat in a new printable window */
     if (exportChatBtn) {
       exportChatBtn.addEventListener("click", () => {
         const win = window.open("", "_blank");
@@ -1338,7 +1432,6 @@
       });
     }
 
-    /* this is a little daily tip generator */
     const dailyTips = [
       "this is a tip. If you want a quick summary of BeatBox, ask the bot What is BeatBox in simple terms.",
       "this is a tip. Try the command /pricing if you only care about how much the tiers might cost.",
@@ -1362,11 +1455,9 @@
 
     showDailyTipOncePerDay();
 
-    /* this is where we control chat panel visibility and animation */
     function openChatPanel(fromAuto) {
       if (!chatbotPanel) return;
 
-      // always reset to compact width when opening
       chatbotPanel.classList.remove("md:w-[32rem]");
       if (chatSizeToggle) {
         chatSizeToggle.textContent = "Large";
@@ -1417,7 +1508,6 @@
       });
     }
 
-    /* this is the size toggle for the chat panel */
     if (chatSizeToggle && chatbotPanel) {
       chatSizeToggle.addEventListener("click", () => {
         const isLarge = chatbotPanel.classList.toggle("md:w-[32rem]");
@@ -1425,23 +1515,15 @@
       });
     }
 
-    /* this is where we auto open once per session on page load */
-    window.addEventListener("load", () => {
-      const alreadyOpened = sessionStorage.getItem(CHAT_OPENED_KEY) === "true";
-      if (!alreadyOpened) {
-        openChatPanel(true);
-        sessionStorage.setItem(CHAT_OPENED_KEY, "true");
-      }
-    });
+    /* removed the automatic open on page load
+       so the chat stays closed until the user clicks Chat */
 
-    /* this is where escape closes the chat */
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && isPanelVisible()) {
         closeChatPanel();
       }
     });
 
-    /* this is where we watch scroll and show the new messages pill */
     if (chatLog && scrollBottomBtn) {
       chatLog.addEventListener("scroll", () => {
         const nearBottom = chatLog.scrollHeight - chatLog.scrollTop - chatLog.clientHeight < 10;
@@ -1462,7 +1544,6 @@
       });
     }
 
-    /* this is where we update the subtitle with a saved name if we already know it */
     if (storedName && chatSubtitle) {
       chatSubtitle.textContent = "Hi " + storedName + ". this is your BeatBox assistant, ask anything about your subscription.";
     }
