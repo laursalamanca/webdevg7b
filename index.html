@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BeatBox Home</title>
 
-  <!-- this is where we pull in Tailwind for styling -->
+  <!-- This is where we pull in Tailwind for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    /* this is where we tell Tailwind to support dark mode */
+    /* This is where we tell Tailwind to support dark mode */
     tailwind.config = { darkMode: "class" }
   </script>
 
-  <!-- this is where we decide the theme before the page actually paints -->
+  <!-- This is where we decide the theme before the page actually paints -->
   <script>
     if (
       localStorage.theme === "dark" ||
@@ -36,21 +36,21 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
 
-        <!-- this is the brand logo and name -->
+        <!-- This is the brand logo and name -->
         <div class="flex items-center space-x-2">
           <span class="text-xl font-bold dark:text-white">BeatBox</span>
           <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
         </div>
 
-        <!-- this is the mobile button that opens or closes the nav links -->
+        <!-- This is the mobile button that opens or closes the nav links -->
         <div class="flex sm:hidden">
           <button id="menu-toggle" class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md">
-            <!-- this is the menu icon when the nav is closed -->
+            <!-- This is the menu icon when the nav is closed -->
             <svg id="menu-open-icon" class="block h-6 w-6" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <!-- this is the x icon when the nav is open -->
+            <!-- This is the x icon when the nav is open -->
             <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M6 18L18 6M6 6l12 12" />
@@ -58,7 +58,7 @@
           </button>
         </div>
 
-        <!-- this is the desktop navigation section -->
+        <!-- This is the desktop navigation section -->
         <div class="hidden sm:flex sm:space-x-4">
           <a href="index.html" class="nav-link">Home</a>
           <a href="about.html" class="nav-link">About</a>
@@ -69,16 +69,16 @@
           <a href="contact.html" class="nav-link">Contact Us</a>
         </div>
 
-        <!-- this is the right side with font controls and theme toggle -->
+        <!-- This is the right side with font controls and theme toggle -->
         <div class="flex items-center space-x-2">
-          <!-- this is where the user can bump font size up and down -->
+          <!-- This is where the user can bump font size up and down -->
           <div class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs">
             <button id="font-decrease" class="px-2 text-sm font-semibold">A</button>
             <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
             <button id="font-increase" class="px-2 text-base font-semibold">A</button>
           </div>
 
-          <!-- this is the button that flips between light and dark theme -->
+          <!-- This is the button that flips between light and dark theme -->
           <button id="theme-toggle"
             class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600">
             🌗
@@ -88,7 +88,7 @@
       </div>
     </div>
 
-    <!-- this is the mobile navigation menu -->
+    <!-- This is the mobile navigation menu -->
     <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
       <a href="index.html" class="mobile-link">Home</a>
       <a href="about.html" class="mobile-link">About</a>
@@ -336,7 +336,7 @@
   <!--              CHATBOT            -->
   <!-- =============================== -->
 
-  <!-- this is the floating button that opens the chat -->
+  <!-- This is the floating button that opens the chat -->
   <button id="chatbot-btn"
     class="fixed bottom-6 right-6 bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-purple-700 z-50 flex items-center space-x-2">
     <span>💬 Chat</span>
@@ -346,7 +346,7 @@
     </span>
   </button>
 
-  <!-- this is the chat panel container with glass effect and animated enter -->
+  <!-- This is the chat panel container with glass effect and animated enter -->
   <div id="chatbot-panel"
     class="hidden fixed bottom-20 right-6 w-80 md:w-[28rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur border border-purple-300 dark:border-purple-700 rounded-xl shadow-2xl p-4 z-50 transition-all duration-300 transform translate-y-4 opacity-0 chat-closed">
 
@@ -361,14 +361,14 @@
             BeatBox Help Bot
           </p>
           <p id="chat-subtitle" class="text-xs text-slate-500 dark:text-slate-400">
-            this is where you can ask about subscriptions, shipping, and more.
+            This is where you can ask about subscriptions, shipping, and more.
           </p>
         </div>
       </div>
       <div class="flex items-center space-x-2">
         <button id="chat-size-toggle"
           class="text-xs px-2 py-1 rounded border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700">
-          Large
+          Compact
         </button>
         <button id="chat-minimize"
           class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-base leading-none px-1">
@@ -498,15 +498,15 @@
           <div class="space-y-1">
             <details class="faq-item">
               <summary>Where can I see your subscription tiers</summary>
-              <p>this is answered in the Subscription Tiers page and the bot can also explain them if you ask about tiers.</p>
+              <p>This is answered in the Subscription Tiers page and the bot can also explain them if you ask about tiers.</p>
             </details>
             <details class="faq-item">
               <summary>How fast is shipping</summary>
-              <p>this is usually three to five business days after your box leaves the fulfillment center in this demo concept.</p>
+              <p>This is usually three to five business days after your box leaves the fulfillment center in this demo concept.</p>
             </details>
             <details class="faq-item">
               <summary>How do I cancel if I need to</summary>
-              <p>this is done from your account subscription settings in a real product even though this project does not bill for real.</p>
+              <p>This is done from your account subscription settings in a real product even though this project does not bill for real.</p>
             </details>
           </div>
         </div>
@@ -800,12 +800,12 @@
     if (chatLog && chatLog.children.length === 0) {
       const p = document.createElement("p");
       p.classList.add("mb-2", "text-xs", "text-slate-500", "dark:text-slate-400");
-      p.innerText = "this is where you can ask about subscriptions, pricing, shipping, featured artists, tracking, account settings, or you can type clear to reset the chat.";
+      p.innerText = "This is where you can ask about subscriptions, pricing, shipping, featured artists, tracking, account settings, or you can type clear to reset the chat.";
       chatLog.appendChild(p);
 
       const helper = document.createElement("p");
       helper.classList.add("mb-2", "text-[0.7rem]", "text-slate-500", "dark:text-slate-400");
-      helper.innerText = "this is a few example questions: " +
+      helper.innerText = "This is a few example questions: " +
         "What are your subscription tiers, " +
         "How much does BeatBox cost, " +
         "How long does shipping take, " +
@@ -951,21 +951,21 @@
         actions.classList.add("mt-0.5", "flex", "items-center", "space-x-2", "text-[0.65rem]", "text-slate-400");
 
         const label = document.createElement("span");
-        label.innerText = "this is where you can rate this answer:";
+        label.innerText = "This is where you can rate this answer:";
         actions.appendChild(label);
 
         const up = document.createElement("button");
         up.classList.add("hover:text-green-500");
         up.innerText = "👍";
         up.addEventListener("click", () => {
-          label.innerText = "thanks for the feedback.";
+          label.innerText = "Thanks for the feedback.";
         });
 
         const down = document.createElement("button");
         down.classList.add("hover:text-red-500");
         down.innerText = "👎";
         down.addEventListener("click", () => {
-          label.innerText = "thanks, this helps us improve responses.";
+          label.innerText = "Thanks, this helps us improve responses.";
         });
 
         actions.appendChild(up);
@@ -983,7 +983,7 @@
       if (chatHistory.length === 0) {
         const p = document.createElement("p");
         p.classList.add("mb-2", "text-xs", "text-slate-500", "dark:text-slate-400");
-        p.innerText = "Welcome to BeatBox Help Bot. this is where you can ask about subscriptions, shipping, billing, featured artists, or you can type clear to reset.";
+        p.innerText = "Welcome to BeatBox Help Bot. This is where you can ask about subscriptions, shipping, billing, featured artists, or you can type clear to reset.";
         chatLog.appendChild(p);
       } else {
         chatHistory.forEach(msg => {
@@ -1000,7 +1000,7 @@
       favoritesList.innerHTML = "";
       if (favoriteQuestions.length === 0) {
         const li = document.createElement("li");
-        li.innerText = "this is where saved questions will appear.";
+        li.innerText = "This is where saved questions will appear.";
         favoritesList.appendChild(li);
         return;
       }
@@ -1022,7 +1022,7 @@
       recentList.innerHTML = "";
       if (recentQuestions.length === 0) {
         const li = document.createElement("li");
-        li.innerText = "this is where recent questions will appear.";
+        li.innerText = "This is where recent questions will appear.";
         recentList.appendChild(li);
         return;
       }
@@ -1128,7 +1128,7 @@
             setUserName(cleanName);
             storedName = cleanName;
             if (chatSubtitle) {
-              chatSubtitle.textContent = "Hi " + cleanName + ". this is your BeatBox chat assistant.";
+              chatSubtitle.textContent = "Hi " + cleanName + ". This is your BeatBox chat assistant.";
             }
             botAnswerWithDelay("Nice to meet you " + cleanName + ". I will use your name in this chat.");
           }
@@ -1161,7 +1161,7 @@
       if (qLower === "/help") {
         lastTopic = "help";
         botConversation([
-          { text: "this is a quick list of things I can help with.", delay: 0 },
+          { text: "This is a quick list of things I can help with.", delay: 0 },
           { text: "Ask about subscription tiers, pricing, shipping, featured artists, support, or type clear to reset the chat.", delay: 600 },
           { text: "You can also try commands like /pricing, /tiers, /track, or /help.", delay: 600 }
         ]);
@@ -1217,7 +1217,7 @@
         const namePart = storedName ? " " + storedName : "";
         lastTopic = "greeting";
         botConversation([
-          { text: "Hi" + namePart + ". this is the BeatBox Help Bot.", delay: 0 },
+          { text: "Hi" + namePart + ". This is the BeatBox Help Bot.", delay: 0 },
           { text: "You can ask me about pricing, shipping, tiers, featured artists, support, or type /help to see more options.", delay: 700 }
         ]);
         return;
@@ -1291,13 +1291,13 @@
 
       if (qLower.includes("more") && lastTopic) {
         const follow = {
-          pricing: "this is one more note on pricing. Real plans may change when we move beyond this class project, but the idea is to keep things friendly for fans and fair for artists.",
-          tiers: "this is a little more detail on tiers. Headliner boxes are imagined as limited runs with items that feel collectible, while Starter Vibes keeps things simple and affordable.",
-          shipping: "this is a little more about shipping. In a real product you would see live carrier options, estimated arrival, and tracking updates directly in your account.",
-          artists: "this is a little more about artists. The long term idea is for artists to share stories, track breakdowns, and behind the scenes notes that only box members can see.",
-          support: "this is a little more about support. The team would handle lost boxes, damaged items, billing issues, and general questions all from a central support view."
+          pricing: "This is one more note on pricing. Real plans may change when we move beyond this class project, but the idea is to keep things friendly for fans and fair for artists.",
+          tiers: "This is a little more detail on tiers. Headliner boxes are imagined as limited runs with items that feel collectible, while Starter Vibes keeps things simple and affordable.",
+          shipping: "This is a little more about shipping. In a real product you would see live carrier options, estimated arrival, and tracking updates directly in your account.",
+          artists: "This is a little more about artists. The long term idea is for artists to share stories, track breakdowns, and behind the scenes notes that only box members can see.",
+          support: "This is a little more about support. The team would handle lost boxes, damaged items, billing issues, and general questions all from a central support view."
         };
-        const msg = follow[lastTopic] || "this is where a real product could go deeper into this topic with more examples and live account details.";
+        const msg = follow[lastTopic] || "This is where a real product could go deeper into this topic with more examples and live account details.";
         botAnswerWithDelay(msg);
         return;
       }
@@ -1359,7 +1359,7 @@
         }
         const match = sampleQuestions.find(q => q.toLowerCase().startsWith(value.toLowerCase()));
         if (match && inputSuggestion) {
-          inputSuggestion.textContent = "this is a suggestion: " + match;
+          inputSuggestion.textContent = "This is a suggestion: " + match;
         } else if (inputSuggestion) {
           inputSuggestion.textContent = "";
         }
@@ -1433,11 +1433,11 @@
     }
 
     const dailyTips = [
-      "this is a tip. If you want a quick summary of BeatBox, ask the bot What is BeatBox in simple terms.",
-      "this is a tip. Try the command /pricing if you only care about how much the tiers might cost.",
-      "this is a tip. If you are not sure what to ask, type help or /help and I will list ideas.",
-      "this is a tip. You can save your favorite question with the Save last question button near the input.",
-      "this is a tip. You can come back later and tap a saved question on the right to reuse it instantly."
+      "This is a tip. If you want a quick summary of BeatBox, ask the bot What is BeatBox in simple terms.",
+      "This is a tip. Try the command /pricing if you only care about how much the tiers might cost.",
+      "This is a tip. If you are not sure what to ask, type help or /help and I will list ideas.",
+      "This is a tip. You can save your favorite question with the Save last question button near the input.",
+      "This is a tip. You can come back later and tap a saved question on the right to reuse it instantly."
     ];
 
     function showDailyTipOncePerDay() {
@@ -1445,7 +1445,7 @@
       const today = new Date().toISOString().slice(0, 10);
       const last = safeGet(CHAT_TIP_DATE_KEY);
       if (last === today) {
-        dailyTipElement.innerText = "this is the tip for today. You already saw it, but you can still ask anything you like.";
+        dailyTipElement.innerText = "This is the tip for today. You already saw it, but you can still ask anything you like.";
         return;
       }
       const tip = dailyTips[Math.floor(Math.random() * dailyTips.length)];
@@ -1455,10 +1455,13 @@
 
     showDailyTipOncePerDay();
 
+    // UPDATED: force compact size whenever the panel opens
     function openChatPanel(fromAuto) {
       if (!chatbotPanel) return;
 
+      // force compact on open
       chatbotPanel.classList.remove("md:w-[32rem]");
+      chatbotPanel.style.width = "";
       if (chatSizeToggle) {
         chatSizeToggle.textContent = "Large";
       }
@@ -1508,14 +1511,18 @@
       });
     }
 
+    // UPDATED: label shows what you can switch to
     if (chatSizeToggle && chatbotPanel) {
+      const isLargeNow = chatbotPanel.classList.contains("md:w-[32rem]");
+      chatSizeToggle.textContent = isLargeNow ? "Compact" : "Large";
+
       chatSizeToggle.addEventListener("click", () => {
         const isLarge = chatbotPanel.classList.toggle("md:w-[32rem]");
         chatSizeToggle.textContent = isLarge ? "Compact" : "Large";
       });
     }
 
-    /* removed the automatic open on page load
+    /* Removed the automatic open on page load
        so the chat stays closed until the user clicks Chat */
 
     document.addEventListener("keydown", (e) => {
@@ -1545,7 +1552,7 @@
     }
 
     if (storedName && chatSubtitle) {
-      chatSubtitle.textContent = "Hi " + storedName + ". this is your BeatBox assistant, ask anything about your subscription.";
+      chatSubtitle.textContent = "Hi " + storedName + ". This is your BeatBox assistant, ask anything about your subscription.";
     }
   </script>
 
