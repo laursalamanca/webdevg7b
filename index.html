@@ -508,7 +508,7 @@
     let unreadCount = 0;
     let botTypingTimeout = null;
     let lastTopic = "";
-    let lastUserQuestion = "";
+       let lastUserQuestion = "";
     let favoriteQuestions = [];
     let recentQuestions = [];
 
@@ -1365,6 +1365,13 @@
     /* this is where we control chat panel visibility and animation */
     function openChatPanel(fromAuto) {
       if (!chatbotPanel) return;
+
+      // always reset to compact width when opening
+      chatbotPanel.classList.remove("md:w-[32rem]");
+      if (chatSizeToggle) {
+        chatSizeToggle.textContent = "Large";
+      }
+
       chatbotPanel.classList.remove("hidden");
       chatbotPanel.classList.remove("chat-closed");
       chatbotPanel.classList.add("chat-open");
