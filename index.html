@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BeatBox Home</title>
 
-  <!-- This is where we pull in Tailwind for styling -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
-    /* This is where we tell Tailwind to support dark mode */
     tailwind.config = { darkMode: "class" }
   </script>
 
-  <!-- This is where we decide the theme before the page actually paints -->
+  <!-- Theme before paint -->
   <script>
     if (
       localStorage.theme === "dark" ||
@@ -36,21 +35,19 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
 
-        <!-- This is the brand logo and name -->
+        <!-- brand -->
         <div class="flex items-center space-x-2">
           <span class="text-xl font-bold dark:text-white">BeatBox</span>
           <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
         </div>
 
-        <!-- This is the mobile button that opens or closes the nav links -->
+        <!-- mobile menu button -->
         <div class="flex sm:hidden">
           <button id="menu-toggle" class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md">
-            <!-- This is the menu icon when the nav is closed -->
             <svg id="menu-open-icon" class="block h-6 w-6" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16" />
             </svg>
-            <!-- This is the x icon when the nav is open -->
             <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M6 18L18 6M6 6l12 12" />
@@ -58,7 +55,7 @@
           </button>
         </div>
 
-        <!-- This is the desktop navigation section -->
+        <!-- desktop nav -->
         <div class="hidden sm:flex sm:space-x-4">
           <a href="index.html" class="nav-link">Home</a>
           <a href="about.html" class="nav-link">About</a>
@@ -69,16 +66,14 @@
           <a href="contact.html" class="nav-link">Contact Us</a>
         </div>
 
-        <!-- This is the right side with font controls and theme toggle -->
+        <!-- font size and theme -->
         <div class="flex items-center space-x-2">
-          <!-- This is where the user can bump font size up and down -->
           <div class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs">
             <button id="font-decrease" class="px-2 text-sm font-semibold">A</button>
             <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
             <button id="font-increase" class="px-2 text-base font-semibold">A</button>
           </div>
 
-          <!-- This is the button that flips between light and dark theme -->
           <button id="theme-toggle"
             class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600">
             🌗
@@ -88,7 +83,7 @@
       </div>
     </div>
 
-    <!-- This is the mobile navigation menu -->
+    <!-- mobile menu -->
     <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
       <a href="index.html" class="mobile-link">Home</a>
       <a href="about.html" class="mobile-link">About</a>
@@ -105,9 +100,8 @@
   <!-- =============================== -->
   <main class="px-6 py-10 lg:px-12 lg:py-16 pt-20">
 
-    <!-- hero with soft gradient glow -->
+    <!-- hero -->
     <section class="relative mx-auto max-w-7xl">
-      <!-- background glow -->
       <div class="pointer-events-none absolute inset-0 -z-10">
         <div class="absolute -top-24 -left-16 h-64 w-64 rounded-full bg-purple-300/40 blur-3xl dark:bg-purple-700/40"></div>
         <div class="absolute -bottom-24 -right-10 h-64 w-64 rounded-full bg-indigo-300/40 blur-3xl dark:bg-indigo-700/40"></div>
@@ -115,7 +109,7 @@
 
       <div class="grid gap-12 md:grid-cols-3 items-center">
 
-        <!-- left side hero text -->
+        <!-- left -->
         <div class="space-y-6 md:col-span-2">
           <p class="inline rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 shadow-sm">
             Curated music boxes for rising artists
@@ -129,7 +123,7 @@
             Every month, BeatBox curates a box with merch, digital playlists, and behind the scenes artist content so you feel closer to the music you love.
           </p>
 
-          <!-- stats strip -->
+          <!-- stats -->
           <div class="grid grid-cols-3 gap-4 text-xs sm:text-sm">
             <div class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700">
               <p class="text-2xl font-semibold text-purple-600 dark:text-purple-300">25+</p>
@@ -145,7 +139,7 @@
             </div>
           </div>
 
-          <!-- main call to action buttons -->
+          <!-- cta -->
           <div class="flex flex-wrap gap-4 pt-2">
             <a href="subscriptiontiers.html"
               class="rounded-xl bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 hover:bg-purple-700">
@@ -158,7 +152,7 @@
             </a>
           </div>
 
-          <!-- genres row -->
+          <!-- genres -->
           <div class="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-300 pt-2">
             <span class="mr-1 text-slate-600 dark:text-slate-200">Genres imagined for BeatBox:</span>
             <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Alt RnB</span>
@@ -168,7 +162,7 @@
           </div>
         </div>
 
-        <!-- right side image with card under it -->
+        <!-- right -->
         <div class="flex flex-col items-end gap-3">
           <div class="relative">
             <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-purple-500/30 via-indigo-500/20 to-blue-500/20 blur-xl"></div>
@@ -179,7 +173,6 @@
             </div>
           </div>
 
-          <!-- Sponsored by BeatBox card moved outside the image -->
           <div class="w-full max-w-xs rounded-2xl border border-slate-800 bg-black/85 text-white p-3 text-xs shadow-lg">
             <p class="font-semibold flex items-center justify-between">
               <span>Sponsored by BeatBox</span>
@@ -196,7 +189,7 @@
       </div>
     </section>
 
-    <!-- as seen on style strip -->
+    <!-- as seen on strip -->
     <section class="mt-14">
       <div class="mx-auto max-w-7xl border border-slate-200/70 dark:border-slate-700/80 rounded-2xl px-4 py-3 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur">
         <div class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
@@ -213,7 +206,7 @@
       </div>
     </section>
 
-    <!-- how it works fancy steps -->
+    <!-- how it works -->
     <section class="mt-16">
       <div class="mx-auto max-w-7xl">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-8">
@@ -265,7 +258,7 @@
       </div>
     </section>
 
-    <!-- reviews row -->
+    <!-- reviews -->
     <section class="mt-20">
       <div class="mx-auto max-w-7xl">
         <h2 class="text-3xl font-bold text-center mb-3">What listeners are saying</h2>
@@ -297,7 +290,7 @@
       </div>
     </section>
 
-    <!-- gradient call to action -->
+    <!-- call to action -->
     <section class="mt-16">
       <div class="mx-auto max-w-7xl">
         <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 text-white px-6 py-8 sm:px-10 sm:py-10 shadow-xl">
@@ -333,221 +326,62 @@
   </main>
 
   <!-- =============================== -->
-  <!--              CHATBOT            -->
+  <!--          SIMPLE CHATBOT         -->
   <!-- =============================== -->
 
-  <!-- This is the floating button that opens the chat -->
+  <!-- floating chat button -->
   <button id="chatbot-btn"
     class="fixed bottom-6 right-6 bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-purple-700 z-50 flex items-center space-x-2">
     <span>💬 Chat</span>
-    <span id="chat-unread"
-          class="hidden text-xs bg-red-500 text-white rounded-full px-2 py-0.5">
-      0
-    </span>
   </button>
 
-  <!-- This is the chat panel container with glass effect and animated enter -->
+  <!-- simple chat panel -->
   <div id="chatbot-panel"
-    class="hidden fixed bottom-20 right-6 w-80 md:w-[28rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur border border-purple-300 dark:border-purple-700 rounded-xl shadow-2xl p-4 z-50 transition-all duration-300 transform translate-y-4 opacity-0 chat-closed">
+    class="hidden fixed bottom-20 right-6 w-80 md:w-96 bg-white dark:bg-slate-900 border border-purple-300 dark:border-purple-700 rounded-xl shadow-2xl p-4 z-50">
 
-    <!-- header area -->
-    <div class="flex items-center justify-between mb-2">
+    <div class="flex items-center justify-between mb-3">
       <div class="flex items-center space-x-2">
         <div class="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm">
           🎧
         </div>
-        <div class="flex flex-col">
+        <div>
           <p class="font-bold text-slate-800 dark:text-white">
             BeatBox Help Bot
           </p>
-          <p id="chat-subtitle" class="text-xs text-slate-500 dark:text-slate-400">
-            This is where you can ask about subscriptions, shipping, and more.
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            Ask quick questions about this concept.
           </p>
         </div>
       </div>
-      <div class="flex items-center space-x-2">
-        <button id="chat-size-toggle"
-          class="text-xs px-2 py-1 rounded border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700">
-          Compact
-        </button>
-        <button id="chat-minimize"
-          class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-base leading-none px-1">
-          ▾
-        </button>
-        <button id="chatbot-close"
-          class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg leading-none px-1">
-          ×
-        </button>
-      </div>
+      <button id="chatbot-close"
+        class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg leading-none px-1">
+        ×
+      </button>
     </div>
 
-    <!-- layout -->
-    <div class="md:grid md:grid-cols-[2fr,1.4fr] md:gap-3">
+    <div id="chat-log"
+         class="h-48 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-slate-950">
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        This is where you can ask simple questions like what is BeatBox or what are the tiers.
+      </p>
+    </div>
 
-      <!-- chat column -->
-      <div class="flex flex-col">
-        <div class="relative">
-          <div id="chat-log"
-               class="h-44 md:h-52 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50/90 dark:bg-slate-950/80">
-          </div>
-
-          <button id="scroll-bottom-btn"
-                  class="hidden absolute bottom-4 right-4 text-xs bg-purple-600 text-white px-3 py-1 rounded-full shadow">
-            New messages
-          </button>
-        </div>
-
-        <p id="typing-indicator"
-           class="hidden text-[0.7rem] text-slate-500 dark:text-slate-400 mb-1 flex items-center space-x-1">
-          <span>Bot is typing</span>
-          <span class="inline-flex">
-            <span class="dot-anim"></span>
-            <span class="dot-anim"></span>
-            <span class="dot-anim"></span>
-          </span>
-        </p>
-
-        <div class="flex flex-wrap gap-2 mb-2">
-          <button class="suggest-chip" data-question="What are your subscription tiers">
-            Tiers
-          </button>
-          <button class="suggest-chip" data-question="How much does BeatBox cost each month">
-            Pricing
-          </button>
-          <button class="suggest-chip" data-question="How does BeatBox shipping work">
-            Shipping
-          </button>
-          <button class="suggest-chip" data-question="Who is the featured artist right now">
-            Featured artist
-          </button>
-          <button class="suggest-chip" data-question="How do I track my BeatBox order">
-            Track order
-          </button>
-          <button class="suggest-chip" data-question="How do I contact BeatBox support">
-            Contact support
-          </button>
-        </div>
-
-        <p id="input-suggestion"
-           class="text-[0.7rem] text-slate-500 dark:text-slate-400 mb-1 h-4 overflow-hidden">
-        </p>
-
-        <div class="flex items-center space-x-2 mb-1">
-          <input id="chat-input"
-                 class="flex-1 p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
-                 placeholder="Ask a question or type /help..." />
-          <button id="chat-clear"
-                  class="text-xs px-2 py-1 border border-slate-300 dark:border-slate-600 rounded text-slate-600 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700">
-            Clear
-          </button>
-        </div>
-
-        <div class="flex items-center justify-between text-[0.7rem] mt-1">
-          <button id="save-last-question"
-                  class="text-purple-700 dark:text-purple-300 hover:underline">
-            Save last question
-          </button>
-          <button id="export-chat"
-                  class="text-slate-600 dark:text-slate-300 hover:underline">
-            Export chat
-          </button>
-        </div>
-      </div>
-
-      <!-- info column -->
-      <div class="hidden md:flex md:flex-col md:border-l md:border-slate-200 md:dark:border-slate-700 md:pl-3 md:space-y-3 mt-3 md:mt-0 text-xs">
-
-        <div class="border border-slate-200 dark:border-slate-700 rounded-lg p-2 bg-slate-50/80 dark:bg-slate-950/60">
-          <p class="font-semibold text-slate-700 dark:text-slate-200 mb-1">
-            BeatBox daily tip
-          </p>
-          <p id="daily-tip" class="text-slate-600 dark:text-slate-300 text-[0.7rem]">
-          </p>
-        </div>
-
-        <div>
-          <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
-            Quick topics
-          </p>
-          <div class="space-y-1">
-            <button class="topic-btn" data-topic="subscriptions">
-              Subscriptions and plans
-            </button>
-            <button class="topic-btn" data-topic="shipping">
-              Shipping and delivery
-            </button>
-            <button class="topic-btn" data-topic="billing">
-              Billing and payments
-            </button>
-            <button class="topic-btn" data-topic="artists">
-              Featured artists
-            </button>
-            <button class="topic-btn" data-topic="account">
-              Account settings
-            </button>
-            <button class="topic-btn" data-topic="support">
-              Support and contact
-            </button>
-          </div>
-        </div>
-
-        <div>
-          <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
-            Fast questions
-          </p>
-          <div class="space-y-1">
-            <details class="faq-item">
-              <summary>Where can I see your subscription tiers</summary>
-              <p>This is answered in the Subscription Tiers page and the bot can also explain them if you ask about tiers.</p>
-            </details>
-            <details class="faq-item">
-              <summary>How fast is shipping</summary>
-              <p>This is usually three to five business days after your box leaves the fulfillment center in this demo concept.</p>
-            </details>
-            <details class="faq-item">
-              <summary>How do I cancel if I need to</summary>
-              <p>This is done from your account subscription settings in a real product even though this project does not bill for real.</p>
-            </details>
-          </div>
-        </div>
-
-        <div>
-          <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
-            Saved questions
-          </p>
-          <ul id="favorite-questions" class="space-y-1 text-[0.7rem] text-slate-600 dark:text-slate-300">
-          </ul>
-        </div>
-
-        <div>
-          <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
-            Recent questions
-          </p>
-          <ul id="recent-questions" class="space-y-1 text-[0.7rem] text-slate-600 dark:text-slate-300">
-          </ul>
-        </div>
-
-        <div>
-          <p class="text-[0.7rem] font-semibold text-slate-500 dark:text-slate-300 mb-1">
-            BeatBox news preview
-          </p>
-          <ul class="space-y-1 text-[0.7rem] text-slate-600 dark:text-slate-300">
-            <li>New independent artist spotlight planned for next cycle.</li>
-            <li>Concept ideas for festival themed boxes are in the works.</li>
-            <li>Student discount pilot is under discussion in this demo story.</li>
-          </ul>
-        </div>
-
-      </div>
+    <div class="flex items-center space-x-2">
+      <input id="chat-input"
+             class="flex-1 p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
+             placeholder="Type a message..." />
+      <button id="chat-send"
+              class="px-3 py-2 text-sm rounded bg-purple-600 text-white hover:bg-purple-700">
+        Send
+      </button>
     </div>
   </div>
-
 
   <!-- =============================== -->
   <!--            INLINE JS            -->
   <!-- =============================== -->
   <script>
-    /* theme toggle */
+    // theme toggle
     const themeToggle = document.getElementById("theme-toggle");
     if (themeToggle) {
       themeToggle.addEventListener("click", () => {
@@ -556,7 +390,7 @@
       });
     }
 
-    /* mobile navigation behavior */
+    // mobile nav
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
     const openIcon = document.getElementById("menu-open-icon");
@@ -570,7 +404,7 @@
       });
     }
 
-    /* highlight current nav link */
+    // highlight current nav link
     const path = window.location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll("nav a").forEach((a) => {
       if (a.getAttribute("href") === path) {
@@ -578,7 +412,7 @@
       }
     });
 
-    /* font size adjuster */
+    // font size adjuster
     const inc = document.getElementById("font-increase");
     const dec = document.getElementById("font-decrease");
     let scale = 1;
@@ -599,960 +433,84 @@
       });
     }
 
-    /* chatbot wiring */
+    // very basic chatbot
     const chatbotBtn = document.getElementById("chatbot-btn");
     const chatbotPanel = document.getElementById("chatbot-panel");
     const chatbotClose = document.getElementById("chatbot-close");
-    const chatMinimize = document.getElementById("chat-minimize");
-    const chatInput = document.getElementById("chat-input");
     const chatLog = document.getElementById("chat-log");
-    const chatClearBtn = document.getElementById("chat-clear");
-    const helperQuestionsSpan = document.getElementById("helper-questions");
-    const typingIndicator = document.getElementById("typing-indicator");
-    const scrollBottomBtn = document.getElementById("scroll-bottom-btn");
-    const chatSizeToggle = document.getElementById("chat-size-toggle");
-    const chatUnread = document.getElementById("chat-unread");
-    const chatSubtitle = document.getElementById("chat-subtitle");
-    const topicButtons = document.querySelectorAll(".topic-btn");
-    const suggestChips = document.querySelectorAll(".suggest-chip");
-    const dailyTipElement = document.getElementById("daily-tip");
-    const inputSuggestion = document.getElementById("input-suggestion");
-    const saveLastQuestionBtn = document.getElementById("save-last-question");
-    const exportChatBtn = document.getElementById("export-chat");
-    const favoritesList = document.getElementById("favorite-questions");
-    const recentList = document.getElementById("recent-questions");
+    const chatInput = document.getElementById("chat-input");
+    const chatSend = document.getElementById("chat-send");
 
-    const CHAT_HISTORY_KEY = "beatboxChatHistory";
-    const CHAT_USER_KEY = "beatboxUserName";
-    const CHAT_OPENED_KEY = "beatboxChatOpenedOnce";
-    const CHAT_FAVORITES_KEY = "beatboxChatFavorites";
-    const CHAT_RECENT_KEY = "beatboxChatRecent";
-    const CHAT_TIP_DATE_KEY = "beatboxTipDate";
-
-    let isUserScrollingUp = false;
-    let unreadCount = 0;
-    let botTypingTimeout = null;
-    let lastTopic = "";
-    let lastUserQuestion = "";
-    let favoriteQuestions = [];
-    let recentQuestions = [];
-
-    function playBeep(frequency) {
-      try {
-        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-        if (!AudioContextClass) return;
-        const ctx = new AudioContextClass();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.frequency.value = frequency;
-        osc.type = "sine";
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        gain.gain.setValueAtTime(0.06, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.15);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.16);
-      } catch (e) {
-      }
+    function toggleChatPanel() {
+      if (!chatbotPanel) return;
+      chatbotPanel.classList.toggle("hidden");
     }
 
-    function vibrateIfPossible(pattern) {
-      try {
-        if (navigator.vibrate) {
-          navigator.vibrate(pattern);
-        }
-      } catch (e) {
-      }
+    if (chatbotBtn) {
+      chatbotBtn.addEventListener("click", toggleChatPanel);
+    }
+    if (chatbotClose) {
+      chatbotClose.addEventListener("click", toggleChatPanel);
     }
 
-    const baseQuestions = [
-      "What are your subscription tiers",
-      "How do I start a BeatBox subscription",
-      "Can I buy only one BeatBox",
-      "Does my BeatBox plan renew every month",
-      "How do I choose my BeatBox plan",
-      "Can I upgrade my BeatBox plan later",
-      "Can I downgrade my BeatBox plan later",
-      "How long is each BeatBox subscription term",
-      "Can I pause my BeatBox subscription",
-      "Can I skip a BeatBox shipment",
-      "How do I restart my BeatBox subscription",
-      "Can I move from Starter Vibes to Headliner",
-      "Can I move from Headliner to Starter Vibes",
-      "Can I have more than one BeatBox subscription",
-      "Can I create a BeatBox gift subscription",
-      "What is included in the Starter Vibes tier",
-      "What is included in the Crowd Favorite tier",
-      "What is included in the Headliner tier",
-      "Do all tiers include digital playlists",
-      "Do all tiers include physical merch",
-      "Do all tiers get access to the featured artist content",
-      "Can I see a comparison chart of BeatBox tiers",
-      "Which BeatBox tier is best for new fans",
-      "Which BeatBox tier is best for collectors",
-      "Which BeatBox tier has the most merch",
-      "How much does BeatBox cost each month",
-      "Do you charge a sign up fee for BeatBox",
-      "Do you charge tax on BeatBox orders",
-      "Do BeatBox prices change based on location",
-      "Do BeatBox prices change during promotions",
-      "Do you accept debit cards for BeatBox",
-      "Do you accept credit cards for BeatBox",
-      "Can I use PayPal to pay for BeatBox",
-      "Can I pay for BeatBox with Apple Pay",
-      "Can I pay for BeatBox with Google Pay",
-      "Can I use a prepaid card for BeatBox",
-      "How do I update my BeatBox payment method",
-      "When is my BeatBox payment processed each month",
-      "What happens if my BeatBox payment fails",
-      "Do you send a reminder before my BeatBox renews",
-      "Can I change my billing date for BeatBox",
-      "Do you offer student discounts for BeatBox",
-      "Do you offer first time BeatBox customer discounts",
-      "Do you have BeatBox bundle discounts",
-      "Can I use a promo code on my BeatBox order",
-      "Where do I enter a BeatBox promo code",
-      "Can I use more than one promo code on BeatBox",
-      "Can I apply a promo code after I place my BeatBox order",
-      "How long does BeatBox shipping take",
-      "How much is BeatBox shipping",
-      "Is BeatBox shipping included in the price",
-      "Do you offer free shipping for BeatBox",
-      "Do you ship BeatBox to my state",
-      "Do you ship BeatBox to rural addresses",
-      "Do you ship BeatBox to PO boxes",
-      "Do you ship BeatBox to college dorms",
-      "Do you ship BeatBox to work addresses",
-      "Which carrier do you use to ship BeatBox",
-      "How soon does my BeatBox ship after billing",
-      "Do all BeatBox orders include tracking",
-      "How do I track my BeatBox order",
-      "Where can I find my BeatBox tracking number",
-      "What if my BeatBox tracking link does not update",
-      "What if my BeatBox shows delivered but I did not get it",
-      "What if my BeatBox package is stolen",
-      "What if my BeatBox is lost in transit",
-      "What if my BeatBox arrives late",
-      "What if my BeatBox arrives damaged",
-      "Can I get a replacement BeatBox",
-      "How do I report a damaged BeatBox",
-      "Do you ship BeatBox internationally",
-      "Which countries do you ship BeatBox to",
-      "Do you plan to expand BeatBox international shipping",
-      "Are customs fees included in BeatBox orders",
-      "Will I have to pay import fees for BeatBox",
-      "Do you offer country specific BeatBox versions",
-      "How do I create a BeatBox account",
-      "How do I log in to my BeatBox account",
-      "How do I reset my BeatBox password",
-      "How do I change my BeatBox email address",
-      "How do I change my BeatBox profile name",
-      "How do I update my BeatBox billing address",
-      "How do I update my BeatBox shipping address",
-      "How do I update my BeatBox clothing size",
-      "How do I update my BeatBox music preferences",
-      "How do I delete my BeatBox account",
-      "How do I cancel my BeatBox subscription",
-      "Can I cancel BeatBox online",
-      "How late can I cancel BeatBox before renewal",
-      "What happens after I cancel BeatBox",
-      "Do I still get my final BeatBox after I cancel",
-      "How do I skip a BeatBox month",
-      "Can I skip multiple BeatBox months in a row",
-      "What comes inside each BeatBox",
-      "Do BeatBox boxes include posters",
-      "Do BeatBox boxes include stickers",
-      "Do BeatBox boxes include digital downloads",
-      "Do BeatBox boxes include behind the scenes content",
-      "Do BeatBox boxes include interviews",
-      "Do BeatBox boxes ever include signed items",
-      "Are BeatBox items exclusive to BeatBox customers",
-      "Can I buy past BeatBox items",
-      "Who is the current BeatBox featured artist",
-      "How often do you change the BeatBox featured artist",
-      "How do you select the BeatBox featured artist",
-      "Do you work with independent artists for BeatBox",
-      "Can I suggest an artist for BeatBox",
-      "How do I access my BeatBox digital playlists",
-      "Can I share my BeatBox playlist with friends",
-      "Do you offer BeatBox gift subscriptions",
-      "How do BeatBox gift subscriptions work",
-      "Do you offer holiday themed BeatBox boxes",
-      "Do you offer limited edition BeatBox drops",
-      "How do I contact BeatBox customer support",
-      "What is the BeatBox support email",
-      "What are BeatBox customer support hours",
-      "What is your BeatBox refund policy",
-      "Where can I see past BeatBox featured artists",
-      "What is BeatBox in simple terms",
-      "What can this BeatBox chat bot help me with",
-      "How do I clear this BeatBox chat"
-    ];
-
-    const extraQuestionsNeeded = 1000 - baseQuestions.length;
-    const extraQuestions = Array.from({ length: extraQuestionsNeeded }, (_, index) => {
-      const n = index + 1;
-      return "I have a BeatBox question number " + n;
-    });
-
-    const sampleQuestions = baseQuestions.concat(extraQuestions);
-
-    if (chatLog && chatLog.children.length === 0) {
-      const p = document.createElement("p");
-      p.classList.add("mb-2", "text-xs", "text-slate-500", "dark:text-slate-400");
-      p.innerText = "This is where you can ask about subscriptions, pricing, shipping, featured artists, tracking, account settings, or you can type clear to reset the chat.";
-      chatLog.appendChild(p);
-
-      const helper = document.createElement("p");
-      helper.classList.add("mb-2", "text-[0.7rem]", "text-slate-500", "dark:text-slate-400");
-      helper.innerText = "This is a few example questions: " +
-        "What are your subscription tiers, " +
-        "How much does BeatBox cost, " +
-        "How long does shipping take, " +
-        "Who is the featured artist right now, " +
-        "How do I cancel my subscription, " +
-        "Do you offer student discounts, " +
-        "How do I track my BeatBox order.";
-      chatLog.appendChild(helper);
-    }
-
-    function safeGet(key) {
-      try {
-        return localStorage.getItem(key);
-      } catch (e) {
-        return null;
-      }
-    }
-
-    function safeSet(key, value) {
-      try {
-        localStorage.setItem(key, value);
-      } catch (e) {
-      }
-    }
-
-    function loadChatHistory() {
-      try {
-        const raw = safeGet(CHAT_HISTORY_KEY);
-        if (!raw) return [];
-        return JSON.parse(raw) || [];
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function saveChatHistory(history) {
-      safeSet(CHAT_HISTORY_KEY, JSON.stringify(history));
-    }
-
-    function getUserName() {
-      try {
-        return safeGet(CHAT_USER_KEY) || "";
-      } catch (e) {
-        return "";
-      }
-    }
-
-    function setUserName(name) {
-      safeSet(CHAT_USER_KEY, name);
-    }
-
-    function loadFavorites() {
-      try {
-        const raw = safeGet(CHAT_FAVORITES_KEY);
-        if (!raw) return [];
-        return JSON.parse(raw) || [];
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function saveFavorites(favs) {
-      safeSet(CHAT_FAVORITES_KEY, JSON.stringify(favs));
-    }
-
-    function loadRecent() {
-      try {
-        const raw = safeGet(CHAT_RECENT_KEY);
-        if (!raw) return [];
-        return JSON.parse(raw) || [];
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function saveRecent(rec) {
-      safeSet(CHAT_RECENT_KEY, JSON.stringify(rec));
-    }
-
-    let chatHistory = loadChatHistory();
-    let storedName = getUserName();
-    favoriteQuestions = loadFavorites();
-    recentQuestions = loadRecent();
-
-    function formatTime(date) {
-      const h = date.getHours();
-      const m = date.getMinutes().toString().padStart(2, "0");
-      const suffix = h >= 12 ? "PM" : "AM";
-      const hour12 = ((h + 11) % 12) + 1;
-      return hour12 + ":" + m + " " + suffix;
-    }
-
-    function appendMessageToDom(sender, text, time) {
+    function addMessage(sender, text) {
       if (!chatLog) return;
-      const wrapper = document.createElement("div");
-      wrapper.classList.add("mb-2", "flex", sender === "user" ? "justify-end" : "justify-start");
+      const wrap = document.createElement("div");
+      wrap.className = "my-1";
 
-      const inner = document.createElement("div");
-      inner.classList.add("max-w-[85%]");
+      const label = document.createElement("p");
+      label.className = "text-[0.75rem] font-semibold";
+      label.textContent = sender === "user" ? "You:" : "Bot:";
 
-      const meta = document.createElement("div");
-      meta.classList.add("flex", sender === "user" ? "justify-end" : "justify-start", "items-baseline", "mb-0.5");
+      const body = document.createElement("p");
+      body.className = "text-sm ml-2";
+      body.textContent = text;
 
-      const metaInner = document.createElement("div");
-      metaInner.classList.add("flex", "items-center", "space-x-1");
-
-      const avatar = document.createElement("div");
-      avatar.classList.add("w-5", "h-5", "rounded-full", "flex", "items-center", "justify-center", "text-[0.7rem]");
-      if (sender === "user") {
-        avatar.classList.add("bg-slate-300", "dark:bg-slate-600", "text-slate-900", "dark:text-white");
-        avatar.innerText = "🙂";
-      } else {
-        avatar.classList.add("bg-purple-600", "text-white");
-        avatar.innerText = "🎧";
-      }
-
-      const nameSpan = document.createElement("span");
-      nameSpan.classList.add("text-[0.7rem]", sender === "user" ? "text-slate-600" : "text-purple-700");
-      nameSpan.innerText = sender === "user" ? "You" : "Bot";
-
-      const timeSpan = document.createElement("span");
-      timeSpan.classList.add("text-[0.65rem]", "text-slate-400");
-      timeSpan.innerText = time;
-
-      metaInner.appendChild(avatar);
-      metaInner.appendChild(nameSpan);
-      meta.appendChild(metaInner);
-      meta.appendChild(timeSpan);
-
-      const body = document.createElement("div");
-      if (sender === "user") {
-        body.classList.add("px-2", "py-1", "rounded-lg", "bg-slate-200", "dark:bg-slate-700", "text-slate-900", "dark:text-white");
-      } else {
-        body.classList.add("px-2", "py-1", "rounded-lg", "bg-purple-100", "dark:bg-purple-900/40", "text-purple-900", "dark:text-purple-100");
-      }
-      body.innerText = text;
-
-      inner.appendChild(meta);
-      inner.appendChild(body);
-
-      if (sender === "bot") {
-        const actions = document.createElement("div");
-        actions.classList.add("mt-0.5", "flex", "items-center", "space-x-2", "text-[0.65rem]", "text-slate-400");
-
-        const label = document.createElement("span");
-        label.innerText = "This is where you can rate this answer:";
-        actions.appendChild(label);
-
-        const up = document.createElement("button");
-        up.classList.add("hover:text-green-500");
-        up.innerText = "👍";
-        up.addEventListener("click", () => {
-          label.innerText = "Thanks for the feedback.";
-        });
-
-        const down = document.createElement("button");
-        down.classList.add("hover:text-red-500");
-        down.innerText = "👎";
-        down.addEventListener("click", () => {
-          label.innerText = "Thanks, this helps us improve responses.";
-        });
-
-        actions.appendChild(up);
-        actions.appendChild(down);
-        inner.appendChild(actions);
-      }
-
-      wrapper.appendChild(inner);
-      chatLog.appendChild(wrapper);
-    }
-
-    function renderChatHistory() {
-      if (!chatLog) return;
-      chatLog.innerHTML = "";
-      if (chatHistory.length === 0) {
-        const p = document.createElement("p");
-        p.classList.add("mb-2", "text-xs", "text-slate-500", "dark:text-slate-400");
-        p.innerText = "Welcome to BeatBox Help Bot. This is where you can ask about subscriptions, shipping, billing, featured artists, or you can type clear to reset.";
-        chatLog.appendChild(p);
-      } else {
-        chatHistory.forEach(msg => {
-          appendMessageToDom(msg.sender, msg.text, msg.time);
-        });
-      }
+      wrap.appendChild(label);
+      wrap.appendChild(body);
+      chatLog.appendChild(wrap);
       chatLog.scrollTop = chatLog.scrollHeight;
     }
 
-    renderChatHistory();
-
-    function renderFavorites() {
-      if (!favoritesList) return;
-      favoritesList.innerHTML = "";
-      if (favoriteQuestions.length === 0) {
-        const li = document.createElement("li");
-        li.innerText = "This is where saved questions will appear.";
-        favoritesList.appendChild(li);
-        return;
-      }
-      favoriteQuestions.forEach(q => {
-        const li = document.createElement("li");
-        const btn = document.createElement("button");
-        btn.classList.add("hover:underline", "text-left");
-        btn.innerText = "• " + q;
-        btn.addEventListener("click", () => {
-          sendUserQuestion(q);
-        });
-        li.appendChild(btn);
-        favoritesList.appendChild(li);
-      });
-    }
-
-    function renderRecent() {
-      if (!recentList) return;
-      recentList.innerHTML = "";
-      if (recentQuestions.length === 0) {
-        const li = document.createElement("li");
-        li.innerText = "This is where recent questions will appear.";
-        recentList.appendChild(li);
-        return;
-      }
-      recentQuestions.forEach(q => {
-        const li = document.createElement("li");
-        const btn = document.createElement("button");
-        btn.classList.add("hover:underline", "text-left");
-        btn.innerText = "• " + q;
-        btn.addEventListener("click", () => {
-          sendUserQuestion(q);
-        });
-        li.appendChild(btn);
-        recentList.appendChild(li);
-      });
-    }
-
-    renderFavorites();
-    renderRecent();
-
-    function addMessage(sender, text) {
-      const time = formatTime(new Date());
-      const entry = { sender, text, time };
-      chatHistory.push(entry);
-      saveChatHistory(chatHistory);
-      appendMessageToDom(sender, text, time);
-
-      if (sender === "bot") {
-        playBeep(600);
-      } else {
-        playBeep(350);
-      }
-
-      if (!isPanelVisible() || isUserScrollingUp) {
-        unreadCount += 1;
-        updateUnreadBadge();
-      }
-
-      if (!isUserScrollingUp && chatLog) {
-        chatLog.scrollTop = chatLog.scrollHeight;
-      }
-    }
-
-    function updateUnreadBadge() {
-      if (!chatUnread) return;
-      if (unreadCount > 0 && !isPanelVisible()) {
-        chatUnread.classList.remove("hidden");
-        chatUnread.innerText = unreadCount;
-      } else {
-        chatUnread.classList.add("hidden");
-      }
-    }
-
-    function resetUnread() {
-      unreadCount = 0;
-      updateUnreadBadge();
-    }
-
-    function isPanelVisible() {
-      return chatbotPanel && !chatbotPanel.classList.contains("hidden");
-    }
-
-    function showTyping() {
-      if (!typingIndicator) return;
-      typingIndicator.classList.remove("hidden");
-    }
-
-    function hideTyping() {
-      if (!typingIndicator) return;
-      typingIndicator.classList.add("hidden");
-    }
-
-    function botAnswerWithDelay(text) {
-      showTyping();
-      if (botTypingTimeout) {
-        clearTimeout(botTypingTimeout);
-      }
-      botTypingTimeout = setTimeout(() => {
-        hideTyping();
-        addMessage("bot", text);
-        vibrateIfPossible(10);
-      }, 600);
-    }
-
-    function botConversation(messages) {
-      let delay = 0;
-      messages.forEach(msg => {
-        delay += msg.delay || 600;
-        setTimeout(() => {
-          botAnswerWithDelay(msg.text);
-        }, delay);
-      });
-    }
-
-    function detectAndSaveName(text) {
+    function simpleBotReply(text) {
       const lower = text.toLowerCase();
-      const marker = "my name is ";
-      const index = lower.indexOf(marker);
-      if (index !== -1) {
-        const rawName = text.substring(index + marker.length).trim();
-        if (rawName.length > 0) {
-          const cleanName = rawName.split(" ")[0].replace(/[^\w]/g, "");
-          if (cleanName) {
-            setUserName(cleanName);
-            storedName = cleanName;
-            if (chatSubtitle) {
-              chatSubtitle.textContent = "Hi " + cleanName + ". This is your BeatBox chat assistant.";
-            }
-            botAnswerWithDelay("Nice to meet you " + cleanName + ". I will use your name in this chat.");
-          }
-        }
+
+      if (lower.includes("what is beatbox")) {
+        addMessage("bot", "BeatBox is a concept for a monthly music box that bundles playlists, merch, and artist stories around a featured artist.");
+        return;
       }
+
+      if (lower.includes("tier") || lower.includes("subscription")) {
+        addMessage("bot", "BeatBox is imagined with three tiers called Starter Vibes, Crowd Favorite, and Headliner with different levels of content and merch.");
+        return;
+      }
+
+      if (lower.includes("price") || lower.includes("cost")) {
+        addMessage("bot", "Prices in this class project are for display only, but the idea is a simple monthly subscription at different levels.");
+        return;
+      }
+
+      addMessage("bot", "This is a simple demo bot for the BeatBox project. Try asking what is BeatBox or what are the tiers.");
     }
 
-    function checkSentiment(text) {
-      const lower = text.toLowerCase();
-      const badWords = ["frustrated", "angry", "upset", "mad", "annoyed", "confused", "stressed"];
-      return badWords.some(w => lower.includes(w));
+    function handleSend() {
+      if (!chatInput) return;
+      const text = chatInput.value.trim();
+      if (!text) return;
+      addMessage("user", text);
+      chatInput.value = "";
+      simpleBotReply(text);
     }
 
-    function handleCommand(qLower) {
-      if (qLower === "/pricing") {
-        lastTopic = "pricing";
-        botAnswerWithDelay("BeatBox is planned around three main tiers. Starter Vibes at about ten per month, Crowd Favorite around twenty five per month, and Headliner around forty per month depending on promotions and location.");
-        return true;
-      }
-      if (qLower === "/tier" || qLower === "/tiers") {
-        lastTopic = "tiers";
-        botAnswerWithDelay("Starter Vibes focuses on digital content and small merch, Crowd Favorite adds more exclusive tracks and physical items, and Headliner includes premium merch like apparel and limited edition prints.");
-        return true;
-      }
-      if (qLower === "/track") {
-        lastTopic = "shipping";
-        botAnswerWithDelay("When your BeatBox ships you get an email with a tracking link so you can follow your box until it arrives.");
-        return true;
-      }
-      if (qLower === "/help") {
-        lastTopic = "help";
-        botConversation([
-          { text: "This is a quick list of things I can help with.", delay: 0 },
-          { text: "Ask about subscription tiers, pricing, shipping, featured artists, support, or type clear to reset the chat.", delay: 600 },
-          { text: "You can also try commands like /pricing, /tiers, /track, or /help.", delay: 600 }
-        ]);
-        return true;
-      }
-      if (qLower === "/clear") {
-        chatHistory = [];
-        saveChatHistory(chatHistory);
-        if (chatLog) {
-          chatLog.innerHTML = "";
-        }
-        botAnswerWithDelay("Chat cleared. Ask me anything about your BeatBox subscription.");
-        return true;
-      }
-      return false;
+    if (chatSend) {
+      chatSend.addEventListener("click", handleSend);
     }
-
-    function handleQuestion(rawText) {
-      const q = rawText.trim();
-      const qLower = q.toLowerCase();
-
-      if (!q) return;
-
-      detectAndSaveName(q);
-      lastUserQuestion = q;
-
-      if (qLower.startsWith("/")) {
-        if (handleCommand(qLower)) {
-          return;
-        }
-      }
-
-      if (checkSentiment(q)) {
-        botAnswerWithDelay("I hear that this feels a bit frustrating. I will keep answers simple and clear. If anything I say is confusing, you can tell me and I will try again.");
-      }
-
-      if (qLower === "clear" || qLower === "reset" || qLower === "cls") {
-        chatHistory = [];
-        saveChatHistory(chatHistory);
-        if (chatLog) {
-          chatLog.innerHTML = "";
-        }
-        botAnswerWithDelay("Chat cleared. Ask me anything about your BeatBox subscription.");
-        return;
-      }
-
-      if (
-        qLower.includes("hi") ||
-        qLower.includes("hello") ||
-        qLower.includes("hey") ||
-        qLower.includes("yo")
-      ) {
-        const namePart = storedName ? " " + storedName : "";
-        lastTopic = "greeting";
-        botConversation([
-          { text: "Hi" + namePart + ". This is the BeatBox Help Bot.", delay: 0 },
-          { text: "You can ask me about pricing, shipping, tiers, featured artists, support, or type /help to see more options.", delay: 700 }
-        ]);
-        return;
-      }
-
-      if (qLower.includes("what is beatbox") || (qLower.includes("beatbox") && qLower.includes("what"))) {
-        lastTopic = "overview";
-        botAnswerWithDelay("BeatBox is a monthly music subscription box for rising artists. Each box includes exclusive playlists, merch, and behind the scenes content curated around a featured artist.");
-        return;
-      }
-
-      if (qLower.includes("tier") || qLower.includes("plan") || qLower.includes("subscription")) {
-        lastTopic = "tiers";
-        botAnswerWithDelay("BeatBox offers three planned tiers. Starter Vibes with core digital content and small merch, Crowd Favorite with extra merch and more exclusive tracks, and Headliner with premium items like apparel and limited prints.");
-        return;
-      }
-
-      if (qLower.includes("price") || qLower.includes("cost") || qLower.includes("how much")) {
-        lastTopic = "pricing";
-        botAnswerWithDelay("Prices can shift with promotions and location, but Starter Vibes is planned around ten per month, Crowd Favorite around twenty five per month, and Headliner around forty per month.");
-        return;
-      }
-
-      if (qLower.includes("shipping") || qLower.includes("deliver") || qLower.includes("delivery") || qLower.includes("ship")) {
-        lastTopic = "shipping";
-        botAnswerWithDelay("Most BeatBox orders are prepared shortly after billing and are planned to arrive in about three to five business days once they ship. A tracking link is sent by email when your box leaves our facility.");
-        return;
-      }
-
-      if (qLower.includes("international") || qLower.includes("outside") || qLower.includes("country")) {
-        lastTopic = "international";
-        botAnswerWithDelay("Right now BeatBox is focused on customers within the United States. Expanding into additional countries is something we plan to explore as we grow.");
-        return;
-      }
-
-      if (qLower.includes("featured artist") || qLower.includes("artist of the month") || qLower.includes("who is the artist")) {
-        lastTopic = "artists";
-        botAnswerWithDelay("Each month we spotlight a different featured artist. You can see the current selection on the Featured Artist page in the main navigation.");
-        return;
-      }
-
-      if (qLower.includes("cancel") || qLower.includes("stop") || qLower.includes("end my subscription")) {
-        lastTopic = "cancel";
-        botAnswerWithDelay("You can cancel your BeatBox plan in your account subscription settings. After you cancel, you keep access through the end of your current billing period.");
-        return;
-      }
-
-      if (qLower.includes("pause") || qLower.includes("hold") || qLower.includes("skip a month")) {
-        lastTopic = "pause";
-        botAnswerWithDelay("Account settings are planned to support pause and skip options so you can take a short break without fully cancelling.");
-        return;
-      }
-
-      if (qLower.includes("contact") || qLower.includes("email") || qLower.includes("support") || qLower.includes("help desk")) {
-        lastTopic = "support";
-        botAnswerWithDelay("If you need more help you can visit the Contact page in the navigation or email support at beatboxsound dot com.");
-        return;
-      }
-
-      if (qLower.includes("track") || qLower.includes("tracking") || qLower.includes("where is my box") || qLower.includes("order status")) {
-        lastTopic = "tracking";
-        botAnswerWithDelay("When your BeatBox ships you get an email with tracking details so you can follow your package until it arrives.");
-        return;
-      }
-
-      if (qLower.includes("student") || qLower.includes("discount") || qLower.includes("promo")) {
-        lastTopic = "discounts";
-        botAnswerWithDelay("BeatBox may offer student pricing and promo codes through campus events, email campaigns, and partner promotions. Keep an eye on our newsletter for current offers.");
-        return;
-      }
-
-      if (qLower.includes("more") && lastTopic) {
-        const follow = {
-          pricing: "This is one more note on pricing. Real plans may change when we move beyond this class project, but the idea is to keep things friendly for fans and fair for artists.",
-          tiers: "This is a little more detail on tiers. Headliner boxes are imagined as limited runs with items that feel collectible, while Starter Vibes keeps things simple and affordable.",
-          shipping: "This is a little more about shipping. In a real product you would see live carrier options, estimated arrival, and tracking updates directly in your account.",
-          artists: "This is a little more about artists. The long term idea is for artists to share stories, track breakdowns, and behind the scenes notes that only box members can see.",
-          support: "This is a little more about support. The team would handle lost boxes, damaged items, billing issues, and general questions all from a central support view."
-        };
-        const msg = follow[lastTopic] || "This is where a real product could go deeper into this topic with more examples and live account details.";
-        botAnswerWithDelay(msg);
-        return;
-      }
-
-      if (qLower.includes("help") || qLower.includes("what can you do") || qLower.includes("options")) {
-        lastTopic = "help";
-        botConversation([
-          { text: "I can help explain BeatBox subscription tiers, pricing, shipping, featured artists, cancelling or pausing, and how to contact support.", delay: 0 },
-          { text: "You can also try quick commands like /pricing, /tiers, /track, or /help for instant answers.", delay: 700 }
-        ]);
-        return;
-      }
-
-      lastTopic = "other";
-      botAnswerWithDelay("I am not sure about that one yet. Try asking about pricing, subscription tiers, shipping, featured artists, cancelling or pausing, order tracking, or type clear to reset the chat.");
-    }
-
-    function sendUserQuestion(text) {
-      const q = text.trim();
-      if (!q) return;
-      addMessage("user", q);
-      addToRecent(q);
-      handleQuestion(q);
-    }
-
-    function addToRecent(q) {
-      if (!q) return;
-      recentQuestions.unshift(q);
-      recentQuestions = recentQuestions.slice(0, 6);
-      saveRecent(recentQuestions);
-      renderRecent();
-    }
-
-    function saveLastQuestion() {
-      if (!lastUserQuestion) return;
-      if (!favoriteQuestions.includes(lastUserQuestion)) {
-        favoriteQuestions.unshift(lastUserQuestion);
-        favoriteQuestions = favoriteQuestions.slice(0, 8);
-        saveFavorites(favoriteQuestions);
-        renderFavorites();
-        botAnswerWithDelay("Got it. I saved that question in the Saved questions section on the right.");
-      }
-    }
-
-    if (chatInput && chatLog) {
+    if (chatInput) {
       chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" && chatInput.value.trim() !== "") {
-          const q = chatInput.value.trim();
-          chatInput.value = "";
-          sendUserQuestion(q);
+        if (e.key === "Enter") {
+          handleSend();
         }
       });
-
-      chatInput.addEventListener("input", () => {
-        const value = chatInput.value.trim();
-        if (!value) {
-          if (inputSuggestion) inputSuggestion.textContent = "";
-          return;
-        }
-        const match = sampleQuestions.find(q => q.toLowerCase().startsWith(value.toLowerCase()));
-        if (match && inputSuggestion) {
-          inputSuggestion.textContent = "This is a suggestion: " + match;
-        } else if (inputSuggestion) {
-          inputSuggestion.textContent = "";
-        }
-      });
-    }
-
-    if (chatClearBtn) {
-      chatClearBtn.addEventListener("click", () => {
-        chatHistory = [];
-        saveChatHistory(chatHistory);
-        if (chatLog) {
-          chatLog.innerHTML = "";
-        }
-        botAnswerWithDelay("Chat cleared. Ask me anything about your BeatBox subscription.");
-      });
-    }
-
-    suggestChips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        const question = chip.getAttribute("data-question") || "";
-        if (question) {
-          sendUserQuestion(question);
-        }
-      });
-    });
-
-    const topicAnswers = {
-      subscriptions: "BeatBox subscriptions are built around three planned tiers. Starter Vibes focuses on digital content and small merch, Crowd Favorite adds more exclusive tracks and physical items, and Headliner includes premium merch like apparel and limited prints. Plans are designed to renew monthly and eventually support skip and pause options so you stay in control.",
-      shipping: "BeatBox aims to ship boxes within a few days of your billing date. Once your box leaves the fulfillment center you receive an email with a tracking link. Most boxes are planned to arrive in about three to five business days, and future versions could show live estimated delivery windows right in your account.",
-      billing: "BeatBox billing is planned to run on a recurring monthly schedule. You will be able to update your payment method, billing address, and preferred plan from your account settings. Promotional prices, student discounts, and bundle offers can be applied with promo codes during checkout when available.",
-      artists: "Each BeatBox cycle centers on a featured artist. That artist helps shape the playlists, stories, and merch inside the box. We focus on rising artists and independent talent while also exploring partnerships with labels, festivals, and brands, so fans can discover new voices and support them early.",
-      account: "From your BeatBox account you will be able to manage your subscription, update shipping and billing details, change your plan, adjust your music preferences, and control email settings. Future updates could include profile badges, listening stats, and rewards for long time supporters.",
-      support: "If something is not right with your BeatBox order you can reach out through the Contact page or by using the support email listed there. Including your order details, photos for damaged items, and a short summary of the problem helps the support team respond faster."
-    };
-
-    topicButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const topic = btn.getAttribute("data-topic");
-        const qText = "Tell me about " + (topic || "BeatBox");
-        addMessage("user", qText);
-        const answer = topicAnswers[topic] || "BeatBox offers flexible subscriptions, curated boxes, and direct support so you can discover new artists and manage your plan easily.";
-        botAnswerWithDelay(answer);
-      });
-    });
-
-    if (saveLastQuestionBtn) {
-      saveLastQuestionBtn.addEventListener("click", () => {
-        saveLastQuestion();
-      });
-    }
-
-    if (exportChatBtn) {
-      exportChatBtn.addEventListener("click", () => {
-        const win = window.open("", "_blank");
-        if (!win) return;
-        const doc = win.document;
-        doc.write("<html><head><title>BeatBox Chat Export</title></head><body>");
-        doc.write("<h2>BeatBox chat history</h2>");
-        doc.write("<p>This export shows your conversation with the BeatBox Help Bot from this browser session.</p>");
-        doc.write("<ul>");
-        chatHistory.forEach(msg => {
-          doc.write("<li><strong>" + (msg.sender === "user" ? "You" : "Bot") + "</strong> " +
-                    "[" + msg.time + "]: " + msg.text + "</li>");
-        });
-        doc.write("</ul>");
-        doc.write("</body></html>");
-        doc.close();
-        win.focus();
-        win.print();
-      });
-    }
-
-    const dailyTips = [
-      "This is a tip. If you want a quick summary of BeatBox, ask the bot What is BeatBox in simple terms.",
-      "This is a tip. Try the command /pricing if you only care about how much the tiers might cost.",
-      "This is a tip. If you are not sure what to ask, type help or /help and I will list ideas.",
-      "This is a tip. You can save your favorite question with the Save last question button near the input.",
-      "This is a tip. You can come back later and tap a saved question on the right to reuse it instantly."
-    ];
-
-    function showDailyTipOncePerDay() {
-      if (!dailyTipElement) return;
-      const today = new Date().toISOString().slice(0, 10);
-      const last = safeGet(CHAT_TIP_DATE_KEY);
-      if (last === today) {
-        dailyTipElement.innerText = "This is the tip for today. You already saw it, but you can still ask anything you like.";
-        return;
-      }
-      const tip = dailyTips[Math.floor(Math.random() * dailyTips.length)];
-      dailyTipElement.innerText = tip;
-      safeSet(CHAT_TIP_DATE_KEY, today);
-    }
-
-    showDailyTipOncePerDay();
-
-    // UPDATED: force compact size whenever the panel opens
-    function openChatPanel(fromAuto) {
-      if (!chatbotPanel) return;
-
-      // force compact on open
-      chatbotPanel.classList.remove("md:w-[32rem]");
-      chatbotPanel.style.width = "";
-      if (chatSizeToggle) {
-        chatSizeToggle.textContent = "Large";
-      }
-
-      chatbotPanel.classList.remove("hidden");
-      chatbotPanel.classList.remove("chat-closed");
-      chatbotPanel.classList.add("chat-open");
-      resetUnread();
-
-      if (chatLog) {
-        chatLog.scrollTop = chatLog.scrollHeight;
-      }
-
-      if (!fromAuto && sessionStorage.getItem(CHAT_OPENED_KEY) !== "true") {
-        sessionStorage.setItem(CHAT_OPENED_KEY, "true");
-      }
-    }
-
-    function closeChatPanel() {
-      if (!chatbotPanel) return;
-      chatbotPanel.classList.remove("chat-open");
-      chatbotPanel.classList.add("chat-closed");
-      setTimeout(() => {
-        chatbotPanel.classList.add("hidden");
-      }, 200);
-    }
-
-    if (chatbotBtn && chatbotPanel) {
-      chatbotBtn.addEventListener("click", () => {
-        if (isPanelVisible()) {
-          closeChatPanel();
-        } else {
-          openChatPanel(false);
-        }
-      });
-    }
-
-    if (chatbotClose && chatbotPanel) {
-      chatbotClose.addEventListener("click", () => {
-        closeChatPanel();
-      });
-    }
-
-    if (chatMinimize && chatbotPanel) {
-      chatMinimize.addEventListener("click", () => {
-        closeChatPanel();
-      });
-    }
-
-    // UPDATED: label shows what you can switch to
-    if (chatSizeToggle && chatbotPanel) {
-      const isLargeNow = chatbotPanel.classList.contains("md:w-[32rem]");
-      chatSizeToggle.textContent = isLargeNow ? "Compact" : "Large";
-
-      chatSizeToggle.addEventListener("click", () => {
-        const isLarge = chatbotPanel.classList.toggle("md:w-[32rem]");
-        chatSizeToggle.textContent = isLarge ? "Compact" : "Large";
-      });
-    }
-
-    /* Removed the automatic open on page load
-       so the chat stays closed until the user clicks Chat */
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && isPanelVisible()) {
-        closeChatPanel();
-      }
-    });
-
-    if (chatLog && scrollBottomBtn) {
-      chatLog.addEventListener("scroll", () => {
-        const nearBottom = chatLog.scrollHeight - chatLog.scrollTop - chatLog.clientHeight < 10;
-        isUserScrollingUp = !nearBottom;
-        if (nearBottom) {
-          scrollBottomBtn.classList.add("hidden");
-          resetUnread();
-        } else if (unreadCount > 0) {
-          scrollBottomBtn.classList.remove("hidden");
-        }
-      });
-
-      scrollBottomBtn.addEventListener("click", () => {
-        chatLog.scrollTop = chatLog.scrollHeight;
-        isUserScrollingUp = false;
-        scrollBottomBtn.classList.add("hidden");
-        resetUnread();
-      });
-    }
-
-    if (storedName && chatSubtitle) {
-      chatSubtitle.textContent = "Hi " + storedName + ". This is your BeatBox assistant, ask anything about your subscription.";
     }
   </script>
 
@@ -1599,110 +557,6 @@
     .stars {
       color: #f59e0b;
       font-size: 1.125rem;
-    }
-
-    .suggest-chip {
-      font-size: 0.7rem;
-      padding: 0.25rem 0.5rem;
-      border-radius: 999px;
-      border: 1px solid #cbd5f5;
-      background-color: #eef2ff;
-      color: #4c1d95;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .dark .suggest-chip {
-      border-color: #4c1d95;
-      background-color: #312e81;
-      color: #e0e7ff;
-    }
-
-    .suggest-chip:hover {
-      background-color: #e0e7ff;
-    }
-    .dark .suggest-chip:hover {
-      background-color: #4338ca;
-    }
-
-    .topic-btn {
-      font-size: 0.75rem;
-      padding: 0.4rem 0.5rem;
-      border-radius: 0.5rem;
-      border: 1px solid #e5e7eb;
-      text-align: left;
-      background-color: #f9fafb;
-      color: #111827;
-      width: 100%;
-    }
-    .topic-btn:hover {
-      background-color: #e5e7eb;
-    }
-    .dark .topic-btn {
-      border-color: #4b5563;
-      background-color: #111827;
-      color: #e5e7eb;
-    }
-    .dark .topic-btn:hover {
-      background-color: #374151;
-    }
-
-    .faq-item {
-      border-radius: 0.5rem;
-      border: 1px solid #e5e7eb;
-      padding: 0.3rem 0.4rem;
-      background-color: #f9fafb;
-    }
-    .faq-item summary {
-      cursor: pointer;
-      list-style: none;
-    }
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-    .faq-item summary::before {
-      content: "› ";
-      color: #6b7280;
-    }
-    .faq-item p {
-      margin-top: 0.25rem;
-      color: #4b5563;
-    }
-    .dark .faq-item {
-      border-color: #4b5563;
-      background-color: #111827;
-    }
-    .dark .faq-item p {
-      color: #e5e7eb;
-    }
-
-    .chat-open {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    .chat-closed {
-      transform: translateY(1rem);
-      opacity: 0;
-    }
-
-    .dot-anim {
-      width: 4px;
-      height: 4px;
-      margin-left: 2px;
-      border-radius: 999px;
-      background-color: #9ca3af;
-      display: inline-block;
-      animation: dotPulse 1s infinite ease-in-out;
-    }
-    .dot-anim:nth-child(2) {
-      animation-delay: 0.15s;
-    }
-    .dot-anim:nth-child(3) {
-      animation-delay: 0.3s;
-    }
-
-    @keyframes dotPulse {
-      0%, 80%, 100% { transform: scale(0.8); opacity: 0.4; }
-      40% { transform: scale(1); opacity: 1; }
     }
   </style>
 
