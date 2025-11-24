@@ -117,7 +117,7 @@
             <a
               href="featuredartist.html"
               class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Featured Artist</a
+              >Featured Artist of the Month</a
             >
             <a
               href="checkoutpage.html"
@@ -131,22 +131,13 @@
             >
           </div>
 
-          <div class="flex items-center space-x-2">
-            <div
-              class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs"
-            >
-              <button id="font-decrease" class="px-2 text-sm font-semibold">
-                A
-              </button>
-              <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
-              <button id="font-increase" class="px-2 text-base font-semibold">
-                A
-              </button>
-            </div>
-
+          <!-- RIGHT: THEME TOGGLE -->
+          <div class="flex items-center">
             <button
               id="theme-toggle"
-              class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600"
+              class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-600 transition"
+              aria-label="Toggle theme"
+              title="Toggle dark / light"
             >
               🌗
             </button>
@@ -154,7 +145,7 @@
         </div>
       </div>
 
-      <!-- MOBILE MENU -->
+      <!-- <!-- MOBILE MENU -->
       <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
         <a
           href="index.html"
@@ -195,290 +186,195 @@
     </nav>
 
     <!-- MAIN CONTENT -->
-    <main class="py-16 px-4 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <section
-          class="relative overflow-hidden rounded-3xl bg-black dark:bg-slate-800 shadow-2xl"
-        >
-          <div class="absolute inset-0 z-0">
-            <div
-              class="absolute -top-1/4 -right-1/4 h-3/4 w-3/4 rounded-full bg-red-700/30 blur-3xl opacity-60"
-            ></div>
-            <div
-              class="absolute -bottom-1/4 -left-1/4 h-3/4 w-3/4 rounded-full bg-pink-500/30 blur-3xl opacity-60"
-            ></div>
+   <main class="py-16 px-4 lg:px-8">
+  <div class="mx-auto max-w-7xl">
+
+    <section class="relative overflow-hidden rounded-3xl bg-black dark:bg-slate-800 shadow-2xl">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute -top-1/4 -right-1/4 h-3/4 w-3/4 rounded-full bg-red-700/30 blur-3xl opacity-60"></div>
+        <div class="absolute -bottom-1/4 -left-1/4 h-3/4 w-3/4 rounded-full bg-pink-500/30 blur-3xl opacity-60"></div>
+      </div>
+      
+      <div class="relative z-10 grid md:grid-cols-2 items-center p-6 sm:p-10 lg:p-16 gap-12">
+        
+        <div class="space-y-6 text-white text-left">
+          <p class="inline-block rounded-full bg-red-500/20 px-4 py-1 text-sm font-semibold text-red-300 shadow-sm border border-red-500/40">
+            BeatBox Exclusive Drop: November 2025
+          </p>
+
+          <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black leading-none">
+            Rihanna
+          </h1>
+          
+          <p class="text-xl max-w-lg text-red-200/90 font-medium">
+            From Bajan roots to global mogul, the R&B/Pop icon defines sound and style. This box celebrates her greatest eras and unstoppable vision.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="subscriptiontiers.html"
+              class="rounded-xl bg-red-500 px-6 py-3 text-lg font-semibold text-white shadow-xl shadow-red-500/40 hover:bg-red-600 transition">
+              Get the BeatBox Drop
+            </a>
+            <a href="#tracklist"
+              class="rounded-xl border border-white/50 px-6 py-3 text-lg font-semibold text-white/90 hover:bg-white/10 transition">
+              See Box Details
+            </a>
+          </div>
+        </div>
+
+        <div class="flex justify-center md:justify-end">
+          <img 
+            src="images/rihanna-barbadian-singer-portrait-paint-colorful-vivid-2048x2048-4225.jpg" 
+            alt="Stylized portrait of Rihanna" 
+            class="w-64 sm:w-80 lg:w-96 rounded-full object-cover shadow-2xl border-4 border-red-500/50"
+          />
           </div>
 
-          <div
-            class="relative z-10 grid md:grid-cols-2 items-center p-6 sm:p-10 lg:p-16 gap-12"
-          >
-            <div class="space-y-6 text-white text-left">
-              <p
-                class="inline-block rounded-full bg-red-500/20 px-4 py-1 text-sm font-semibold text-red-300 shadow-sm border border-red-500/40"
-              >
-                BeatBox Exclusive Drop: November 2025
-              </p>
+      </div>
+    </section>
 
-              <h1
-                class="text-6xl sm:text-7xl lg:text-8xl font-black leading-none"
-              >
-                Rihanna
-              </h1>
-
-              <p class="text-xl max-w-lg text-red-200/90 font-medium">
-                From Bajan roots to global mogul, the R&B/Pop icon defines sound
-                and style. This box celebrates her greatest eras and unstoppable
-                vision.
-              </p>
-
-              <div class="flex flex-wrap gap-4 pt-4">
-                <a
-                  href="subscriptiontiers.html"
-                  class="rounded-xl bg-red-500 px-6 py-3 text-lg font-semibold text-white shadow-xl shadow-red-500/40 hover:bg-red-600 transition"
-                >
-                  Get the BeatBox Drop
-                </a>
-                <a
-                  href="#tracklist"
-                  class="rounded-xl border border-white/50 px-6 py-3 text-lg font-semibold text-white/90 hover:bg-white/10 transition"
-                >
-                  See Box Details
-                </a>
-              </div>
-            </div>
-
-            <div class="flex justify-center md:justify-end">
-              <img
-                src="images/rihanna-barbadian-singer-portrait-paint-colorful-vivid-2048x2048-4225.jpg"
-                alt="Stylized portrait of Rihanna"
-                class="w-64 sm:w-80 lg:w-96 rounded-full object-cover shadow-2xl border-4 border-red-500/50"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section class="mt-20">
-          <div class="grid lg:grid-cols-3 gap-12 items-start">
-            <div class="lg:col-span-2 space-y-8">
-              <h2 class="text-4xl font-bold border-b pb-3 border-red-500/30">
-                Behind the FENTY Sound
-              </h2>
-
-              <article class="space-y-4 text-slate-700 dark:text-slate-300">
-                <p>
-                  This BeatBox drop dives deep into the evolution of **Robyn
-                  Rihanna Fenty**. It's a journey from the infectious Dancehall
-                  rhythms of *Music of the Sun* to the raw, genre-bending
-                  anthems of *Anti*. We explore how she became more than just a
-                  pop star—she became a **cultural disruptor**.
-                </p>
-                <p>
-                  The digital experience focuses on her transformation from a
-                  Pop Princess to the **"Bad Gal Riri"** era, highlighting her
-                  influence on contemporary R&B, Trap, and electronic music.
-                  You'll receive **exclusive behind-the-scenes content** about
-                  the making of her most iconic album covers and music videos,
-                  illustrating her meticulous control over her visual identity.
-                </p>
-                <blockquote
-                  class="border-l-4 border-red-500 pl-4 italic text-slate-500 dark:text-slate-400"
-                >
-                  "My career is my journey. My style is my journey. Everything
-                  is my journey." - Rihanna (Imagined Quote for the Drop)
-                </blockquote>
-                <p>
-                  A major theme of this box is her business empire. Learn how
-                  her **Savage X Fenty** and **Fenty Beauty** ventures tie back
-                  into the themes of empowerment, inclusivity, and fearless
-                  self-expression that are always present in her music.
-                </p>
-              </article>
-
-              <div
-                class="flex flex-wrap items-center gap-2 text-sm text-slate-500 dark:text-slate-300 pt-4"
-              >
-                <span
-                  class="mr-2 text-slate-800 dark:text-slate-200 font-semibold"
-                  >BeatBox Genres:</span
-                >
-                <span class="genre-tag">Pop/R&B</span>
-                <span class="genre-tag">Dancehall</span>
-                <span class="genre-tag">Trap Soul</span>
-                <span class="genre-tag">Experimental</span>
-              </div>
-              <style>
-                .genre-tag {
-                  @apply rounded-full bg-red-100/50 dark:bg-red-900/40 px-3 py-1 text-red-700 dark:text-red-300 text-xs font-medium border border-red-500/30;
-                }
-              </style>
-            </div>
-
-            <div
-              class="lg:col-span-1 space-y-8 bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-700"
-            >
-              <h3
-                class="text-2xl font-bold flex items-center gap-2 text-red-600 dark:text-red-400"
-              >
-                📦 BeatBox Contents Preview
-              </h3>
-
-              <ul class="space-y-4">
-                <li class="flex items-center space-x-3">
-                  <span class="text-xl text-red-500">🎧</span>
-                  <div>
-                    <p class="font-semibold">The "Anti" Era Playlist</p>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">
-                      A curated playlist focusing on her genre-bending deep
-                      cuts.
-                    </p>
-                  </div>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="text-xl text-red-500">👕</span>
-                  <div>
-                    <p class="font-semibold">Exclusive FENTY-Inspired Merch</p>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">
-                      A high-quality item tied to her visual aesthetic (T-shirt
-                      or hat concept).
-                    </p>
-                  </div>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="text-xl text-red-500">📜</span>
-                  <div>
-                    <p class="font-semibold">Digital Story & Lookbook</p>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">
-                      A digital booklet detailing her 8-album journey and
-                      impact.
-                    </p>
-                  </div>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="text-xl text-red-500">🎟️</span>
-                  <div>
-                    <p class="font-semibold">Unreleased Demo Track Access</p>
-                    <p class="text-sm text-slate-600 dark:text-slate-400">
-                      A hypothetical digital code for one B-side or early cut
-                      (concept).
-                    </p>
-                  </div>
-                </li>
-              </ul>
-
-              <div class="text-center pt-4">
-                <a
-                  href="checkoutpage.html"
-                  class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-2.5 text-base font-semibold shadow-md shadow-red-500/30 hover:bg-red-700 transition"
-                >
-                  Add BeatBox to Cart
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="tracklist" class="mt-20">
-          <h2 class="text-4xl font-bold text-center mb-10">
-            Top Tracks Defining the BeatBox Vibe
+    <section class="mt-20">
+      <div class="grid lg:grid-cols-3 gap-12 items-start">
+        
+        <div class="lg:col-span-2 space-y-8">
+          <h2 class="text-4xl font-bold border-b pb-3 border-red-500/30">
+            Behind the FENTY Sound
           </h2>
-          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <div class="track-card">
-              <h4 class="font-bold text-red-500">01. Umbrella</h4>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Good Girl Gone Bad (2007)
-              </p>
-              <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">
-                The iconic global takeover anthem that cemented her pop legacy.
-              </p>
-            </div>
+          
+          <article class="space-y-4 text-slate-700 dark:text-slate-300">
+            <p>
+              This BeatBox drop dives deep into the evolution of **Robyn Rihanna Fenty**. It's a journey from the infectious Dancehall rhythms of *Music of the Sun* to the raw, genre-bending anthems of *Anti*. We explore how she became more than just a pop star—she became a **cultural disruptor**.
+            </p>
+            <p>
+              The digital experience focuses on her transformation from a Pop Princess to the **"Bad Gal Riri"** era, highlighting her influence on contemporary R&B, Trap, and electronic music. You'll receive **exclusive behind-the-scenes content** about the making of her most iconic album covers and music videos, illustrating her meticulous control over her visual identity.
+            </p>
+            <blockquote class="border-l-4 border-red-500 pl-4 italic text-slate-500 dark:text-slate-400">
+              "My career is my journey. My style is my journey. Everything is my journey." - Rihanna (Imagined Quote for the Drop)
+            </blockquote>
+            <p>
+              A major theme of this box is her business empire. Learn how her **Savage X Fenty** and **Fenty Beauty** ventures tie back into the themes of empowerment, inclusivity, and fearless self-expression that are always present in her music.
+            </p>
+          </article>
 
-            <div class="track-card">
-              <h4 class="font-bold text-red-500">
-                02. Bitch Better Have My Money
-              </h4>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Single (2015)
-              </p>
-              <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">
-                The fearless, trap-influenced shift toward the 'Bad Gal'
-                persona.
-              </p>
-            </div>
-
-            <div class="track-card">
-              <h4 class="font-bold text-red-500">03. Needed Me</h4>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Anti (2016)
-              </p>
-              <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">
-                A slow-burn R&B track showcasing her vocal maturity and
-                emotional depth.
-              </p>
-            </div>
-
-            <div class="track-card">
-              <h4 class="font-bold text-red-500">04. Pon de Replay</h4>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Music of the Sun (2005)
-              </p>
-              <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">
-                A throwback to the island rhythms that started her entire
-                career.
-              </p>
-            </div>
-
-            <div class="track-card">
-              <h4 class="font-bold text-red-500">05. Love on the Brain</h4>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Anti (2016)
-              </p>
-              <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">
-                Doo-wop inspired ballad that demonstrates her powerful vocal
-                range.
-              </p>
-            </div>
-
-            <div class="track-card">
-              <h4 class="font-bold text-red-500">06. We Found Love</h4>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Talk That Talk (2011)
-              </p>
-              <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">
-                A massive EDM/Pop crossover hit for the "Party Girl" era.
-              </p>
-            </div>
+          <div class="flex flex-wrap items-center gap-2 text-sm text-slate-500 dark:text-slate-300 pt-4">
+            <span class="mr-2 text-slate-800 dark:text-slate-200 font-semibold">BeatBox Genres:</span>
+            <span class="genre-tag">Pop/R&B</span>
+            <span class="genre-tag">Dancehall</span>
+            <span class="genre-tag">Trap Soul</span>
+            <span class="genre-tag">Experimental</span>
           </div>
-
           <style>
-            .track-card {
-              @apply rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm hover:shadow-lg transition duration-300 hover:scale-[1.02];
+            .genre-tag {
+              @apply rounded-full bg-red-100/50 dark:bg-red-900/40 px-3 py-1 text-red-700 dark:text-red-300 text-xs font-medium border border-red-500/30;
             }
           </style>
-        </section>
+
+        </div>
+
+        <div class="lg:col-span-1 space-y-8 bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+          <h3 class="text-2xl font-bold flex items-center gap-2 text-red-600 dark:text-red-400">
+            📦 BeatBox Contents Preview
+          </h3>
+          
+          <ul class="space-y-4">
+            <li class="flex items-center space-x-3">
+              <span class="text-xl text-red-500">🎧</span>
+              <div>
+                <p class="font-semibold">The "Anti" Era Playlist</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400">A curated playlist focusing on her genre-bending deep cuts.</p>
+              </div>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="text-xl text-red-500">👕</span>
+              <div>
+                <p class="font-semibold">Exclusive FENTY-Inspired Merch</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400">A high-quality item tied to her visual aesthetic (T-shirt or hat concept).</p>
+              </div>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="text-xl text-red-500">📜</span>
+              <div>
+                <p class="font-semibold">Digital Story & Lookbook</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400">A digital booklet detailing her 8-album journey and impact.</p>
+              </div>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="text-xl text-red-500">🎟️</span>
+              <div>
+                <p class="font-semibold">Unreleased Demo Track Access</p>
+                <p class="text-sm text-slate-600 dark:text-slate-400">A hypothetical digital code for one B-side or early cut (concept).</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="text-center pt-4">
+            <a href="checkoutpage.html" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-2.5 text-base font-semibold shadow-md shadow-red-500/30 hover:bg-red-700 transition">
+              Add BeatBox to Cart
+            </a>
+          </div>
+        </div>
+
       </div>
-    </main>
+    </section>
+
+    <section id="tracklist" class="mt-20">
+      <h2 class="text-4xl font-bold text-center mb-10">
+        Top Tracks Defining the BeatBox Vibe
+      </h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <div class="track-card">
+          <h4 class="font-bold text-red-500">01. Umbrella</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Good Girl Gone Bad (2007)</p>
+          <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">The iconic global takeover anthem that cemented her pop legacy.</p>
+        </div>
+
+        <div class="track-card">
+          <h4 class="font-bold text-red-500">02. Bitch Better Have My Money</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Single (2015)</p>
+          <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">The fearless, trap-influenced shift toward the 'Bad Gal' persona.</p>
+        </div>
+
+        <div class="track-card">
+          <h4 class="font-bold text-red-500">03. Needed Me</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Anti (2016)</p>
+          <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">A slow-burn R&B track showcasing her vocal maturity and emotional depth.</p>
+        </div>
+
+        <div class="track-card">
+          <h4 class="font-bold text-red-500">04. Pon de Replay</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Music of the Sun (2005)</p>
+          <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">A throwback to the island rhythms that started her entire career.</p>
+        </div>
+
+        <div class="track-card">
+          <h4 class="font-bold text-red-500">05. Love on the Brain</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Anti (2016)</p>
+          <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">Doo-wop inspired ballad that demonstrates her powerful vocal range.</p>
+        </div>
+
+        <div class="track-card">
+          <h4 class="font-bold text-red-500">06. We Found Love</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Talk That Talk (2011)</p>
+          <p class="text-xs mt-2 text-slate-600 dark:text-slate-300">A massive EDM/Pop crossover hit for the "Party Girl" era.</p>
+        </div>
+
+      </div>
+      
+      <style>
+        .track-card {
+          @apply rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 shadow-sm hover:shadow-lg transition duration-300 hover:scale-[1.02];
+        }
+      </style>
+      
+    </section>
+
+  </div>
+  
+</main>
 
     <!-- JS: Toggle theme & hamburger -->
     <script>
-      // Font size controls
-      const inc = document.getElementById("font-increase");
-      const dec = document.getElementById("font-decrease");
-      let scale = 1;
-
-      function applyScale() {
-        document.documentElement.style.fontSize = 16 * scale + "px";
-      }
-
-      inc.addEventListener("click", () => {
-        scale = Math.min(1.3, scale + 0.05);
-        applyScale();
-      });
-
-      dec.addEventListener("click", () => {
-        scale = Math.max(0.85, scale - 0.05);
-        applyScale();
-      });
-
       // Dark mode toggle
       const themeToggle = document.getElementById("theme-toggle");
       themeToggle.addEventListener("click", () => {
@@ -524,122 +420,79 @@
       });
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const currentYearSpan = document.getElementById("current-year");
-        if (currentYearSpan) {
-          // Get the current year (e.g., 2025) and set it in the span element
-          currentYearSpan.textContent = new Date().getFullYear();
-        }
-      });
-    </script>
-    <footer
-      class="mt-20 border-t border-slate-200 dark:border-slate-700 pt-10 pb-16"
-    >
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
-          <div class="col-span-2 lg:col-span-1 space-y-3">
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl font-bold text-slate-900 dark:text-white"
-                >BeatBox</span
-              >
-              <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
-            </div>
-            <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs">
-              Curated music and merch drops for the next generation of sound.
-            </p>
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYearSpan = document.getElementById("current-year");
+    if (currentYearSpan) {
+        // Get the current year (e.g., 2025) and set it in the span element
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+});
+
+  </script>
+  <footer class="mt-20 border-t border-slate-200 dark:border-slate-700 pt-10 pb-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+
+        <div class="col-span-2 lg:col-span-1 space-y-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-2xl font-bold text-slate-900 dark:text-white">BeatBox</span>
+            <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
           </div>
-
-          <div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Product
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a href="subscriptiontiers.html" class="hover:text-purple-600"
-                  >Subscription Tiers</a
-                >
-              </li>
-              <li>
-                <a href="howitworks.html" class="hover:text-purple-600"
-                  >How It Works</a
-                >
-              </li>
-              <li>
-                <a href="featuredartist.html" class="hover:text-purple-600"
-                  >Featured Artist</a
-                >
-              </li>
-              <li><a href="#" class="hover:text-purple-600">FAQs</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Company
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a href="about.html" class="hover:text-purple-600">About Us</a>
-              </li>
-              <li>
-                <a href="contact.html" class="hover:text-purple-600"
-                  >Contact Support</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-purple-600">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-purple-600">Terms of Service</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-span-2 md:col-span-1">
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Follow Us
-            </h3>
-            <div class="flex space-x-4 mb-6">
-              <a
-                href="#"
-                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <span class="text-xl">🐦</span
-                ><span class="sr-only">Twitter</span>
-              </a>
-
-              <a
-                href="#"
-                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <span class="text-xl">📸</span
-                ><span class="sr-only">Instagram</span>
-              </a>
-              <a
-                href="#"
-                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <span class="text-xl">▶️</span
-                ><span class="sr-only">YouTube</span>
-              </a>
-            </div>
-
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Project Info
-            </h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400">
-              Design Concept Only. No real billing or shipping is involved.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-10 border-t border-slate-100 dark:border-slate-800 pt-8">
-          <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
-            &copy; <span id="current-year"></span> BeatBox Concept, Inc. All
-            rights reserved.
+          <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs">
+            Curated music and merch drops for the next generation of sound.
           </p>
         </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Product</h3>
+          <ul class="space-y-3">
+            <li><a href="subscriptiontiers.html" class="hover:text-purple-600">Subscription Tiers</a></li>
+            <li><a href="howitworks.html" class="hover:text-purple-600">How It Works</a></li>
+            <li><a href="featuredartist.html" class="hover:text-purple-600">Featured Artist</a></li>
+            <li><a href="#" class="hover:text-purple-600">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Company</h3>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-purple-600">Contact Support</a></li>
+            <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 md:col-span-1">
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Follow Us</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">🐦</span><span class="sr-only">Twitter</span>
+            </a>
+           
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">📸</span><span class="sr-only">Instagram</span>
+            </a>
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">▶️</span><span class="sr-only">YouTube</span>
+            </a>
+          </div>
+
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Project Info</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Design Concept Only. No real billing or shipping is involved.
+          </p>
+        </div>
+
       </div>
-    </footer>
+
+      <div class="mt-10 border-t border-slate-100 dark:border-slate-800 pt-8">
+  <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
+    &copy; <span id="current-year"></span> BeatBox Concept, Inc. All rights reserved.
+  </p>
+</div>
+    </div>
+  </footer>
+
   </body>
 </html>

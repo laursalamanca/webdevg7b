@@ -117,7 +117,7 @@
             <a
               href="featuredartist.html"
               class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Featured Artist</a
+              >Featured Artist of the Month</a
             >
             <a
               href="checkoutpage.html"
@@ -186,7 +186,141 @@
     </nav>
 
     <!-- MAIN CONTENT -->
-    <main class="py-16 px-4 text-center"></main>
+    <main class="py-20 px-6 max-w-4xl mx-auto space-y-12">
+      <!-- Title -->
+      <h1
+        class="text-4xl font-extrabold text-slate-900 dark:text-white text-center"
+      >
+        How It Works
+      </h1>
+
+      <!-- Description Section -->
+      <section
+        class="space-y-4 text-slate-700 dark:text-slate-300 text-lg leading-relaxed"
+      >
+        <p>
+          Once you subscribe to one of our BeatBox tiers, we immediately begin
+          preparing a personalized experience just for you. Within a few
+          minutes, you’ll receive an email containing a short customization
+          form. This form helps us understand your style, your favorite genres,
+          and the artists you connect with most.
+        </p>
+        <p>
+          Our team uses your responses to hand-select items for your monthly box
+          — from apparel and posters to exclusive artist merch and limited-run
+          collectibles. Every BeatBox is curated with your tastes in mind,
+          delivering a music experience that feels uniquely yours.
+        </p>
+        <p>
+          Below is an example of the type of form you'll receive after
+          subscribing:
+        </p>
+      </section>
+
+        <!-- Demo Form -->
+    <!-- Demo Form -->
+  <section
+    class="bg-slate-100 dark:bg-slate-800 p-8 rounded-xl shadow-lg space-y-6 border border-slate-300 dark:border-slate-700"
+  >
+    <h2 class="text-2xl font-semibold text-slate-900 dark:text-white text-center">
+      Personalization Form
+    </h2>
+
+    <form id="beatbox-form" class="space-y-6">
+      <!-- Name -->
+      <div>
+        <label class="block text-left font-medium text-slate-800 dark:text-slate-200 mb-2">
+          Your Name
+        </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your name"
+          class="w-full px-4 py-2 rounded-md bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none"
+        />
+      </div>
+
+      <!-- Music Preferences -->
+      <div>
+        <label class="block text-left font-medium text-slate-800 dark:text-slate-200 mb-2">
+          Music Preferences (Genres)
+        </label>
+        <input
+          id="genres"
+          type="text"
+          placeholder="e.g., Rock, EDM, Indie, Rap"
+          class="w-full px-4 py-2 rounded-md bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none"
+        />
+      </div>
+
+      <!-- Favorite Artist/Band -->
+      <div>
+        <label class="block text-left font-medium text-slate-800 dark:text-slate-200 mb-2">
+          Favorite Band or Artist
+        </label>
+        <input
+          id="artist"
+          type="text"
+          placeholder="e.g., The Weeknd, Fleetwood Mac, Travis Scott"
+          class="w-full px-4 py-2 rounded-md bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none"
+        />
+      </div>
+
+      <!-- Additional Comments -->
+      <div>
+        <label class="block text-left font-medium text-slate-800 dark:text-slate-200 mb-2">
+          Additional Comments
+        </label>
+        <textarea
+          id="comments"
+          rows="4"
+          placeholder="Tell us anything else you'd like in your box!"
+          class="w-full px-4 py-2 rounded-md bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white focus:ring-2 focus:ring-purple-500 outline-none"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        id="submit-button"
+        type="button"
+        class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition"
+      >
+        Submit
+      </button>
+
+      <!-- Success Button (shown after submit) -->
+      <button
+        id="success-button"
+        type="button"
+        class="hidden w-full py-3 bg-green-600 text-white font-semibold rounded-lg shadow-md cursor-default"
+      >
+        Form successfully submitted
+      </button>
+    </form>
+  </section>
+
+  <!-- Info / Privacy Blurb (normal page text below form) -->
+  <p class="mt-6 text-sm text-slate-600 dark:text-slate-400 text-center leading-relaxed">
+    The information you provide will only be used to personalize your monthly BeatBox.
+    We do not sell or share your preferences — your answers help us curate items that
+    match your taste and create the best possible experience.
+  </p>
+
+  <!-- Clear form + show success script -->
+  <script>
+    const form = document.getElementById("beatbox-form");
+    const submitButton = document.getElementById("submit-button");
+    const successButton = document.getElementById("success-button");
+
+    submitButton.addEventListener("click", () => {
+      // Clear all fields
+      form.reset();
+
+      // Show the success button
+      successButton.classList.remove("hidden");
+    });
+  </script>
+
 
     <!-- JS: Toggle theme & hamburger -->
     <script>

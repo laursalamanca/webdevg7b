@@ -117,7 +117,7 @@
             <a
               href="featuredartist.html"
               class="rounded-md px-3 py-2 text-sm font-medium text-black dark:text-white hover:bg-gray-800/5 hover:text-black"
-              >Featured Artist</a
+              >Featured Artist of the Month</a
             >
             <a
               href="checkoutpage.html"
@@ -185,8 +185,120 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="py-16 px-4 text-center"></main>
+        <!-- MAIN CONTENT -->
+    <main class="py-20 px-6 max-w-5xl mx-auto space-y-12">
+
+  <!-- Title -->
+  <h1 class="text-4xl font-extrabold text-slate-900 dark:text-white">
+    About BeatBox
+  </h1>
+
+  <!-- Intro Paragraph -->
+  <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+    BeatBox was founded by a group of music lovers who wanted to make it much easier
+    for people to access music-related merchandise. Everything from rare posters to
+    limited-edition tour merch. We wanted to bring that same excitement to people
+    everywhere — without the high prices, the hassle of hunting for collectibles, or
+    the disappointment of missing out on exclusive drops.
+  </p>
+
+  <!-- Team + Photo Row -->
+  <section class="mt-4 flex flex-col md:flex-row items-start gap-10">
+    
+    <!-- Left: Names & Roles -->
+    <div class="md:w-1/2 space-y-4">
+      <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">
+        Meet the Team (from left to right in the photo)
+      </h2>
+
+      <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+        
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white">David – Creative Director</h3>
+          <p>Oversees the visual style of every box, from poster art to apparel design,
+            making sure each drop looks as good as it feels.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white">Laura – Co-Founder & CEO</h3>
+          <p>Leads the vision for BeatBox and keeps the team focused on making music merch
+            more accessible and fun for fans everywhere.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white">Jack – Partnerships Manager</h3>
+          <p>Works with labels, venues, and up-and-coming artists to bring exclusive,
+            limited-run items into the BeatBox lineup.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white">George – Operations & Logistics Lead</h3>
+          <p>Makes sure every BeatBox is packed, shipped, and delivered on time,
+            so fans never miss a drop.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right: Group Photo -->
+    <div class="md:w-1/2 flex justify-center md:justify-end">
+      <img
+        src="images/GroupPhoto.jpg"
+        alt="Group Picture of Founders"
+        class="w-64 sm:w-80 lg:w-96 rounded-full object-cover shadow-2xl border-4 border-red-500/50"
+      />
+    </div>
+
+  </section>
+
+  <!-- Mission Section -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Our Mission</h2>
+    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+      BeatBox exists to make music culture more accessible. Our goal is simple:
+      deliver high-quality, thoughtfully curated music merchandise right to your door,
+      every month. Whether you’re into indie, rap, EDM, metal, or pop icons, our team
+      puts together unique packages that celebrate the artists and sounds shaping the
+      world today.
+    </p>
+  </section>
+
+  <!-- What We Do -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">What We Do</h2>
+    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+      Each BeatBox subscription includes a monthly package filled with carefully selected
+      items — from apparel and posters to limited-edition accessories, stickers, and other
+      collectibles. We work directly with designers and partner with up-and-coming artists
+      to make every box special and exclusive.
+    </p>
+    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+      We believe music should be immersive. It should connect you to a culture, a community,
+      and a story. BeatBox is our way of bringing that feeling to your doorstep.
+    </p>
+  </section>
+
+  <!-- Values -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Our Values</h2>
+    <ul class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-2">
+      <li>🎧 <strong>Passion for Music:</strong> We’re fans first — and that shapes everything we do.</li>
+      <li>📦 <strong>Quality First:</strong> Every item is curated with care, creativity, and authenticity.</li>
+      <li>🤝 <strong>Community Driven:</strong> We support independent artists and creators.</li>
+      <li>💸 <strong>Affordable Access:</strong> Music culture shouldn’t break the bank.</li>
+    </ul>
+  </section>
+
+  <!-- Closing -->
+  <section>
+    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+      BeatBox isn’t just a subscription — it’s a celebration of the artists, the fans,
+      and the culture that make music unforgettable. Thanks for being part of the journey.
+    </p>
+  </section>
+
+</main>
+
 
     <!-- JS: Toggle theme & hamburger -->
     <script>
@@ -236,122 +348,144 @@
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const currentYearSpan = document.getElementById("current-year");
-        if (currentYearSpan) {
-          // Get the current year (e.g., 2025) and set it in the span element
-          currentYearSpan.textContent = new Date().getFullYear();
-        }
-      });
-    </script>
-    <footer
-      class="mt-20 border-t border-slate-200 dark:border-slate-700 pt-10 pb-16"
-    >
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
-          <div class="col-span-2 lg:col-span-1 space-y-3">
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl font-bold text-slate-900 dark:text-white"
-                >BeatBox</span
-              >
-              <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
-            </div>
-            <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs">
-              Curated music and merch drops for the next generation of sound.
-            </p>
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYearSpan = document.getElementById("current-year");
+    if (currentYearSpan) {
+        // Get the current year (e.g., 2025) and set it in the span element
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+});
+</script>
+
+    <!-- FOOTER -->
+  <footer class="mt-20 border-t border-slate-200 dark:border-slate-700 pt-10 pb-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+
+        <div class="col-span-2 lg:col-span-1 space-y-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-2xl font-bold text-slate-900 dark:text-white">BeatBox</span>
+            <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
           </div>
-
-          <div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Product
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a href="subscriptiontiers.html" class="hover:text-purple-600"
-                  >Subscription Tiers</a
-                >
-              </li>
-              <li>
-                <a href="howitworks.html" class="hover:text-purple-600"
-                  >How It Works</a
-                >
-              </li>
-              <li>
-                <a href="featuredartist.html" class="hover:text-purple-600"
-                  >Featured Artist</a
-                >
-              </li>
-              <li><a href="#" class="hover:text-purple-600">FAQs</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Company
-            </h3>
-            <ul class="space-y-3">
-              <li>
-                <a href="about.html" class="hover:text-purple-600">About Us</a>
-              </li>
-              <li>
-                <a href="contact.html" class="hover:text-purple-600"
-                  >Contact Support</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-purple-600">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-purple-600">Terms of Service</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-span-2 md:col-span-1">
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Follow Us
-            </h3>
-            <div class="flex space-x-4 mb-6">
-              <a
-                href="#"
-                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <span class="text-xl">🐦</span
-                ><span class="sr-only">Twitter</span>
-              </a>
-
-              <a
-                href="#"
-                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <span class="text-xl">📸</span
-                ><span class="sr-only">Instagram</span>
-              </a>
-              <a
-                href="#"
-                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
-              >
-                <span class="text-xl">▶️</span
-                ><span class="sr-only">YouTube</span>
-              </a>
-            </div>
-
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
-              Project Info
-            </h3>
-            <p class="text-sm text-slate-500 dark:text-slate-400">
-              Design Concept Only. No real billing or shipping is involved.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-10 border-t border-slate-100 dark:border-slate-800 pt-8">
-          <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
-            &copy; <span id="current-year"></span> BeatBox Concept, Inc. All
-            rights reserved.
+          <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs">
+            Curated music and merch drops for the next generation of sound.
           </p>
         </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Product</h3>
+          <ul class="space-y-3">
+            <li><a href="subscriptiontiers.html" class="hover:text-purple-600">Subscription Tiers</a></li>
+            <li><a href="howitworks.html" class="hover:text-purple-600">How It Works</a></li>
+            <li><a href="featuredartist.html" class="hover:text-purple-600">Featured Artist</a></li>
+            <li><a href="#" class="hover:text-purple-600">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Company</h3>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-purple-600">Contact Support</a></li>
+            <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 md:col-span-1">
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Follow Us</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">🐦</span><span class="sr-only">Twitter</span>
+            </a>
+            
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">📸</span><span class="sr-only">Instagram</span>
+            </a>
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">▶️</span><span class="sr-only">YouTube</span>
+            </a>
+          </div>
+
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Project Info</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Design Concept Only. No real billing or shipping is involved.
+          </p>
+        </div>
+
       </div>
-    </footer>
+
+      <div class="mt-10 border-t border-slate-100 dark:border-slate-800 pt-8">
+  <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
+    &copy; <span id="current-year"></span> BeatBox Concept, Inc. All rights reserved.
+  </p>
+</div>
+    </div>
+  </script>
+  <footer class="mt-20 border-t border-slate-200 dark:border-slate-700 pt-10 pb-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+
+        <div class="col-span-2 lg:col-span-1 space-y-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-2xl font-bold text-slate-900 dark:text-white">BeatBox</span>
+            <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs">
+            Curated music and merch drops for the next generation of sound.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Product</h3>
+          <ul class="space-y-3">
+            <li><a href="subscriptiontiers.html" class="hover:text-purple-600">Subscription Tiers</a></li>
+            <li><a href="howitworks.html" class="hover:text-purple-600">How It Works</a></li>
+            <li><a href="featuredartist.html" class="hover:text-purple-600">Featured Artist</a></li>
+            <li><a href="#" class="hover:text-purple-600">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Company</h3>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-purple-600">Contact Support</a></li>
+            <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-2 md:col-span-1">
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Follow Us</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">🐦</span><span class="sr-only">Twitter</span>
+            </a>
+            
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">📸</span><span class="sr-only">Instagram</span>
+            </a>
+            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
+              <span class="text-xl">▶️</span><span class="sr-only">YouTube</span>
+            </a>
+          </div>
+
+          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Project Info</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Design Concept Only. No real billing or shipping is involved.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-10 border-t border-slate-100 dark:border-slate-800 pt-8">
+  <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
+    &copy; <span id="current-year"></span> BeatBox Concept, Inc. All rights reserved.
+  </p>
+</div>
+    </div>
+  </footer>
+  
   </body>
 </html>

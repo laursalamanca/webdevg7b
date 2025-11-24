@@ -1,641 +1,875 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BeatBox Home</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BeatBox Home</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    tailwind.config = { darkMode: "class" }
-  </script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
 
-  <!-- Theme before paint -->
-  <script>
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  </script>
-</head>
-
-<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen">
-
-  <!-- =============================== -->
-  <!--           TOP NAVBAR            -->
-  <!-- =============================== -->
-  <nav class="bg-white dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-700">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-
-        <!-- brand -->
-        <div class="flex items-center space-x-2">
-          <span class="text-xl font-bold dark:text-white">BeatBox</span>
-          <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
-        </div>
-
-        <!-- mobile menu button -->
-        <div class="flex sm:hidden">
-          <button id="menu-toggle" class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md">
-            <svg id="menu-open-icon" class="block h-6 w-6" fill="none" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg id="menu-close-icon" class="hidden h-6 w-6" fill="none" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <!-- desktop nav -->
-        <div class="hidden sm:flex sm:space-x-4">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="subscriptiontiers.html" class="nav-link">Subscription Tiers</a>
-          <a href="howitworks.html" class="nav-link">How It Works</a>
-          <a href="featuredartist.html" class="nav-link">Featured Artist</a>
-          <a href="checkoutpage.html" class="nav-link">Checkout</a>
-          <a href="contact.html" class="nav-link">Contact Us</a>
-        </div>
-
-        <!-- font size and theme -->
-        <div class="flex items-center space-x-2">
-          <div class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs">
-            <button id="font-decrease" class="px-2 text-sm font-semibold">A</button>
-            <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
-            <button id="font-increase" class="px-2 text-base font-semibold">A</button>
-          </div>
-
-          <button id="theme-toggle"
-            class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600">
-            🌗
-          </button>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- mobile menu -->
-    <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
-      <a href="index.html" class="mobile-link">Home</a>
-      <a href="about.html" class="mobile-link">About</a>
-      <a href="subscriptiontiers.html" class="mobile-link">Subscription Tiers</a>
-      <a href="howitworks.html" class="mobile-link">How It Works</a>
-      <a href="featuredartist.html" class="mobile-link">Featured Artist</a>
-      <a href="checkoutpage.html" class="mobile-link">Checkout</a>
-      <a href="contact.html" class="mobile-link">Contact Us</a>
-    </div>
-  </nav>
-
-  <!-- =============================== -->
-  <!--           MAIN CONTENT          -->
-  <!-- =============================== -->
-  <main class="px-6 py-10 lg:px-12 lg:py-16 pt-20">
-
-    <!-- hero -->
-    <section class="relative mx-auto max-w-7xl">
-      <div class="pointer-events-none absolute inset-0 -z-10">
-        <div class="absolute -top-24 -left-16 h-64 w-64 rounded-full bg-purple-300/40 blur-3xl dark:bg-purple-700/40"></div>
-        <div class="absolute -bottom-24 -right-10 h-64 w-64 rounded-full bg-indigo-300/40 blur-3xl dark:bg-indigo-700/40"></div>
-      </div>
-
-      <div class="grid gap-12 md:grid-cols-3 items-center">
-
-        <!-- left -->
-        <div class="space-y-6 md:col-span-2">
-          <p class="inline rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 shadow-sm">
-            Curated music boxes for rising artists
-          </p>
-
-          <h1 class="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-            BeatBox brings exclusive music, playlists, and merch straight to your door.
-          </h1>
-
-          <p class="text-lg max-w-xl text-slate-600 dark:text-slate-300">
-            Every month, BeatBox curates a box with merch, digital playlists, and behind the scenes artist content so you feel closer to the music you love.
-          </p>
-
-          <!-- stats -->
-          <div class="grid grid-cols-3 gap-4 text-xs sm:text-sm">
-            <div class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700">
-              <p class="text-2xl font-semibold text-purple-600 dark:text-purple-300">25+</p>
-              <p class="text-slate-500 dark:text-slate-300">featured artists imagined for this concept</p>
-            </div>
-            <div class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700">
-              <p class="text-2xl font-semibold text-purple-600 dark:text-purple-300">4</p>
-              <p class="text-slate-500 dark:text-slate-300">curated playlists planned for each box</p>
-            </div>
-            <div class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700">
-              <p class="text-2xl font-semibold text-purple-600 dark:text-purple-300">100%</p>
-              <p class="text-slate-500 dark:text-slate-300">built in class as a design concept</p>
-            </div>
-          </div>
-
-          <!-- cta -->
-          <div class="flex flex-wrap gap-4 pt-2">
-            <a href="subscriptiontiers.html"
-              class="rounded-xl bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 hover:bg-purple-700">
-              View subscription tiers
-            </a>
-
-            <a href="featuredartist.html"
-              class="text-sm font-semibold text-purple-700 dark:text-purple-300 underline-offset-4 hover:underline">
-              Meet the featured artist
-            </a>
-          </div>
-
-          <!-- genres -->
-          <div class="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-300 pt-2">
-            <span class="mr-1 text-slate-600 dark:text-slate-200">Genres imagined for BeatBox:</span>
-            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Alt RnB</span>
-            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Indie Rap</span>
-            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Bedroom Pop</span>
-            <span class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800">Lo Fi Nights</span>
-          </div>
-        </div>
-
-        <!-- right -->
-        <div class="flex flex-col items-end gap-3">
-          <div class="relative">
-            <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-purple-500/30 via-indigo-500/20 to-blue-500/20 blur-xl"></div>
-            <div class="relative rounded-2xl shadow-xl overflow-hidden">
-              <img src="images/67.png"
-                   class="w-56 sm:w-64 lg:w-72 object-cover"
-                   alt="BeatBox featured artist" />
-            </div>
-          </div>
-
-          <div class="w-full max-w-xs rounded-2xl border border-slate-800 bg-black/85 text-white p-3 text-xs shadow-lg">
-            <p class="font-semibold flex items-center justify-between">
-              <span>Sponsored by BeatBox</span>
-              <span class="text-[0.6rem] px-2 py-0.5 rounded-full bg-white/10 border border-white/20">
-                Concept drop
-              </span>
-            </p>
-            <p class="mt-1 text-[0.7rem] text-slate-100">
-              This section imagines a real partnership with a rising artist whose story is told through your box.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- as seen on strip -->
-    <section class="mt-14">
-      <div class="mx-auto max-w-7xl border border-slate-200/70 dark:border-slate-700/80 rounded-2xl px-4 py-3 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur">
-        <div class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm">
-          <p class="font-medium text-slate-600 dark:text-slate-200 flex items-center gap-1">
-            <span class="text-base">✨</span>
-            <span>Imagined for students and music fans</span>
-          </p>
-          <div class="flex flex-wrap items-center gap-3 text-slate-500 dark:text-slate-300">
-            <span class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]">Campus project</span>
-            <span class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]">Design concept</span>
-            <span class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]">No real billing here</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- how it works -->
-    <section class="mt-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-8">
-          <div>
-            <h2 class="text-3xl font-bold">How BeatBox could work</h2>
-            <p class="text-sm text-slate-600 dark:text-slate-300 max-w-xl mt-1">
-              This flow explains the idea behind the product. In this class project you can explore the pages without any real checkout.
-            </p>
-          </div>
-          <a href="howitworks.html" class="text-sm text-purple-700 dark:text-purple-300 underline-offset-4 hover:underline">
-            See full walkthrough
-          </a>
-        </div>
-
-        <div class="grid gap-5 md:grid-cols-3">
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm">
-            <div class="flex items-center justify-between mb-2">
-              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold">1</span>
-              <span class="text-xs text-slate-400 dark:text-slate-500">Choose your vibe</span>
-            </div>
-            <p class="font-semibold mb-1">Pick a subscription tier</p>
-            <p class="text-sm text-slate-600 dark:text-slate-300">
-              Browse the Subscription Tiers page to see which mix of digital perks and imagined merch feels right for you.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm">
-            <div class="flex items-center justify-between mb-2">
-              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold">2</span>
-              <span class="text-xs text-slate-400 dark:text-slate-500">Meet the artist</span>
-            </div>
-            <p class="font-semibold mb-1">Discover the featured story</p>
-            <p class="text-sm text-slate-600 dark:text-slate-300">
-              Visit the Featured Artist page to imagine the story, inspirations, and tracks that would shape this months box.
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm">
-            <div class="flex items-center justify-between mb-2">
-              <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold">3</span>
-              <span class="text-xs text-slate-400 dark:text-slate-500">Unbox and repeat</span>
-            </div>
-            <p class="font-semibold mb-1">Experience the drop</p>
-            <p class="text-sm text-slate-600 dark:text-slate-300">
-              In a real product this is where you would unbox playlists, stories, and merch, then check your next cycle from your account page.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- reviews -->
-    <section class="mt-20">
-      <div class="mx-auto max-w-7xl">
-        <h2 class="text-3xl font-bold text-center mb-3">What listeners are saying</h2>
-        <p class="text-sm text-slate-600 dark:text-slate-300 text-center mb-8">
-          These quotes are written for this project so you can see how reviews might look in a live product.
-        </p>
-
-        <div class="grid gap-8 md:grid-cols-3">
-
-          <article class="review-card">
-            <p class="stars">★★★★★</p>
-            <p class="review-title">BeatBox put me on to new artists instantly.</p>
-            <p class="review-user">Maya from Boston</p>
-          </article>
-
-          <article class="review-card">
-            <p class="stars">★★★★★</p>
-            <p class="review-title">The drops feel custom made for me.</p>
-            <p class="review-user">Jordan from New York</p>
-          </article>
-
-          <article class="review-card">
-            <p class="stars">★★★★★</p>
-            <p class="review-title">My fanbase grew because of BeatBox.</p>
-            <p class="review-user">Nova independent artist</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- call to action -->
-    <section class="mt-16">
-      <div class="mx-auto max-w-7xl">
-        <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 text-white px-6 py-8 sm:px-10 sm:py-10 shadow-xl">
-          <div class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/10 blur-2xl"></div>
-          <div class="absolute -left-10 bottom-0 h-40 w-40 rounded-full bg-black/10 blur-2xl"></div>
-
-          <div class="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <p class="text-xs uppercase tracking-wide text-white/70 mb-1">BeatBox concept preview</p>
-              <h3 class="text-2xl sm:text-3xl font-bold mb-2">
-                Ready to explore the rest of the BeatBox story
-              </h3>
-              <p class="text-sm sm:text-base text-white/80 max-w-xl">
-                Jump into the Subscription Tiers, Featured Artist, and How It Works pages to see how this experience comes together as a full design project.
-              </p>
-            </div>
-            <div class="flex flex-col items-start gap-3">
-              <a href="subscriptiontiers.html"
-                 class="inline-flex items-center justify-center rounded-xl bg-white text-purple-700 px-5 py-2.5 text-sm font-semibold shadow-lg shadow-black/20 hover:bg-slate-100">
-                Explore tiers and pricing
-              </a>
-              <button
-                 onclick="window.location.href='contact.html';"
-                 class="inline-flex items-center justify-center rounded-xl border border-white/70 bg-white/5 px-4 py-2 text-xs font-medium text-white/90 backdrop-blur hover:bg-white/10">
-                Share feedback on this concept
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- =============================== -->
-  <!--          SIMPLE CHATBOT         -->
-  <!-- =============================== -->
-
-  <!-- floating chat button -->
-  <button id="chatbot-btn"
-    class="fixed bottom-6 right-6 bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-purple-700 z-50 flex items-center space-x-2">
-    <span>💬 Chat</span>
-  </button>
-
-  <!-- simple chat panel -->
-  <div id="chatbot-panel"
-    class="hidden fixed bottom-20 right-6 w-80 md:w-96 bg-white dark:bg-slate-900 border border-purple-300 dark:border-purple-700 rounded-xl shadow-2xl p-4 z-50">
-
-    <div class="flex items-center justify-between mb-3">
-      <div class="flex items-center space-x-2">
-        <div class="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm">
-          🎧
-        </div>
-        <div>
-          <p class="font-bold text-slate-800 dark:text-white">
-            BeatBox Help Bot
-          </p>
-          <p class="text-xs text-slate-500 dark:text-slate-400">
-            Ask quick questions about this concept.
-          </p>
-        </div>
-      </div>
-      <button id="chatbot-close"
-        class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg leading-none px-1">
-        ×
-      </button>
-    </div>
-
-    <div id="chat-log"
-         class="h-48 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-slate-950">
-      <p class="text-xs text-slate-500 dark:text-slate-400">
-        This is where you can ask simple questions like what is BeatBox or what are the tiers.
-      </p>
-    </div>
-
-    <div class="flex items-center space-x-2">
-      <input id="chat-input"
-             class="flex-1 p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
-             placeholder="Type a message..." />
-      <button id="chat-send"
-              class="px-3 py-2 text-sm rounded bg-purple-600 text-white hover:bg-purple-700">
-        Send
-      </button>
-    </div>
-  </div>
-
-  <!-- =============================== -->
-  <!--            INLINE JS            -->
-  <!-- =============================== -->
-  <script>
-    // theme toggle
-    const themeToggle = document.getElementById("theme-toggle");
-    if (themeToggle) {
-      themeToggle.addEventListener("click", () => {
-        const isDark = document.documentElement.classList.toggle("dark");
-        localStorage.theme = isDark ? "dark" : "light";
-      });
-    }
-
-    // mobile nav
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const openIcon = document.getElementById("menu-open-icon");
-    const closeIcon = document.getElementById("menu-close-icon");
-
-    if (menuToggle && mobileMenu && openIcon && closeIcon) {
-      menuToggle.addEventListener("click", () => {
-        const hidden = mobileMenu.classList.toggle("hidden");
-        openIcon.classList.toggle("hidden", !hidden);
-        closeIcon.classList.toggle("hidden", hidden);
-      });
-    }
-
-    // highlight current nav link
-    const path = window.location.pathname.split("/").pop() || "index.html";
-    document.querySelectorAll("nav a").forEach((a) => {
-      if (a.getAttribute("href") === path) {
-        a.classList.add("bg-gray-100", "dark:bg-gray-800", "text-blue-600");
+    <!-- Theme before paint -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
-    });
+    </script>
+  </head>
 
-    // font size adjuster
-    const inc = document.getElementById("font-increase");
-    const dec = document.getElementById("font-decrease");
-    let scale = 1;
-
-    function applyScale() {
-      document.documentElement.style.fontSize = 16 * scale + "px";
-    }
-
-    if (inc && dec) {
-      inc.addEventListener("click", () => {
-        scale = Math.min(1.3, scale + 0.05);
-        applyScale();
-      });
-
-      dec.addEventListener("click", () => {
-        scale = Math.max(0.85, scale - 0.05);
-        applyScale();
-      });
-    }
-
-    // very basic chatbot
-    const chatbotBtn = document.getElementById("chatbot-btn");
-    const chatbotPanel = document.getElementById("chatbot-panel");
-    const chatbotClose = document.getElementById("chatbot-close");
-    const chatLog = document.getElementById("chat-log");
-    const chatInput = document.getElementById("chat-input");
-    const chatSend = document.getElementById("chat-send");
-
-    function toggleChatPanel() {
-      if (!chatbotPanel) return;
-      chatbotPanel.classList.toggle("hidden");
-    }
-
-    if (chatbotBtn) {
-      chatbotBtn.addEventListener("click", toggleChatPanel);
-    }
-    if (chatbotClose) {
-      chatbotClose.addEventListener("click", toggleChatPanel);
-    }
-
-    function addMessage(sender, text) {
-      if (!chatLog) return;
-      const wrap = document.createElement("div");
-      wrap.className = "my-1";
-
-      const label = document.createElement("p");
-      label.className = "text-[0.75rem] font-semibold";
-      label.textContent = sender === "user" ? "You:" : "Bot:";
-
-      const body = document.createElement("p");
-      body.className = "text-sm ml-2";
-      body.textContent = text;
-
-      wrap.appendChild(label);
-      wrap.appendChild(body);
-      chatLog.appendChild(wrap);
-      chatLog.scrollTop = chatLog.scrollHeight;
-    }
-
-    function simpleBotReply(text) {
-      const lower = text.toLowerCase();
-
-      if (lower.includes("what is beatbox")) {
-        addMessage("bot", "BeatBox is a concept for a monthly music box that bundles playlists, merch, and artist stories around a featured artist.");
-        return;
-      }
-
-      if (lower.includes("tier") || lower.includes("subscription")) {
-        addMessage("bot", "BeatBox is imagined with three tiers called Starter Vibes, Crowd Favorite, and Headliner with different levels of content and merch.");
-        return;
-      }
-
-      if (lower.includes("price") || lower.includes("cost")) {
-        addMessage("bot", "Prices in this class project are for display only, but the idea is a simple monthly subscription at different levels.");
-        return;
-      }
-
-      addMessage("bot", "This is a simple demo bot for the BeatBox project. Try asking what is BeatBox or what are the tiers.");
-    }
-
-    function handleSend() {
-      if (!chatInput) return;
-      const text = chatInput.value.trim();
-      if (!text) return;
-      addMessage("user", text);
-      chatInput.value = "";
-      simpleBotReply(text);
-    }
-
-    if (chatSend) {
-      chatSend.addEventListener("click", handleSend);
-    }
-    if (chatInput) {
-      chatInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          handleSend();
-        }
-      });
-    }
-  </script>
-
-  <!-- current year script for footer -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const currentYearSpan = document.getElementById("current-year");
-      if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
-
-  <!-- =============================== -->
-  <!--               FOOTER            -->
-  <!-- =============================== -->
-  <footer class="mt-20 border-t border-slate-200 dark:border-slate-700 pt-10 pb-16">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
-
-        <div class="col-span-2 lg:col-span-1 space-y-3">
+  <body
+    class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen"
+  >
+    <!-- =============================== -->
+    <!--           TOP NAVBAR            -->
+    <!-- =============================== -->
+    <nav
+      class="bg-white dark:bg-black/80 backdrop-blur border-b border-gray-200 dark:border-gray-700"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <!-- brand -->
           <div class="flex items-center space-x-2">
-            <span class="text-2xl font-bold text-slate-900 dark:text-white">BeatBox</span>
+            <span class="text-xl font-bold dark:text-white">BeatBox</span>
             <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
           </div>
-          <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs">
-            Curated music and merch drops for the next generation of sound.
-          </p>
+
+          <!-- mobile menu button -->
+          <div class="flex sm:hidden">
+            <button
+              id="menu-toggle"
+              class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md"
+            >
+              <svg
+                id="menu-open-icon"
+                class="block h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                id="menu-close-icon"
+                class="hidden h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- desktop nav -->
+          <div class="hidden sm:flex sm:space-x-4">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="subscriptiontiers.html" class="nav-link"
+              >Subscription Tiers</a
+            >
+            <a href="howitworks.html" class="nav-link">How It Works</a>
+            <a href="featuredartist.html" class="nav-link">Featured Artist</a>
+            <a href="checkoutpage.html" class="nav-link">Checkout</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </div>
+
+          <!-- font size and theme -->
+          <div class="flex items-center space-x-2">
+            <div
+              class="flex items-center rounded-full border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 px-2 py-1 text-xs"
+            >
+              <button id="font-decrease" class="px-2 text-sm font-semibold">
+                A
+              </button>
+              <span class="mx-1 h-4 w-px bg-slate-300 dark:bg-slate-600"></span>
+              <button id="font-increase" class="px-2 text-base font-semibold">
+                A
+              </button>
+            </div>
+
+            <button
+              id="theme-toggle"
+              class="rounded-md px-3 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600"
+            >
+              🌗
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div id="mobile-menu" class="hidden sm:hidden px-2 pb-3 space-y-1">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="subscriptiontiers.html" class="mobile-link"
+          >Subscription Tiers</a
+        >
+        <a href="howitworks.html" class="mobile-link">How It Works</a>
+        <a href="featuredartist.html" class="mobile-link">Featured Artist</a>
+        <a href="checkoutpage.html" class="mobile-link">Checkout</a>
+        <a href="contact.html" class="mobile-link">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- =============================== -->
+    <!--           MAIN CONTENT          -->
+    <!-- =============================== -->
+    <main class="px-6 py-10 lg:px-12 lg:py-16 pt-20">
+      <!-- hero -->
+      <section class="relative mx-auto max-w-7xl">
+        <div class="pointer-events-none absolute inset-0 -z-10">
+          <div
+            class="absolute -top-24 -left-16 h-64 w-64 rounded-full bg-purple-300/40 blur-3xl dark:bg-purple-700/40"
+          ></div>
+          <div
+            class="absolute -bottom-24 -right-10 h-64 w-64 rounded-full bg-indigo-300/40 blur-3xl dark:bg-indigo-700/40"
+          ></div>
         </div>
 
-        <div>
-          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Product</h3>
-          <ul class="space-y-3">
-            <li><a href="subscriptiontiers.html" class="hover:text-purple-600">Subscription Tiers</a></li>
-            <li><a href="howitworks.html" class="hover:text-purple-600">How It Works</a></li>
-            <li><a href="featuredartist.html" class="hover:text-purple-600">Featured Artist</a></li>
-            <li><a href="#" class="hover:text-purple-600">FAQs</a></li>
-          </ul>
-        </div>
+        <div class="grid gap-12 md:grid-cols-3 items-center">
+          <!-- left -->
+          <div class="space-y-6 md:col-span-2">
+            <p
+              class="inline rounded-full bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 shadow-sm"
+            >
+              Curated music boxes for rising artists
+            </p>
 
-        <div>
-          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Company</h3>
-          <ul class="space-y-3">
-            <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
-            <li><a href="contact.html" class="hover:text-purple-600">Contact Support</a></li>
-            <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
-          </ul>
-        </div>
+            <h1
+              class="text-5xl md:text-6xl font-bold leading-tight tracking-tight"
+            >
+              BeatBox brings exclusive music, playlists, and merch straight to
+              your door.
+            </h1>
 
-        <div class="col-span-2 md:col-span-1">
-          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Follow Us</h3>
-          <div class="flex space-x-4 mb-6">
-            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
-              <span class="text-xl">🐦</span><span class="sr-only">Twitter</span>
-            </a>
-            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
-              <span class="text-xl">📸</span><span class="sr-only">Instagram</span>
-            </a>
-            <a href="#" class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition">
-              <span class="text-xl">▶️</span><span class="sr-only">YouTube</span>
+            <p class="text-lg max-w-xl text-slate-600 dark:text-slate-300">
+              Every month, BeatBox curates a box with merch, digital playlists,
+              and behind the scenes artist content so you feel closer to the
+              music you love.
+            </p>
+
+            <!-- stats -->
+            <div class="grid grid-cols-3 gap-4 text-xs sm:text-sm">
+              <div
+                class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700"
+              >
+                <p
+                  class="text-2xl font-semibold text-purple-600 dark:text-purple-300"
+                >
+                  25+
+                </p>
+                <p class="text-slate-500 dark:text-slate-300">
+                  featured artists imagined for this concept
+                </p>
+              </div>
+              <div
+                class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700"
+              >
+                <p
+                  class="text-2xl font-semibold text-purple-600 dark:text-purple-300"
+                >
+                  4
+                </p>
+                <p class="text-slate-500 dark:text-slate-300">
+                  curated playlists planned for each box
+                </p>
+              </div>
+              <div
+                class="rounded-2xl border border-white/50 bg-white/80 p-3 shadow-sm backdrop-blur dark:bg-slate-900/70 dark:border-slate-700"
+              >
+                <p
+                  class="text-2xl font-semibold text-purple-600 dark:text-purple-300"
+                >
+                  100%
+                </p>
+                <p class="text-slate-500 dark:text-slate-300">
+                  built in class as a design concept
+                </p>
+              </div>
+            </div>
+
+            <!-- cta -->
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a
+                href="subscriptiontiers.html"
+                class="rounded-xl bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 hover:bg-purple-700"
+              >
+                View subscription tiers
+              </a>
+
+              <a
+                href="featuredartist.html"
+                class="text-sm font-semibold text-purple-700 dark:text-purple-300 underline-offset-4 hover:underline"
+              >
+                Meet the featured artist
+              </a>
+            </div>
+
+            <!-- genres -->
+            <div
+              class="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-300 pt-2"
+            >
+              <span class="mr-1 text-slate-600 dark:text-slate-200"
+                >Genres imagined for BeatBox:</span
+              >
+              <span
+                class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800"
+                >Alt RnB</span
+              >
+              <span
+                class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800"
+                >Indie Rap</span
+              >
+              <span
+                class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800"
+                >Bedroom Pop</span
+              >
+              <span
+                class="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800"
+                >Lo Fi Nights</span
+              >
+            </div>
+          </div>
+
+          <!-- right -->
+          <div class="flex flex-col items-end gap-3">
+            <div class="relative">
+              <div
+                class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-purple-500/30 via-indigo-500/20 to-blue-500/20 blur-xl"
+              ></div>
+              <div class="relative rounded-2xl shadow-xl overflow-hidden">
+                <img
+                  src="images/67.png"
+                  class="w-56 sm:w-64 lg:w-72 object-cover"
+                  alt="BeatBox featured artist"
+                />
+              </div>
+            </div>
+
+            <div
+              class="w-full max-w-xs rounded-2xl border border-slate-800 bg-black/85 text-white p-3 text-xs shadow-lg"
+            >
+              <p class="font-semibold flex items-center justify-between">
+                <span>Sponsored by BeatBox</span>
+                <span
+                  class="text-[0.6rem] px-2 py-0.5 rounded-full bg-white/10 border border-white/20"
+                >
+                  Concept drop
+                </span>
+              </p>
+              <p class="mt-1 text-[0.7rem] text-slate-100">
+                This section imagines a real partnership with a rising artist
+                whose story is told through your box.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- as seen on strip -->
+      <section class="mt-14">
+        <div
+          class="mx-auto max-w-7xl border border-slate-200/70 dark:border-slate-700/80 rounded-2xl px-4 py-3 bg-slate-50/70 dark:bg-slate-900/70 backdrop-blur"
+        >
+          <div
+            class="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm"
+          >
+            <p
+              class="font-medium text-slate-600 dark:text-slate-200 flex items-center gap-1"
+            >
+              <span class="text-base">✨</span>
+              <span>Imagined for students and music fans</span>
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-3 text-slate-500 dark:text-slate-300"
+            >
+              <span
+                class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]"
+                >Campus project</span
+              >
+              <span
+                class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]"
+                >Design concept</span
+              >
+              <span
+                class="px-2 py-1 rounded-full bg-white/70 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-[0.7rem]"
+                >No real billing here</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- how it works -->
+      <section class="mt-16">
+        <div class="mx-auto max-w-7xl">
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-8"
+          >
+            <div>
+              <h2 class="text-3xl font-bold">How BeatBox could work</h2>
+              <p
+                class="text-sm text-slate-600 dark:text-slate-300 max-w-xl mt-1"
+              >
+                This flow explains the idea behind the product. In this class
+                project you can explore the pages without any real checkout.
+              </p>
+            </div>
+            <a
+              href="howitworks.html"
+              class="text-sm text-purple-700 dark:text-purple-300 underline-offset-4 hover:underline"
+            >
+              See full walkthrough
             </a>
           </div>
 
-          <h3 class="font-semibold text-slate-900 dark:text-white mb-3">Project Info</h3>
-          <p class="text-sm text-slate-500 dark:text-slate-400">
-            Design Concept Only. No real billing or shipping is involved.
-          </p>
-        </div>
+          <div class="grid gap-5 md:grid-cols-3">
+            <div
+              class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span
+                  class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold"
+                  >1</span
+                >
+                <span class="text-xs text-slate-400 dark:text-slate-500"
+                  >Choose your vibe</span
+                >
+              </div>
+              <p class="font-semibold mb-1">Pick a subscription tier</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Browse the Subscription Tiers page to see which mix of digital
+                perks and imagined merch feels right for you.
+              </p>
+            </div>
 
+            <div
+              class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span
+                  class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold"
+                  >2</span
+                >
+                <span class="text-xs text-slate-400 dark:text-slate-500"
+                  >Meet the artist</span
+                >
+              </div>
+              <p class="font-semibold mb-1">Discover the featured story</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Visit the Featured Artist page to imagine the story,
+                inspirations, and tracks that would shape this months box.
+              </p>
+            </div>
+
+            <div
+              class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-900/80 p-4 shadow-sm"
+            >
+              <div class="flex items-center justify-between mb-2">
+                <span
+                  class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 text-sm font-semibold"
+                  >3</span
+                >
+                <span class="text-xs text-slate-400 dark:text-slate-500"
+                  >Unbox and repeat</span
+                >
+              </div>
+              <p class="font-semibold mb-1">Experience the drop</p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                In a real product this is where you would unbox playlists,
+                stories, and merch, then check your next cycle from your account
+                page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- reviews -->
+      <section class="mt-20">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="text-3xl font-bold text-center mb-3">
+            What listeners are saying
+          </h2>
+          <p
+            class="text-sm text-slate-600 dark:text-slate-300 text-center mb-8"
+          >
+            These quotes are written for this project so you can see how reviews
+            might look in a live product.
+          </p>
+
+          <div class="grid gap-8 md:grid-cols-3">
+            <article class="review-card">
+              <p class="stars">★★★★★</p>
+              <p class="review-title">
+                BeatBox put me on to new artists instantly.
+              </p>
+              <p class="review-user">Maya from Boston</p>
+            </article>
+
+            <article class="review-card">
+              <p class="stars">★★★★★</p>
+              <p class="review-title">The drops feel custom made for me.</p>
+              <p class="review-user">Jordan from New York</p>
+            </article>
+
+            <article class="review-card">
+              <p class="stars">★★★★★</p>
+              <p class="review-title">My fanbase grew because of BeatBox.</p>
+              <p class="review-user">Nova independent artist</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- call to action -->
+      <section class="mt-16">
+        <div class="mx-auto max-w-7xl">
+          <div
+            class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-500 text-white px-6 py-8 sm:px-10 sm:py-10 shadow-xl"
+          >
+            <div
+              class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/10 blur-2xl"
+            ></div>
+            <div
+              class="absolute -left-10 bottom-0 h-40 w-40 rounded-full bg-black/10 blur-2xl"
+            ></div>
+
+            <div
+              class="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            >
+              <div>
+                <p class="text-xs uppercase tracking-wide text-white/70 mb-1">
+                  BeatBox concept preview
+                </p>
+                <h3 class="text-2xl sm:text-3xl font-bold mb-2">
+                  Ready to explore the rest of the BeatBox story
+                </h3>
+                <p class="text-sm sm:text-base text-white/80 max-w-xl">
+                  Jump into the Subscription Tiers, Featured Artist, and How It
+                  Works pages to see how this experience comes together as a
+                  full design project.
+                </p>
+              </div>
+              <div class="flex flex-col items-start gap-3">
+                <a
+                  href="subscriptiontiers.html"
+                  class="inline-flex items-center justify-center rounded-xl bg-white text-purple-700 px-5 py-2.5 text-sm font-semibold shadow-lg shadow-black/20 hover:bg-slate-100"
+                >
+                  Explore tiers and pricing
+                </a>
+                <button
+                  onclick="window.location.href='contact.html';"
+                  class="inline-flex items-center justify-center rounded-xl border border-white/70 bg-white/5 px-4 py-2 text-xs font-medium text-white/90 backdrop-blur hover:bg-white/10"
+                >
+                  Share feedback on this concept
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================== -->
+    <!--          SIMPLE CHATBOT         -->
+    <!-- =============================== -->
+
+    <!-- floating chat button -->
+    <button
+      id="chatbot-btn"
+      class="fixed bottom-6 right-6 bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-purple-700 z-50 flex items-center space-x-2"
+    >
+      <span>💬 Chat</span>
+    </button>
+
+    <!-- simple chat panel -->
+    <div
+      id="chatbot-panel"
+      class="hidden fixed bottom-20 right-6 w-80 md:w-96 bg-white dark:bg-slate-900 border border-purple-300 dark:border-purple-700 rounded-xl shadow-2xl p-4 z-50"
+    >
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-7 h-7 rounded-full bg-purple-600 flex items-center justify-center text-white text-sm"
+          >
+            🎧
+          </div>
+          <div>
+            <p class="font-bold text-slate-800 dark:text-white">
+              BeatBox Help Bot
+            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Ask quick questions about this concept.
+            </p>
+          </div>
+        </div>
+        <button
+          id="chatbot-close"
+          class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg leading-none px-1"
+        >
+          ×
+        </button>
       </div>
 
-      <div class="mt-10 border-t border-slate-100 dark:border-slate-800 pt-8">
-        <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
-          &copy; <span id="current-year"></span> BeatBox Concept, Inc. All rights reserved.
+      <div
+        id="chat-log"
+        class="h-48 overflow-y-auto text-sm mb-3 p-2 border border-slate-200 dark:border-slate-700 rounded bg-slate-50 dark:bg-slate-950"
+      >
+        <p class="text-xs text-slate-500 dark:text-slate-400">
+          This is where you can ask simple questions like what is BeatBox or
+          what are the tiers.
         </p>
       </div>
+
+      <div class="flex items-center space-x-2">
+        <input
+          id="chat-input"
+          class="flex-1 p-2 text-sm border border-slate-300 dark:border-slate-600 rounded bg-white dark:bg-slate-900"
+          placeholder="Type a message..."
+        />
+        <button
+          id="chat-send"
+          class="px-3 py-2 text-sm rounded bg-purple-600 text-white hover:bg-purple-700"
+        >
+          Send
+        </button>
+      </div>
     </div>
-  </footer>
 
-  <!-- =============================== -->
-  <!--         EXTRA STYLES            -->
-  <!-- =============================== -->
-  <style>
-    .nav-link {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: black;
-      border-radius: 0.375rem;
-    }
-    .nav-link:hover {
-      background-color: rgba(31,41,55,0.05);
-    }
-    .dark .nav-link {
-      color: white;
-    }
+    <!-- =============================== -->
+    <!--            INLINE JS            -->
+    <!-- =============================== -->
+    <script>
+      // theme toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const isDark = document.documentElement.classList.toggle("dark");
+          localStorage.theme = isDark ? "dark" : "light";
+        });
+      }
 
-    .mobile-link {
-      padding: 0.5rem 0.75rem;
-      font-size: 1rem;
-      font-weight: 500;
-      border-radius: 0.375rem;
-      display: block;
-    }
-    .mobile-link:hover {
-      background-color: rgba(31,41,55,0.05);
-    }
+      // mobile nav
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const openIcon = document.getElementById("menu-open-icon");
+      const closeIcon = document.getElementById("menu-close-icon");
 
-    .review-card {
-      border-radius: 1rem;
-      padding: 1rem;
-      border: 1px solid #e2e8f0;
-      background-color: white;
-    }
-    .dark .review-card {
-      background-color: #0f172a;
-      border-color: #374151;
-    }
+      if (menuToggle && mobileMenu && openIcon && closeIcon) {
+        menuToggle.addEventListener("click", () => {
+          const hidden = mobileMenu.classList.toggle("hidden");
+          openIcon.classList.toggle("hidden", !hidden);
+          closeIcon.classList.toggle("hidden", hidden);
+        });
+      }
 
-    .stars {
-      color: #f59e0b;
-      font-size: 1.125rem;
-    }
-  </style>
+      // highlight current nav link
+      const path = window.location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll("nav a").forEach((a) => {
+        if (a.getAttribute("href") === path) {
+          a.classList.add("bg-gray-100", "dark:bg-gray-800", "text-blue-600");
+        }
+      });
 
-</body>
+      // font size adjuster
+      const inc = document.getElementById("font-increase");
+      const dec = document.getElementById("font-decrease");
+      let scale = 1;
+
+      function applyScale() {
+        document.documentElement.style.fontSize = 16 * scale + "px";
+      }
+
+      if (inc && dec) {
+        inc.addEventListener("click", () => {
+          scale = Math.min(1.3, scale + 0.05);
+          applyScale();
+        });
+
+        dec.addEventListener("click", () => {
+          scale = Math.max(0.85, scale - 0.05);
+          applyScale();
+        });
+      }
+
+      // very basic chatbot
+      const chatbotBtn = document.getElementById("chatbot-btn");
+      const chatbotPanel = document.getElementById("chatbot-panel");
+      const chatbotClose = document.getElementById("chatbot-close");
+      const chatLog = document.getElementById("chat-log");
+      const chatInput = document.getElementById("chat-input");
+      const chatSend = document.getElementById("chat-send");
+
+      function toggleChatPanel() {
+        if (!chatbotPanel) return;
+        chatbotPanel.classList.toggle("hidden");
+      }
+
+      if (chatbotBtn) {
+        chatbotBtn.addEventListener("click", toggleChatPanel);
+      }
+      if (chatbotClose) {
+        chatbotClose.addEventListener("click", toggleChatPanel);
+      }
+
+      function addMessage(sender, text) {
+        if (!chatLog) return;
+        const wrap = document.createElement("div");
+        wrap.className = "my-1";
+
+        const label = document.createElement("p");
+        label.className = "text-[0.75rem] font-semibold";
+        label.textContent = sender === "user" ? "You:" : "Bot:";
+
+        const body = document.createElement("p");
+        body.className = "text-sm ml-2";
+        body.textContent = text;
+
+        wrap.appendChild(label);
+        wrap.appendChild(body);
+        chatLog.appendChild(wrap);
+        chatLog.scrollTop = chatLog.scrollHeight;
+      }
+
+      function simpleBotReply(text) {
+        const lower = text.toLowerCase();
+
+        if (lower.includes("what is beatbox")) {
+          addMessage(
+            "bot",
+            "BeatBox is a concept for a monthly music box that bundles playlists, merch, and artist stories around a featured artist."
+          );
+          return;
+        }
+
+        if (lower.includes("tier") || lower.includes("subscription")) {
+          addMessage(
+            "bot",
+            "BeatBox is imagined with three tiers called Starter Vibes, Crowd Favorite, and Headliner with different levels of content and merch."
+          );
+          return;
+        }
+
+        if (lower.includes("price") || lower.includes("cost")) {
+          addMessage(
+            "bot",
+            "Prices in this class project are for display only, but the idea is a simple monthly subscription at different levels."
+          );
+          return;
+        }
+
+        addMessage(
+          "bot",
+          "This is a simple demo bot for the BeatBox project. Try asking what is BeatBox or what are the tiers."
+        );
+      }
+
+      function handleSend() {
+        if (!chatInput) return;
+        const text = chatInput.value.trim();
+        if (!text) return;
+        addMessage("user", text);
+        chatInput.value = "";
+        simpleBotReply(text);
+      }
+
+      if (chatSend) {
+        chatSend.addEventListener("click", handleSend);
+      }
+      if (chatInput) {
+        chatInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            handleSend();
+          }
+        });
+      }
+    </script>
+
+    <!-- current year script for footer -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentYearSpan = document.getElementById("current-year");
+        if (currentYearSpan) {
+          currentYearSpan.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
+
+    <!-- =============================== -->
+    <!--               FOOTER            -->
+    <!-- =============================== -->
+    <footer
+      class="mt-20 border-t border-slate-200 dark:border-slate-700 pt-10 pb-16"
+    >
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+          <div class="col-span-2 lg:col-span-1 space-y-3">
+            <div class="flex items-center space-x-2">
+              <span class="text-2xl font-bold text-slate-900 dark:text-white"
+                >BeatBox</span
+              >
+              <img src="images/music-box.png" class="h-8" alt="BeatBox logo" />
+            </div>
+            <p class="text-sm text-slate-500 dark:text-slate-400 max-w-xs">
+              Curated music and merch drops for the next generation of sound.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
+              Product
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="subscriptiontiers.html" class="hover:text-purple-600"
+                  >Subscription Tiers</a
+                >
+              </li>
+              <li>
+                <a href="howitworks.html" class="hover:text-purple-600"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a href="featuredartist.html" class="hover:text-purple-600"
+                  >Featured Artist</a
+                >
+              </li>
+              <li><a href="#" class="hover:text-purple-600">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
+              Company
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="about.html" class="hover:text-purple-600">About Us</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-purple-600"
+                  >Contact Support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-purple-600">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-purple-600">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-span-2 md:col-span-1">
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
+              Follow Us
+            </h3>
+            <div class="flex space-x-4 mb-6">
+              <a
+                href="#"
+                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
+              >
+                <span class="text-xl">🐦</span
+                ><span class="sr-only">Twitter</span>
+              </a>
+              <a
+                href="#"
+                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
+              >
+                <span class="text-xl">📸</span
+                ><span class="sr-only">Instagram</span>
+              </a>
+              <a
+                href="#"
+                class="text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition"
+              >
+                <span class="text-xl">▶️</span
+                ><span class="sr-only">YouTube</span>
+              </a>
+            </div>
+
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-3">
+              Project Info
+            </h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Design Concept Only. No real billing or shipping is involved.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 border-t border-slate-100 dark:border-slate-800 pt-8">
+          <p class="text-xs text-slate-500 dark:text-slate-400 text-center">
+            &copy; <span id="current-year"></span> BeatBox Concept, Inc. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =============================== -->
+    <!--         EXTRA STYLES            -->
+    <!-- =============================== -->
+    <style>
+      .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: black;
+        border-radius: 0.375rem;
+      }
+      .nav-link:hover {
+        background-color: rgba(31, 41, 55, 0.05);
+      }
+      .dark .nav-link {
+        color: white;
+      }
+
+      .mobile-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.375rem;
+        display: block;
+      }
+      .mobile-link:hover {
+        background-color: rgba(31, 41, 55, 0.05);
+      }
+
+      .review-card {
+        border-radius: 1rem;
+        padding: 1rem;
+        border: 1px solid #e2e8f0;
+        background-color: white;
+      }
+      .dark .review-card {
+        background-color: #0f172a;
+        border-color: #374151;
+      }
+
+      .stars {
+        color: #f59e0b;
+        font-size: 1.125rem;
+      }
+    </style>
+  </body>
 </html>
