@@ -664,7 +664,7 @@
         if (lower.includes("tier") || lower.includes("subscription")) {
           addMessage(
             "bot",
-            "BeatBox is imagined with three tiers called Starter Vibes, Crowd Favorite, and Headliner with different levels of content and merch."
+            "BeatBox is imagined with four tiers called Listener , Groover, Collector, and Headliner with different levels of content and merch."
           );
           return;
         }
@@ -672,14 +672,14 @@
         if (lower.includes("price") || lower.includes("cost")) {
           addMessage(
             "bot",
-            "Prices in this class project are for display only, but the idea is a simple monthly subscription at different levels."
+            "Prices for each subscription tier are as follows: Listener - $9.99/month, Groover - $19.99/month, Collector - $39.99/month, Headliner - $59.99/month."
           );
           return;
         }
 
         addMessage(
           "bot",
-          "This is a simple demo bot for the BeatBox project. Try asking what is BeatBox or what are the tiers."
+          "Try asking: 'What is BeatBox?', 'What are the prices of subscriptions?', 'What are the differences between the tier or subscription levels?'."
         );
       }
 
